@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.header-links, .header-links a {
+    @apply hover:text-primary
+}
+
