@@ -2,7 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-.header-links, .header-links a {
-    @apply hover:text-primary
+header {
+  @apply flex flex-col sm:flex-row !important;
 }
 
+.header-links,
+.header-links a {
+  @apply hover:text-primary hover:opacity-100;
+}

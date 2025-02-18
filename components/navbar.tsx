@@ -18,7 +18,7 @@ import { GithubIcon, LinkedInIcon } from "@/components/icons";
 
 export const Navbar = () => {
   return (
-    <HeroUINavbar maxWidth="xl" position="sticky">
+    <HeroUINavbar maxWidth="2xl" position="static" id="navbar" className="pt-4">
       <NavbarContent className="basis-1/5 sm:basis-full gap-12" justify="start">
         <NavbarBrand as="li" className="gap-3 max-w-fit">
           <NextLink className="flex justify-start items-center gap-1" href="/">
@@ -27,13 +27,13 @@ export const Navbar = () => {
             </h1>
           </NextLink>
         </NavbarBrand>
-        <ul className="hidden lg:flex gap-6 justify-start ml-2">
+        <div className="hidden lg:flex gap-6 justify-start ml-2">
           {siteConfig.navItems.map((item) => (
             <NavbarItem key={item.href}>
               <NextLink
                 className={clsx(
                   linkStyles({ color: "foreground" }),
-                  "data-[active=true]:text-primary data-[active=true]:font-medium text-xl header-links  ",
+                  "data-[active=true]:text-primary data-[active=true]:font-medium text-xl header-links  "
                 )}
                 color="foreground"
                 href={item.href}
@@ -42,7 +42,7 @@ export const Navbar = () => {
               </NextLink>
             </NavbarItem>
           ))}
-        </ul>
+        </div>
       </NavbarContent>
 
       <>
