@@ -6,7 +6,8 @@ import { Providers } from "./providers";
 
 import { fontSans } from "@/config/fonts";
 import { Navbar } from "@/components/navbar";
-import { Footer } from "@/components/footer";
+import Footer from "@/components/footer";
+import ScrollArrow from "@/components/home/ScrollArrow";
 
 export const metadata: Metadata = {
   title: "Portfolio de Sandrine ALCAZAR - Développeuse Front-end",
@@ -36,17 +37,18 @@ export default function RootLayout({
       <head />
       <body
         className={clsx(
-          "min-h-screen bg-background font-sans antialiased max-w-7xl px-8 mx-auto",
-          fontSans.variable,
+          "min-h-screen bg-background font-sans antialiased w-full  mx-auto scroll-smooth",
+          fontSans.variable
         )}
       >
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
-          <div className="relative flex flex-col h-screen">
+          <div className="relative flex flex-col h-screen w-full">
             <Navbar />
-            <main className="container mx-auto max-w-7xl pt-16 px-6 flex-grow">
+            <main className=" self-center pt-8 w-full  flex-grow ">
               {children}
             </main>
             <Footer />
+            <ScrollArrow />
           </div>
         </Providers>
       </body>
