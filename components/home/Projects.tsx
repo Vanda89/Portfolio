@@ -1,12 +1,11 @@
 // Projects
 
 "use client";
-import clsx from "clsx";
 
 import ProjectsList from "../projects/ProjectsList";
 import ProjectsFilter from "../projects/ProjectsFilter";
 
-import { title } from "@/components/primitives";
+import { title } from "@/styles/primitives";
 import { projects } from "@/data/projects";
 import { useState } from "react";
 import { arrayBuffer } from "stream/consumers";
@@ -51,7 +50,7 @@ const Projects = () => {
       className="container
         min-h-screen w-full pt-20 mx-auto flex flex-col items-center gap-8 "
     >
-      <h2 className={clsx(title(), "mb-6")}>Mes Projets</h2>
+      <h2 className={title({ className: "mb-6" })}>Mes Projets</h2>
       <div className="">
         <ProjectsFilter
           activeTag={activeTag}

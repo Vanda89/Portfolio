@@ -57,12 +57,12 @@ const ScrollArrow = () => {
   }, [sectionIds]);
 
   return (
-    <div className="fixed bottom-10 right-10 z-50">
+    <div className="fixed bottom-10 right-5 z-50">
       <Button
         aria-label="Passer à la section suivante"
         isIconOnly
         onPress={handleClick}
-        className="p-2 rounded-full bg-gray-200 stroke-gray-800 hover:bg-black hover:stroke-white "
+        className="p-1 rounded-full bg-gray-200 stroke-gray-800 hover:bg-black hover:stroke-white "
       >
         {currentSection === sectionIds.length - 1 ? <ArrowUp /> : <ArrowDown />}
       </Button>
