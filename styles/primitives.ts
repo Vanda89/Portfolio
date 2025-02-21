@@ -1,5 +1,5 @@
-import { color } from "framer-motion";
 import { tv } from "tailwind-variants";
+import { color } from "framer-motion";
 
 export const title = tv({
   base: "tracking-tight inline font-semibold",
@@ -14,19 +14,25 @@ export const title = tv({
       foreground: "dark:from-[#FFFFFF] dark:to-[#4B4B4B]",
     },
     size: {
+      xxs: "text-[1.25rem] lg:text-2xl leading-6",
       xs: "text-[1.75rem] lg:text-3xl leading-7",
       sm: "text-[2rem] lg:text-4xl leading-8",
       md: "text-[2.3rem] lg:text-5xl leading-9",
-      lg: "text-5xl lg:text-6xl leading-10",
+      lg: "text-4xl lg:text-6xl leading-10",
       xl: "text-6xl lg:text-7xl leading-[3.5rem]",
+    },
+    weight: {
+      thin: "font-thin",
+      normal: "font-normal",
+      medium: "font-medium",
+      bold: "font-semibold",
+      extrabold: "font-extrabold",
     },
     fullWidth: {
       true: "w-full block",
     },
   },
-  defaultVariants: {
-    size: "md",
-  },
+
   compoundVariants: [
     {
       color: [
@@ -44,13 +50,21 @@ export const title = tv({
 });
 
 export const subtitle = tv({
-  base: "w-full md:w-1/2 my-2 text-lg lg:text-xl text-default-600 block max-w-full",
+  base: "w-full my-2 text-default-600 block max-w-full",
   variants: {
+    size: {
+      sm: "text-base md:text-lg",
+      md: "text-lg md:text-xl",
+      lg: "text-xl md:text-2xl",
+      xl: "text-2xl md:text-3xl",
+    },
     fullWidth: {
       true: "!w-full",
+      false: "md:w-1/2",
     },
   },
   defaultVariants: {
+    size: "md",
     fullWidth: true,
   },
 });
@@ -61,7 +75,7 @@ export const textBase = tv({
     size: {
       xs: "text-xs",
       sm: "text-sm",
-      base: "text-base",
+      md: "text-base",
       lg: "text-lg",
       xl: "text-xl",
     },
@@ -80,7 +94,7 @@ export const textBase = tv({
     },
   },
   defaultVariants: {
-    size: "base",
+    size: "md",
     weight: "normal",
   },
 });
@@ -94,7 +108,7 @@ export const card = tv({
   },
 });
 
-const buttonVariants = {
+export const buttonVariants = {
   base: "inline-flex items-center justify-center px-2 py-1 cursor-pointer text-xs md:text-sm rounded-full",
   active: "bg-secondary text-white dark:text-violet-500 dark:bg-white",
   inactive: "bg-default-50",
