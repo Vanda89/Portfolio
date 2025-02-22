@@ -1,0 +1,67 @@
+{
+  "name": "Sandrine Alcazar",
+  "role": "Développeuse Front-end JavaScript ",
+  "contacts": {
+    "phone": "06 26 08 41 91",
+    "email": "sandrinealcazar@gmail.com",
+    "github": "https://github.com/Vanda89",
+    "linkedin": "https://www.linkedin.com/in/alcazar-sandrine/"
+  },
+  "skills": [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "React",
+    "Next.js",
+    "TailwindCSS",
+    "Node.js",
+    "MongoDB",
+    "Redux",
+    "TypeScript"
+  ],
+  "formation": [
+    {
+      "title": "Développeur Front-end JavaScript/React",
+      "company": "OpenClassrooms",
+      "duration": "08/2023 - 10/2024",
+      "projects": []
+    },
+    {
+      "title": "Développeur/Intégrateur Web",
+      "company": "OpenClassrooms",
+      "duration": "02/2018 - 09/2018",
+      "projects": []
+    },
+    {
+      "title": "Baccalauréat Littéraire",
+      "company": "Lycée Alphonse Daudet - Tarascon-sur-Rhône (13)",
+      "duration": "2007"
+    }
+  ],
+  "activities": [
+    {
+      "title": "Développement de mon portfolio en Next.js",
+      "duration": "01/2025",
+      "description": "Développement d'une interface moderne et responsive mettant en avant mes projets et compétences en développement web."
+    },
+    {
+      "title": "KidsBook Adventures",
+      "duration": "11/2024",
+      "description": "Développement d'une plateforme dédiée à la création de livres pour enfants en Next.js avec intégration IA"
+    },
+    {
+      "title": "Congé parental d'éducation",
+      "duration": "2021 - 2024"
+    },
+    {
+      "title": "Congé parental d'éducation",
+      "duration": "2015 - 2018"
+    },
+    {
+      "title": "AVS (AESH)",
+      "company": "Ecoles diverses",
+      "duration": "2013 - 2015",
+      "description": "Accompagnement d'enfants TDA et polyhandicapés "
+    }
+  ]
+}
