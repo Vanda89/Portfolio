@@ -6,10 +6,10 @@ import ProjectsList from "../projects/ProjectsList";
 import ProjectsFilter from "../projects/ProjectsFilter";
 
 import { title } from "@/styles/primitives";
-import { projects } from "@/data/projects";
 import { useState } from "react";
 import { arrayBuffer } from "stream/consumers";
-import { Project } from "@/types/Project";
+import projects from "@/data/projects.json";
+import { Project } from "@/types/types";
 
 const Projects = () => {
   const [activeTag, setActiveTag] = useState("Tous");
@@ -33,8 +33,8 @@ const Projects = () => {
       return array;
     } else {
       return array.filter((project) =>
-        Object.keys(project.category).some((key) =>
-          project.category[key].some((item) =>
+        Object.keys(project.filters).some((key) =>
+          project.filters[key].some((item) =>
             item.toLowerCase().includes(activeTag.toLowerCase())
           )
         )
@@ -48,16 +48,16 @@ const Projects = () => {
     <section
       id="projects"
       className="container
-        min-h-screen w-full pt-20 mx-auto flex flex-col items-center gap-8 "
+        min-h-screen w-full pt-20 px-2 mx-auto flex flex-col items-center gap-8 "
     >
-      <h2 className={title({ className: "mb-6" })}>Mes Projets</h2>
-      <div className="">
-        <ProjectsFilter
-          activeTag={activeTag}
-          handleTag={handleTag}
-          tagList={tagList}
-        />
-      </div>
+      <h2 className={title({ size: "md", class: "mb-6" })}>Mes Projets</h2>
+
+      <ProjectsFilter
+        activeTag={activeTag}
+        handleTag={handleTag}
+        tagList={tagList}
+      />
+
       <ProjectsList projects={filteredList} />
     </section>
   );

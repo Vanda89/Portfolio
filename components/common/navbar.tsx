@@ -12,17 +12,18 @@ import { link as linkStyles } from "@heroui/theme";
 import NextLink from "next/link";
 
 import { siteConfig } from "@/config/site";
-import { ThemeSwitch } from "@/components/theme-switch";
-import { GithubIcon, LinkedInIcon } from "@/components/icons";
+import { ThemeSwitch } from "@/components/common/theme-switch";
+import { GithubIcon, LinkedInIcon } from "@/components/common/icons";
 import { tv } from "tailwind-variants";
 
 export const navbarVariants = tv({
   slots: {
     navbarBase: "static py-8 bg-background-100",
-    navbarBrand: "gap-3 max-w-fit font-bold text-inherit text-2xl uppercase",
-    linksContainer: "gap-6 justify-start ml-2 hidden lg:flex",
+    navbarBrand:
+      "gap-3 max-w-fit font-bold text-inherit text-lg lg:text-xl uppercase",
+    linksContainer: "gap-6 justify-start ml-2 hidden md:flex text-lg",
     navbarLinks:
-      "text-xl header-links data-[active=true]:text-primary data-[active=true]:font-medium",
+      "text-md lg:text-lg header-links data-[active=true]:text-primary data-[active=true]:font-medium",
     desktopIcon: "hidden sm:flex gap-4",
     icons: "text-default-500 header-links",
     navbarMobileMenu: "sm:hidden basis-1 pl-4",

@@ -1,7 +1,5 @@
-"use client";
 import Banner from "@/components/home/Banner";
 import Projects from "@/components/home/Projects";
-import { useRef } from "react";
 
 export default function Home() {
   return (

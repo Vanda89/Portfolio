@@ -1,7 +1,7 @@
 "use client";
 import { Button } from "@heroui/react";
 import { useEffect, useState } from "react";
-import { ArrowDown, ArrowUp } from "../icons";
+import { ArrowDown, ArrowUp } from "./icons";
 
 const ScrollArrow = () => {
   const [currentSection, setCurrentSection] = useState(0);

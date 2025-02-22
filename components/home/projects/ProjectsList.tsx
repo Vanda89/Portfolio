@@ -3,7 +3,7 @@
 "use client";
 import ProjectCard from "./ProjectCard";
 
-import { Project } from "@/types/Project";
+import { Project } from "@/types/types";
 
 type Props = {
   projects: Project[];
