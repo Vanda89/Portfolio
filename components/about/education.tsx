@@ -18,7 +18,7 @@ export const Education = ({
   projects: Project[];
 }) => {
   return (
-    <Card className="flex flex-col gap-4 p-4">
+    <Card className="flex flex-col gap-4 p-6" id="education">
       <CardHeader className="pb-4 border-b border-gray-300">
         <h2 className={title({ size: "md" })}>Formations</h2>
       </CardHeader>
@@ -43,11 +43,11 @@ export const Education = ({
                 {formationProjects.length > 0 && (
                   <ul className="flex flex-col  gap-4  mt-2 lg:pl-4 space-y-2">
                     {formationProjects.map((project) => (
-                      <li key={project.id} className="flex flex-col   gap-2">
+                      <li key={project.id} className="flex flex-col gap-2">
                         <div>
                           <span>🔹</span>
                           <a
-                            className="text-secondary font-semibold hover:underline"
+                            className="text-secondary font-semibold hover:underline hover:underline-offset-2"
                             href={project.url || "#"}
                             rel="noopener noreferrer"
                             target="_blank"
