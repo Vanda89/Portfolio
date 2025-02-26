@@ -1,5 +1,4 @@
 import { tv } from "tailwind-variants";
-import { color } from "framer-motion";
 
 export const title = tv({
   base: "tracking-tight inline font-semibold",
@@ -101,7 +100,7 @@ export const textBase = tv({
 
 export const card = tv({
   slots: {
-    base: "flex flex-col items-center h-full rounded-xl gap-16 p-4 text-foreground bg-foreground-100 shadow-cardShadowLight dark:shadow-cardShadowDark",
+    base: "flex flex-col items-center h-full rounded-xl gap-16 p-4 text-foreground bg-foreground-100 shadow-lg dark:shadow-cardShadowDark",
     image:
       "border-2 border-gray-100 h-[250px] p-0 overflow-hidden rounded-lg bg-cover",
     body: "text-center",
