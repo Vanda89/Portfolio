@@ -1,14 +1,7 @@
 "use client";
 
-import {
-  Image,
-  Button,
-  Card,
-  CardBody,
-  CardHeader,
-  Chip,
-  Link,
-} from "@heroui/react";
+import { Card, CardBody, CardHeader } from "@heroui/react";
+
 import { title, subtitle, textBase } from "@/styles/primitives";
 import { CvData, Project } from "@/types/types";
 
@@ -16,6 +9,7 @@ const formationCategoryMap: { [key: string]: string } = {
   "Développeur Front-end JavaScript/React": "dev js",
   "Développeur/Intégrateur Web": "dev web",
 };
+
 export const Education = ({
   cvData,
   projects,
@@ -32,7 +26,7 @@ export const Education = ({
         {cvData.formation.map((formation) => {
           const category = formationCategoryMap[formation.title];
           const formationProjects = projects.filter(
-            (project) => project.category === category
+            (project) => project.category === category,
           );
 
           return (
@@ -53,10 +47,10 @@ export const Education = ({
                   {formationProjects.map((project) => (
                     <li key={project.id} className="before:content-['⭐'] mb-2">
                       <a
-                        href={project.url || "#"}
-                        target="_blank"
-                        rel="noopener noreferrer"
                         className="ml-2 text-secondary font-semibold hover:underline"
+                        href={project.url || "#"}
+                        rel="noopener noreferrer"
+                        target="_blank"
                       >
                         {project.title} :
                       </a>

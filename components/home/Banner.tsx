@@ -1,17 +1,17 @@
 "use client";
-import React, { forwardRef } from "react";
+import React from "react";
 import { Link } from "@heroui/link";
 import { button as buttonStyles } from "@heroui/theme";
 
 import { siteConfig } from "@/config/site";
 import { title, subtitle } from "@/styles/primitives";
-import { GithubIcon } from "@/components/icons";
+import { GithubIcon } from "@/components/common/icons";
 
 const Banner = () => {
   return (
     <section
-      id="banner"
       className="inline-block w-full text-center justify-center items-center min-h-[calc(100vh-12rem)] sm:min-h-[calc(100vh-8rem)] bg-center bg-cover pt-20"
+      id="banner"
       style={{}}
     >
       <div className="mb-8">
@@ -34,19 +34,18 @@ const Banner = () => {
       <div className="flex gap-3 mt-16 justify-center">
         <Link
           isExternal
-          role="button"
           className={buttonStyles({
             color: "secondary",
             radius: "full",
             variant: "shadow",
           })}
           href="mailto:sandrinealcazar@gmail.com?subject=Opportunité%20professionnelle%20-%20Contact%20via%20votre%20portfolio"
+          role="button"
         >
           Contactez-moi
         </Link>
         <Link
           isExternal
-          role="button"
           className={buttonStyles({
             variant: "ghost",
             radius: "full",
@@ -54,6 +53,7 @@ const Banner = () => {
               "text-foreground border-foreground hover:bg-foreground hover:opacity-100 hover:text-white dark:hover:text-black",
           })}
           href={siteConfig.links.github}
+          role="button"
         >
           <GithubIcon size={20} />
           GitHub

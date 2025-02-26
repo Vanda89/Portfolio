@@ -8,13 +8,12 @@ import {
   NavbarMenuItem,
 } from "@heroui/navbar";
 import { Link } from "@heroui/link";
-import { link as linkStyles } from "@heroui/theme";
 import NextLink from "next/link";
+import { tv } from "tailwind-variants";
 
 import { siteConfig } from "@/config/site";
 import { ThemeSwitch } from "@/components/common/theme-switch";
 import { GithubIcon, LinkedInIcon } from "@/components/common/icons";
-import { tv } from "tailwind-variants";
 
 export const navbarVariants = tv({
   slots: {
@@ -51,7 +50,7 @@ export const navbarVariants = tv({
 
 export const Navbar = () => {
   return (
-    <HeroUINavbar id="navbar" className={navbarVariants.slots.navbarBase}>
+    <HeroUINavbar className={navbarVariants.slots.navbarBase} id="navbar">
       {/* Logo et links (Desktop) */}
       <NavbarContent className="basis-1/5 sm:basis-full gap-12" justify="start">
         <NavbarBrand className={navbarVariants.slots.navbarBrand}>
