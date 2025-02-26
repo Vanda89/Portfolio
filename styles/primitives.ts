@@ -13,13 +13,15 @@ export const title = tv({
       foreground: "dark:from-[#FFFFFF] dark:to-[#4B4B4B]",
     },
     size: {
-      xxs: "text-[1.25rem] lg:text-2xl leading-6",
-      xs: "text-[1.75rem] lg:text-3xl leading-7",
-      sm: "text-[2rem] lg:text-4xl leading-8",
-      md: "text-[2.3rem] lg:text-5xl leading-9",
-      lg: "text-4xl lg:text-6xl leading-10",
-      xl: "text-6xl lg:text-7xl leading-[3.5rem]",
+      xxs: "text-[0.875rem] sm:text-[1.25rem] lg:text-xl leading-6",
+      xs: "text-[1rem] sm:text-[1.5rem] lg:text-2xl leading-7",
+      sm: "text-[1.25rem] sm:text-[1.75rem] lg:text-3xl leading-8",
+      md: "text-[1.5rem] sm:text-[2rem] lg:text-4xl leading-9",
+      lg: "text-[1.75rem] sm:text-[2.3rem] lg:text-5xl leading-10",
+      xl: "text-[2rem] sm:text-[2.5rem] lg:text-6xl leading-[3.5rem]",
+      xxl: "text-[2.5rem] sm:text-[3rem] lg:text-7xl leading-[3.5rem]",
     },
+
     weight: {
       thin: "font-thin",
       normal: "font-normal",
@@ -52,10 +54,10 @@ export const subtitle = tv({
   base: "w-full my-2 text-default-600 block max-w-full",
   variants: {
     size: {
-      sm: "text-base md:text-lg",
-      md: "text-lg md:text-xl",
-      lg: "text-xl md:text-2xl",
-      xl: "text-2xl md:text-3xl",
+      sm: "text-sm md:text-base",
+      md: "text-base md:text-lg",
+      lg: "text-lg md:text-xl",
+      xl: "text-xl md:text-2xl",
     },
     fullWidth: {
       true: "!w-full",
