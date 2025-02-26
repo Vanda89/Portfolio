@@ -10,7 +10,7 @@ interface Props {
 
 const ProjectsFilter = ({ activeTag, handleTag, tagList }: Props) => {
   return (
-    <div className="w-full grid grid-cols-3 justify-center lg:flex lg:justify-between gap-2">
+    <div className="w-full grid grid-cols-3 justify-center lg:flex lg:justify-between gap-2 ">
       {tagList.map((tag) => {
         return (
           <Button
@@ -20,8 +20,8 @@ const ProjectsFilter = ({ activeTag, handleTag, tagList }: Props) => {
               radius: "full",
               variant: "shadow",
               color: "default",
-              className: ` px-2 md:px-8 py-1 md:py-2 cursor-pointer text-xs md:text-sm
-              ${activeTag === tag ? "bg-secondary text-white dark:text-violet-500 dark:bg-white" : "bg-default-50"}`,
+              className: ` px-2 md:px-8 py-1 md:py-2 cursor-pointer text-sm md:text-md 
+      ${activeTag === tag ? "bg-secondary text-white dark:text-violet-500 dark:bg-white" : "bg-default-50"}`,
             })}
             value={activeTag}
             onPress={() => handleTag(tag)}

@@ -35,9 +35,9 @@ const Projects = () => {
       return array.filter((project) =>
         Object.keys(project.filters).some((key) =>
           project.filters[key].some((item) =>
-            item.toLowerCase().includes(activeTag.toLowerCase()),
-          ),
-        ),
+            item.toLowerCase().includes(activeTag.toLowerCase())
+          )
+        )
       );
     }
   };
@@ -50,7 +50,7 @@ const Projects = () => {
         min-h-screen w-full pt-20 px-2 mx-auto flex flex-col items-center gap-8 "
       id="projects"
     >
-      <h2 className={title({ size: "md", class: "mb-6" })}>Mes Projets</h2>
+      <h2 className={title({ size: "lg" })}>Mes Projets</h2>
 
       <ProjectsFilter
         activeTag={activeTag}
