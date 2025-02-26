@@ -1,6 +1,7 @@
 "use client";
 
 import { Card, CardBody, CardHeader } from "@heroui/react";
+
 import { title, subtitle, textBase } from "@/styles/primitives";
 import { CvData, Project } from "@/types/types";
 
@@ -26,35 +27,37 @@ export const Education = ({
           {cvData.formation.map((formation) => {
             const category = formationCategoryMap[formation.title];
             const formationProjects = projects.filter(
-              (project) => project.category === category
+              (project) => project.category === category,
             );
 
             return (
               <li
                 key={`${formation.title}-${formation.duration}`}
-                className="flex flex-col gap-1 pl-4"
+                className="flex flex-col gap-1 md:pl-4"
               >
-                <h3 className={title({ size: "xs" })}>{formation.title}</h3>
+                <h3 className={title({ size: "sm" })}>{formation.title}</h3>
                 <p className={subtitle({ size: "sm" })}>
                   {formation.company} - {formation.duration}
                 </p>
 
                 {formationProjects.length > 0 && (
-                  <ul className="mt-2 pl-4 space-y-2">
+                  <ul className="flex flex-col  gap-4  mt-2 lg:pl-4 space-y-2">
                     {formationProjects.map((project) => (
-                      <li key={project.id} className="flex items-center gap-2">
-                        <span>🔹</span>
-                        <a
-                          href={project.url || "#"}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-secondary font-semibold hover:underline"
-                        >
-                          {project.title}
-                        </a>
-                        <span className={textBase({ size: "xs" })}>
+                      <li key={project.id} className="flex flex-col   gap-2">
+                        <div>
+                          <span>🔹</span>
+                          <a
+                            className="text-secondary font-semibold hover:underline"
+                            href={project.url || "#"}
+                            rel="noopener noreferrer"
+                            target="_blank"
+                          >
+                            {project.title}
+                          </a>
+                        </div>
+                        <p className={textBase({ size: "xs" })}>
                           {project.resume}
-                        </span>
+                        </p>
                       </li>
                     ))}
                   </ul>

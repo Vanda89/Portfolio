@@ -15,7 +15,7 @@ import { CvData, Project } from "@/types/types";
 export const Skills = ({ cvData }: { cvData: CvData }) => {
   return (
     <Card className="p-4 gap-4">
-      <CardHeader>
+      <CardHeader className="pb-4 border-b border-gray-300">
         <h2
           className={title({
             size: "md",
