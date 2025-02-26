@@ -8,12 +8,9 @@ export const siteConfig = {
       label: "Accueil",
       href: "/",
     },
+
     {
-      label: "Projets",
-      href: "/project",
-    },
-    {
-      label: "CV",
+      label: "C.V.",
       href: "/about",
     },
     {
@@ -27,11 +24,7 @@ export const siteConfig = {
       href: "/",
     },
     {
-      label: "Projets",
-      href: "/project",
-    },
-    {
-      label: "À propos",
+      label: "C.V.",
       href: "/about",
     },
     {

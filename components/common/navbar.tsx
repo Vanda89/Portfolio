@@ -27,7 +27,8 @@ export const navbarVariants = tv({
     icons: "text-default-500 header-links",
     navbarMobileMenu: "sm:hidden basis-1 pl-4",
     mobileLinksContainer: "mx-4 mt-2 flex flex-col gap-2",
-    navbarMobileItem: "text-lg hover:text-primary py-2 px-4 rounded-md",
+    navbarMobileItem:
+      "text-lg text-foreground hover:text-primary py-2 px-4 rounded-md",
   },
   variants: {
     color: {
@@ -103,20 +104,13 @@ export const Navbar = () => {
       </NavbarContent>
 
       {/* Menu Hamburger */}
-      <NavbarMenu>
+      <NavbarMenu className="mt-16">
         <div className={navbarVariants.slots.mobileLinksContainer}>
           {siteConfig.navMenuItems.map((item, index) => (
             <NavbarMenuItem key={`${item}-${index}`}>
               <Link
-                color={
-                  index === 2
-                    ? "primary"
-                    : index === siteConfig.navMenuItems.length - 1
-                      ? "danger"
-                      : "foreground"
-                }
                 href={item.href}
-                size="lg"
+                className={navbarVariants.slots.navbarMobileItem}
               >
                 {item.label}
               </Link>
