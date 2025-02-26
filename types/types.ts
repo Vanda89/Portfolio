@@ -40,6 +40,7 @@ export interface Activities {
 }
 
 export interface CvData {
+  image: string;
   name: string;
   role: string;
   contacts: Contacts;
