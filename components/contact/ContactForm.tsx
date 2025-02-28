@@ -1,6 +1,8 @@
 "use client";
 import React from "react";
-import { Button, Form, Input, Textarea, tv } from "@heroui/react";
+import { Form, Input, Textarea, tv } from "@heroui/react";
+
+import Button from "../common/Button";
 
 import cvData from "@/data/cv.json";
 

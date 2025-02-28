@@ -171,16 +171,19 @@ export const ArrowUp = ({
   ...props
 }: IconSvgProps) => (
   <svg
-    xmlns="http://www.w3.org/2000/svg"
     className="w-6 h-6"
     fill="none"
+    height={size || height}
     viewBox="0 0 24 24"
+    width={size || width}
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
   >
     <path
+      d="M5 15l7-7 7 7"
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={2}
-      d="M5 15l7-7 7 7"
     />
   </svg>
 );
@@ -191,34 +194,54 @@ export const ArrowDown = ({
   ...props
 }: IconSvgProps) => (
   <svg
-    xmlns="http://www.w3.org/2000/svg"
     className="w-6 h-6 "
     fill="none"
+    height={size || height}
     viewBox="0 0 24 24"
+    width={size || width}
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
   >
     <path
+      d="M19 9l-7 7-7-7"
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={2}
-      d="M19 9l-7 7-7-7"
     />
   </svg>
 );
 
 export const MailIcon = ({ size = 24, className = "" }) => (
   <svg
-    width={size}
-    height={size}
-    viewBox="0 0 24 24"
+    className={className}
     fill="none"
+    height={size}
     stroke="currentColor"
-    strokeWidth="2"
     strokeLinecap="round"
     strokeLinejoin="round"
-    className={className}
+    strokeWidth="2"
+    viewBox="0 0 24 24"
+    width={size}
     xmlns="http://www.w3.org/2000/svg"
   >
     <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
     <polyline points="22,6 12,13 2,6" />
+  </svg>
+);
+
+export const PhoneIcon = ({ size = 24, className = "" }) => (
+  <svg
+    className={className}
+    fill="none"
+    height={size}
+    stroke="currentColor"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    strokeWidth="2"
+    viewBox="0 0 24 24"
+    width={size}
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path d="M22 16.92V19a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2 6.18 2 2 0 0 1 4 4h2.08a2 2 0 0 1 2 .91l2.36 3.94a2 2 0 0 1-.45 2.55l-1.27 1a16 16 0 0 0 6 6l1-1.27a2 2 0 0 1 2.55-.45l3.94 2.36a2 2 0 0 1 .91 2Z" />
   </svg>
 );

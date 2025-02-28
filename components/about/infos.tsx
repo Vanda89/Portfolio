@@ -1,16 +1,21 @@
 "use client";
 
-import { Button, Card, CardBody, CardHeader, Avatar } from "@heroui/react";
-import { button as buttonStyles } from "@heroui/theme";
+import { Card, CardBody, CardHeader, Avatar } from "@heroui/react";
+
+import Button from "../common/Button";
 
 import { title, subtitle } from "@/styles/primitives";
 import { CvData } from "@/types/types";
-import { GithubIcon, LinkedInIcon, MailIcon } from "@/components/common/icons";
-import { siteConfig } from "@/config/site";
+import {
+  GithubIcon,
+  LinkedInIcon,
+  MailIcon,
+  PhoneIcon,
+} from "@/components/common/icons";
 
 export const Infos = ({ cvData }: { cvData: CvData }) => {
   return (
-    <Card className="p-6 flex flex-col items-center">
+    <Card className="p-6 flex flex-col items-center" id="infos">
       <CardHeader className="md:w-[90%] lg:w-[80%]  flex flex-col md:flex-row items-center md:justify-center gap-8 md:gap-16 ">
         {/*  <Image
   src={cvData.image && cvData.image.trim() !== "" ? cvData.image : "/images/avatar-placeholder.png"}
@@ -22,7 +27,7 @@ export const Infos = ({ cvData }: { cvData: CvData }) => {
 
         <Avatar className="min-w-content min-h-content w-32 h-24" />
 
-        <div className="flex flex-col items-center w-full">
+        <div className="flex flex-col items-center md:!items-end w-full">
           <h1
             className={title({
               size: "xl",
@@ -32,31 +37,26 @@ export const Infos = ({ cvData }: { cvData: CvData }) => {
           >
             {cvData.name}
           </h1>
-          <p className={subtitle({ class: "text-center" })}>{cvData.role}</p>
+          <p className={subtitle({ class: "text-center md:text-end" })}>
+            {cvData.role}
+          </p>
         </div>
       </CardHeader>
-      <CardBody className="md:w-[90%] lg:w-[80%] flex flex-col md:flex-row md:justify-center w-full items-center gap-4">
+      <CardBody className="w-full   grid grid-col-1 md:grid-cols-2 lg:grid-cols-4 gap-4  place-items-center md:place-content-between">
         <Button
           as="a"
-          className={buttonStyles({
-            variant: "shadow",
-            fullWidth: true,
-            class: "text-xs md:text-md",
-          })}
+          className="text-xs md:text-md w-56 "
           color="default"
-          href={siteConfig.links.mail}
+          href={cvData.contacts.email}
+          variant="shadow"
         >
           <MailIcon className="w-4 text-secondary" /> {cvData.contacts.email}
         </Button>
         <Button
           as="a"
-          className={buttonStyles({
-            variant: "shadow",
-            fullWidth: true,
-            class: "text-xs md:text-md",
-          })}
+          className="text-xs md:text-md w-56  "
           color="default"
-          href={siteConfig.links.linkedin}
+          href={cvData.contacts.linkedin}
           rel="noopener noreferrer"
           target="_blank"
           variant="shadow"
@@ -66,16 +66,22 @@ export const Infos = ({ cvData }: { cvData: CvData }) => {
         </Button>
         <Button
           as="a"
-          className={buttonStyles({
-            variant: "shadow",
-            fullWidth: true,
-            class: "text-xs md:text-md",
-          })}
-          href={siteConfig.links.github}
+          className="text-xs md:text-md w-56 "
+          href={cvData.contacts.github}
           rel="noopener noreferrer"
           target="_blank"
+          variant="shadow"
         >
           <GithubIcon className="w-5 text-secondary" /> GitHub
+        </Button>
+        <Button
+          as="a"
+          className="text-xs md:text-md w-56 "
+          color="default"
+          href={`tel:${cvData.contacts.phone}`}
+          variant="shadow"
+        >
+          <PhoneIcon className="w-4 text-secondary" /> {cvData.contacts.phone}
         </Button>
       </CardBody>
     </Card>
