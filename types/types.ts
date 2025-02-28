@@ -56,3 +56,28 @@ export interface Form {
   subject: string;
   message: string;
 }
+
+export interface Button {
+  as?: "a" | "button" | "link";
+  href?: string;
+  rel?: string;
+  target?: string;
+  isLoading?: boolean;
+  isDisabled?: boolean;
+  type?: "submit" | "reset" | "button";
+  children: React.ReactNode;
+  icon?: string | React.ReactNode;
+  size?: "sm" | "md" | "lg";
+  color?:
+    | "default"
+    | "primary"
+    | "secondary"
+    | "success"
+    | "warning"
+    | "danger";
+  variant?: "solid" | "ghost" | "shadow";
+  radius?: "none" | "sm" | "md" | "lg" | "full";
+  value?: string;
+  className?: string;
+  onClick?: () => void;
+}

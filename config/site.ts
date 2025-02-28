@@ -1,8 +1,14 @@
-export type SiteConfig = typeof siteConfig;
+import {
+  MailIcon,
+  LinkedInIcon,
+  GithubIcon,
+  PhoneIcon,
+} from "@/components/common/icons";
+import cvData from "@/data/cv.json";
 
 export const siteConfig = {
-  name: "Next.js + HeroUI",
-  description: "Make beautiful websites regardless of your design experience.",
+  name: "Portfolio - Sandrine ALCAZAR",
+
   navItems: [
     {
       label: "Accueil",
@@ -32,10 +38,36 @@ export const siteConfig = {
       href: "/contact",
     },
   ],
-  links: {
-    github: "https://github.com/Vanda89",
-    linkedin: "https://www.linkedin.com/in/alcazar-sandrine/",
-    docs: "https://heroui.com",
-    mail: "mailto:sandrinealcazar@gmail.com?subject=Opportunité%20professionnelle%20-%20Contact%20via%20votre%20portfolio",
-  },
+  footer: [
+    {
+      label: "Mentions légales",
+      href: "/mentions",
+    },
+  ],
+  contactLinks: [
+    {
+      href: cvData.contacts.email,
+      icon: MailIcon,
+      label: cvData.contacts.email,
+    },
+    {
+      href: cvData.contacts.linkedin,
+      icon: LinkedInIcon,
+      label: "LinkedIn",
+      target: "_blank",
+      rel: "noopener noreferrer",
+    },
+    {
+      href: cvData.contacts.github,
+      icon: GithubIcon,
+      label: "GitHub",
+      target: "_blank",
+      rel: "noopener noreferrer",
+    },
+    {
+      href: `tel:${cvData.contacts.phone}`,
+      icon: PhoneIcon,
+      label: cvData.contacts.phone,
+    },
+  ],
 };
