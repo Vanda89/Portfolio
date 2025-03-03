@@ -5,7 +5,7 @@ import { ContactForm } from "@/components/contact/ContactForm";
 
 const ContactPage = () => {
   return (
-    <div className="h-full max-w-lg mx-auto flex flex-col justify-center px-4 gap-24">
+    <div className="h-full max-w-lg mx-auto flex flex-col justify-center py-10 px-4 gap-24">
       <h1
         className={title({
           size: "sm",

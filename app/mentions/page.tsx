@@ -4,7 +4,7 @@ import { Card, CardBody, CardHeader } from "@heroui/react";
 import Link from "next/link";
 
 import Button from "@/components/common/Button";
-import { title, subtitle, textBase } from "@/styles/primitives";
+import { title, textBase } from "@/styles/primitives";
 import cvData from "@/data/cv.json";
 
 export default function MentionsLegales() {
@@ -34,10 +34,10 @@ export default function MentionsLegales() {
             <p>
               Contact :{" "}
               <Link
-                href={cvData.contacts.email}
-                target="_blank"
-                rel="noopener noreferrer"
                 className="text-primary underline underline-offset-4"
+                href={cvData.contacts.email}
+                rel="noopener noreferrer"
+                target="_blank"
               >
                 {cvData.contacts.email}
               </Link>{" "}
@@ -55,10 +55,10 @@ export default function MentionsLegales() {
               <p>
                 Site web :{" "}
                 <Link
-                  href="https://ovh.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
                   className="text-primary underline underline-offset-4"
+                  href="https://ovh.com"
+                  rel="noopener noreferrer"
+                  target="_blank"
                 >
                   ovh.com{" "}
                 </Link>{" "}
@@ -93,7 +93,7 @@ export default function MentionsLegales() {
                 Ce site ne collecte aucune donnée personnelle. Le formulaire de
                 contact utilise un simple lien{" "}
                 <span className="font-semibold">mailto:</span> permettant
-                d'envoyer un email directement depuis votre messagerie.
+                d&apos;envoyer un email directement depuis votre messagerie.
               </p>
             </div>
           </section>
@@ -102,7 +102,7 @@ export default function MentionsLegales() {
             <h2 className={title({ size: "sm", weight: "bold" })}>Cookies</h2>
             <div className={textBase({ class: "space-y-2" })}>
               <p>
-                Ce site n'utilise{" "}
+                Ce site n&apos;utilise{" "}
                 <span className="font-semibold">aucun cookie</span>.
               </p>
             </div>
@@ -114,9 +114,9 @@ export default function MentionsLegales() {
             </h2>
             <div className={textBase({ class: "space-y-2" })}>
               <p>
-                L'éditeur du site ne saurait être tenu responsable des éventuels
-                dommages liés à l'utilisation du site ou des informations qui y
-                sont publiées.
+                L&apos;éditeur du site ne saurait être tenu responsable des
+                éventuels dommages liés à l&apos;utilisation du site ou des
+                informations qui y sont publiées.
               </p>
             </div>
           </section>
@@ -124,12 +124,12 @@ export default function MentionsLegales() {
           <div className="flex justify-center py-6">
             <Button
               as="a"
-              href="/"
-              color="secondary"
-              variant="ghost"
               className="font-medium"
+              color="secondary"
+              href="/"
+              variant="ghost"
             >
-              Retour à l'accueil
+              Retour à l&apos;accueil
             </Button>
           </div>
         </CardBody>

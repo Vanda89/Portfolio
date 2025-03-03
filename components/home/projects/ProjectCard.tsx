@@ -2,6 +2,7 @@
 
 "use client";
 import { Link, Image, CardBody, Card, CardHeader } from "@heroui/react";
+
 import { card, textBase, title } from "@/styles/primitives";
 import { Project } from "@/types/types";
 import { GithubIcon } from "@/components/common/icons";
@@ -25,7 +26,7 @@ const ProjectCard = ({ project }: Props) => {
           <div className="flex items-center gap-2">
             <h3 className={title({ size: "sm" })}>{project.title}</h3>
             {isGithubLink && (
-              <GithubIcon className="w-5 h-5 text-default-500" />
+              <GithubIcon className="text-default-500 w-5 h-5" />
             )}
           </div>
           <p className={textBase({ align: "justify", className: "mt-8" })}>

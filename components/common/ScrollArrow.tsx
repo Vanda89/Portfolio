@@ -68,6 +68,7 @@ const ScrollArrow = () => {
       window.scrollTo({ top: 0, behavior: "smooth" });
     } else {
       const nextSection = currentSection + 1;
+
       setCurrentSection(nextSection);
       scrollToElement(nextSection);
     }
@@ -83,8 +84,10 @@ const ScrollArrow = () => {
 
         elementIds.forEach((id, index) => {
           const element = document.getElementById(id);
+
           if (element) {
             const rect = element.getBoundingClientRect();
+
             if (rect.top <= viewportMiddle && rect.bottom >= viewportMiddle) {
               setCurrentSection(index);
             }

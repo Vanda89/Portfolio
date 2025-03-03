@@ -14,12 +14,6 @@ module.exports = {
         sans: ["var(--font-sans)"],
         mono: ["var(--font-mono)"],
       },
-      boxShadow: {
-        cardShadowLight:
-          "0px 10px 10px rgba(0, 0, 0, 0.2), 0px 20px 40px rgba(255, 255, 255, 0.15)",
-        cardShadowDark:
-          "0px 10px 10px rgba(255, 255, 255, 0.15), 0px 20px 40px rgba(0, 0, 0, 0.15)",
-      },
     },
   },
   darkMode: "class",

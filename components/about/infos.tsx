@@ -1,17 +1,11 @@
 "use client";
 
-import { Card, CardBody, CardHeader, Avatar } from "@heroui/react";
+import { Card, CardBody, CardHeader } from "@heroui/react";
 
 import Button from "../common/Button";
 
 import { title, subtitle } from "@/styles/primitives";
 import { CvData } from "@/types/types";
-import {
-  GithubIcon,
-  LinkedInIcon,
-  MailIcon,
-  PhoneIcon,
-} from "@/components/common/icons";
 import { siteConfig as site } from "@/config/site";
 type ContactLink = {
   href: string;
@@ -23,15 +17,16 @@ type ContactLink = {
 
 const contactButton = (link: ContactLink) => {
   const Icon = link.icon;
+
   return (
     <Button
       as="a"
       className="text-xs md:text-md w-56 "
       color="default"
       href={link.href}
-      variant="shadow"
-      target={link.target}
       rel={link.rel}
+      target={link.target}
+      variant="shadow"
     >
       <Icon className="w-4 text-secondary" /> {link.label}
     </Button>

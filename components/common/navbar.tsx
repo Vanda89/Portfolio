@@ -18,7 +18,7 @@ import { GithubIcon, LinkedInIcon } from "@/components/common/icons";
 
 export const navbarVariants = tv({
   slots: {
-    navbarBase: "static py-8 bg-background-100",
+    navbarBase: "static py-4 bg-background-100",
     navbarBrand:
       "gap-3 max-w-fit font-bold text-inherit text-lg lg:text-xl uppercase",
     linksContainer: "gap-6 justify-start ml-2 hidden md:flex text-lg",
@@ -30,23 +30,6 @@ export const navbarVariants = tv({
     mobileLinksContainer: "mx-4 mt-2 flex flex-col gap-2",
     navbarMobileItem:
       "text-lg text-foreground hover:text-primary py-2 px-4 rounded-md",
-  },
-  variants: {
-    color: {
-      default: "text-inherit",
-      primary: "text-primary",
-      secondary: "text-secondary",
-      danger: "text-danger",
-    },
-    size: {
-      sm: "text-sm",
-      lg: "text-lg",
-      xl: "text-xl",
-    },
-    visibility: {
-      hidden: "hidden",
-      visible: "visible",
-    },
   },
 });
 
