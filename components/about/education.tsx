@@ -20,7 +20,7 @@ export const Education = ({
   return (
     <Card className="flex flex-col gap-4 p-6" id="education">
       <CardHeader className="pb-4 border-b border-gray-300">
-        <h2 className={title({ size: "md" })}>Formations</h2>
+        <h2 className={title({ size: "md", weight: "bold" })}>Formations</h2>
       </CardHeader>
       <CardBody>
         <ul className="space-y-4 flex flex-col gap-8">
@@ -44,15 +44,16 @@ export const Education = ({
                   <ul className="flex flex-col  gap-4  mt-2 lg:pl-4 space-y-2">
                     {formationProjects.map((project) => (
                       <li key={project.id} className="flex flex-col gap-2">
-                        <div>
+                        <div className="flex">
                           <span>🔹</span>
                           <a
-                            className="text-secondary font-semibold hover:underline hover:underline-offset-2"
                             href={project.url || "#"}
                             rel="noopener noreferrer"
                             target="_blank"
                           >
-                            {project.title}
+                            <h4 className="text-secondary font-semibold underline underline-offset-2 transition-colors duration-300 hover:text-primary">
+                              {project.title}
+                            </h4>
                           </a>
                         </div>
                         <p className={textBase({ size: "xs" })}>

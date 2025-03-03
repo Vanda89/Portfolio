@@ -9,13 +9,13 @@ export const Activities = ({ cvData }: { cvData: CvData }) => {
   return (
     <Card className="flex flex-col gap-6 p-6 bg-foreground-50" id="activities">
       <CardHeader className="pb-4 border-b border-foreground-300">
-        <h2 className={title({ size: "md" })}>Activités</h2>
+        <h2 className={title({ size: "md", weight: "bold" })}>Activités</h2>
       </CardHeader>
       <CardBody className="space-y-6">
         <ul className="space-y-4">
           {cvData.activities.map((activity) => (
             <li
-              key={activity.title}
+              key={`${activity.title}-${activity.duration}`}
               className="flex flex-col gap-4 lg:gap-0 p-4 bg-foreground-50 border-2 border-secondary-300 rounded-lg shadow-sm hover:shadow-lg transition-shadow"
             >
               <div className="flex justify-between items-center lg:mb-4">

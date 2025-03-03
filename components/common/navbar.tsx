@@ -11,6 +11,7 @@ import { Link } from "@heroui/link";
 import NextLink from "next/link";
 import { tv } from "tailwind-variants";
 
+import cvData from "@/data/cv.json";
 import { siteConfig } from "@/config/site";
 import { ThemeSwitch } from "@/components/common/theme-switch";
 import { GithubIcon, LinkedInIcon } from "@/components/common/icons";
@@ -81,13 +82,13 @@ export const Navbar = () => {
           <Link
             isExternal
             aria-label="Linkedin"
-            href={siteConfig.links.linkedin}
+            href={cvData.contacts.linkedin}
           >
             <LinkedInIcon className={navbarVariants.slots.icons} />
           </Link>
         </NavbarItem>
         <NavbarItem className={navbarVariants.slots.desktopIcon}>
-          <Link isExternal aria-label="Github" href={siteConfig.links.github}>
+          <Link isExternal aria-label="Github" href={cvData.contacts.github}>
             <GithubIcon className={navbarVariants.slots.icons} />
           </Link>
           <ThemeSwitch />
@@ -96,7 +97,7 @@ export const Navbar = () => {
 
       {/* Social Links & Theme Switch (Mobile) */}
       <NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
-        <Link isExternal aria-label="Github" href={siteConfig.links.github}>
+        <Link isExternal aria-label="Github" href={cvData.contacts.github}>
           <GithubIcon className={navbarVariants.slots.icons} />
         </Link>
         <ThemeSwitch />
@@ -109,8 +110,8 @@ export const Navbar = () => {
           {siteConfig.navMenuItems.map((item, index) => (
             <NavbarMenuItem key={`${item}-${index}`}>
               <Link
-                href={item.href}
                 className={navbarVariants.slots.navbarMobileItem}
+                href={item.href}
               >
                 {item.label}
               </Link>

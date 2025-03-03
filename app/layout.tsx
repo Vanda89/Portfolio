@@ -38,11 +38,10 @@ export default function RootLayout({
         className={`min-w-xs min-h-screen bg-background font-sans antialiased   mx-auto scroll-smooth ${fontSans.variable}`}
       >
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
-          <div className="relative flex flex-col h-screen w-full">
+          <div className="relative flex flex-col h-screen w-full gap-10">
             <Navbar />
-            <main className=" self-center pt-8 w-full  flex-grow ">
-              {children}
-            </main>
+
+            <main className=" self-center  w-full  flex-grow ">{children}</main>
             <Footer />
             <ScrollArrow />
           </div>

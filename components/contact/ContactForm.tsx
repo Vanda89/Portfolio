@@ -11,7 +11,7 @@ export const formVariants = tv({
     form: "flex flex-col items-center justify-center gap-4",
     input: " h-[64px] mt-20 font-semibold  ",
     inputWrapper: "shadow-lg dark:shadow-cardShadowDark",
-    label: "!text-secondary",
+    label: "!text-secondary text-sm md:text-medium",
     textarea: "font-semibold",
     button: "mt-8 shadow-lg",
     message: "",
@@ -22,9 +22,6 @@ export const formVariants = tv({
       lg: "text-lg",
       xl: "text-xl",
     },
-  },
-  defaultVariants: {
-    size: "lg",
   },
 });
 

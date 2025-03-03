@@ -12,6 +12,7 @@ export const Skills = ({ cvData }: { cvData: CvData }) => {
         <h2
           className={title({
             size: "md",
+            weight: "bold",
           })}
         >
           Compétences
