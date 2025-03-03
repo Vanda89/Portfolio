@@ -13,7 +13,7 @@ export interface Project {
   filters: { [key: string]: string[] };
   resume: string;
   description: string;
-  url: string;
+  url?: string;
   image: string;
   github: string;
 }

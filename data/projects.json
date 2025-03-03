@@ -10,8 +10,7 @@
     },
     "resume": "Une interface moderne et responsive mettant en avant mes projets et compétences en développement web.",
     "description": "Site personnel développé en Next.js, Hero UI et TailwindCSS, rassembleant mes projets et mes informations personnelles. Il reflète mon évolution en développement web moderne, en mettant l'accent sur des designs responsives et une gestion flexible des thèmes. Ce projet m'a permis de consolider mes compétences tout en explorant de nouvelles approches créatives.",
-
-    "url": "https://sandrinealcazar.ovh",
+    "_url": "https://sandrinealcazar.ovh",
     "image": "/images/projects_thumbnails/portfolio.png",
     "github": "https://github.com/Vanda89/Portfolio"
   },
@@ -42,7 +41,7 @@
     },
     "resume": "Application web permettant de générer des histoires personnalisées pour enfants grâce à l'IA.",
     "description": "Application web génèrant des histoires personnalisées pour enfants avec OpenAI. L'application utilise un design kawaii, un système de thèmes colorés et une expérience utilisateur ludique.",
-    "url": "https://kidsbookadventures.sandrinealcazar.ovh",
+    "_url": "https://kidsbookadventures.sandrinealcazar.ovh",
     "image": "/images/projects_thumbnails/kidsbook_adventures.png",
     "github": "https://github.com/Vanda89/KidsBook_Adventures"
   },
@@ -57,8 +56,8 @@
       "technologies": ["TailwindCSS", "React", "Redux"]
     },
     "resume": "Refonte d'une application interne de jquery à React pour améliorer performances et accessibilité.",
-    "description": "WealthHealth est un projet de modernisation d’une application interne de gestion des dossiers employés (HRnet). L'objectif était de convertir l'application de jQuery à React, tout en améliorant ses performances, son accessibilité et son design. Ce projet met en évidence la transition d’une technologie obsolète à une pile moderne et performante, tout en résolvant des problèmes d’ergonomie et de stabilité pour les utilisateurs.",
-    "url": "https://wealth-health.sandrinealcazar.ovh",
+    "description": "WealthHealth est un projet de modernisation d'une application interne de gestion des dossiers employés (HRnet). L'objectif était de convertir l'application de jQuery à React, tout en améliorant ses performances, son accessibilité et son design. Ce projet met en évidence la transition d'une technologie obsolète à une pile moderne et performante, tout en résolvant des problèmes d'ergonomie et de stabilité pour les utilisateurs.",
+    "_url": "https://wealth-health.sandrinealcazar.ovh",
     "image": "/images/projects_thumbnails/wealth-health.png",
     "github": "https://github.com/Vanda89/WealthHealth"
   },
@@ -81,7 +80,7 @@
     },
     "resume": "Intégration d'une API pour un compte utilisateur bancaire et définition des endpoints avec Swagger",
     "description": "ArgentBank est une application bancaire en ligne offrant une gestion sécurisée des comptes bancaires. Ce projet inclut l'authentification des utilisateurs, la gestion des profils et des comptes via une interface moderne et responsive. Il prépare également une extension API pour la gestion des transactions (visualisation, modification, suppression).",
-    "url": "https://argentbank.sandrinealcazar.ovh/",
+    "_url": "https://argentbank.sandrinealcazar.ovh/",
     "image": "/images/projects_thumbnails/argentbank.png",
     "github": "https://github.com/Vanda89/ArgentBank"
   },
@@ -96,8 +95,8 @@
       "technologies": ["React", "Recharts", "TailwindCSS", "NodeJS"]
     },
     "resume": "Tableau de bord interactif d'analystics des performances sportives",
-    "description": "SportSee est une application React dédiée à l’analyse des performances sportives. Elle utilise Recharts pour afficher des graphiques dynamiques des sessions d’entraînement et des calories brûlées. Le projet intègre Axios pour récupérer les données d'une API backend, et offre une interface utilisateur intuitive permettant aux utilisateurs de suivre leurs progrès via un tableau de bord interactif.",
-    "url": "https://sportsee.sandrinealcazar.ovh",
+    "description": "SportSee est une application React dédiée à l'analyse des performances sportives. Elle utilise Recharts pour afficher des graphiques dynamiques des sessions d'entraînement et des calories brûlées. Le projet intègre Axios pour récupérer les données d'une API backend, et offre une interface utilisateur intuitive permettant aux utilisateurs de suivre leurs progrès via un tableau de bord interactif.",
+    "_url": "https://sportsee.sandrinealcazar.ovh",
     "image": "/images/projects_thumbnails/sportsee.png",
     "github": "https://github.com/Vanda89/SportSee"
   },
@@ -126,7 +125,7 @@
       "technologies": []
     },
     "resume": "Définition des besoins et conception de maquettes pour une plateforme de soutien scolaire. ",
-    "description": "Learn@home est un projet de conception d’une plateforme de soutien scolaire. Le projet inclut des maquettes sur Figma, des user stories et des diagrammes de cas d’usage. L’objectif est de définir les besoins d'enfants en difficulté scolaire et des tuteurs bénévoles, avec des fonctionnalités comme le chat, le calendrier et le tableau de bord.",
+    "description": "Learn@home est un projet de conception d'une plateforme de soutien scolaire. Le projet inclut des maquettes sur Figma, des user stories et des diagrammes de cas d'usage. L'objectif est de définir les besoins d'enfants en difficulté scolaire et des tuteurs bénévoles, avec des fonctionnalités comme le chat, le calendrier et le tableau de bord.",
     "url": "https://www.figma.com/design/AjDV7imr4r4IGSE1fYwhEI/Learn%40home?node-id=0-1&m=dev&t=uA6sl25XH8Kfg5Nh-1",
     "image": "/images/projects_thumbnails/learn@home.png",
     "github": "https://github.com/Vanda89/Learn-home"
@@ -187,7 +186,7 @@
     "filters": {
       "technologies": ["HTML/CSS", "JavaScript"]
     },
-    "resume": " Implémentation d’un formulaire d’inscription pour un tournoi de jeux vidéo, avec validation des champs et gestion des erreurs. ",
+    "resume": " Implémentation d'un formulaire d'inscription pour un tournoi de jeux vidéo, avec validation des champs et gestion des erreurs. ",
     "description": "GameOn est une plateforme de gestion des inscriptions pour des tournois de jeux vidéo. Le projet a consisté à optimiser et finaliser un formulaire d'inscription en ajoutant des fonctionnalités JavaScript manquantes, améliorant le code existant, validant les entrées utilisateur, et assurant la compatibilité responsive. Des tests manuels ont été réalisés pour garantir la stabilité et une documentation détaillée a été fournie.",
     "url": "https://gameon.sandrinealcazar.ovh",
     "image": "/images/projects_thumbnails/gameon.png",
@@ -308,7 +307,7 @@
       "technologies": ["HTML/CSS"]
     },
     "resume": "Maquette fonctionnelle pour un site d'agence web respectant les bonnes pratiques de responsive design et d'accessibilité.",
-    "description": "Webagency est une maquette fonctionnelle d'un site pour une agence web, développée uniquement en HTML/CSS et CSS. Le projet met l'accent sur l'application des bonnes pratiques de responsive design et d'accessibilité pour offrir une expérience utilisateur optimale sur tous les appareils.",
+    "description": "Webagency est une maquette fonctionnelle d'un site pour une agence web, développée uniquement en HTML et CSS. Le projet met l'accent sur l'application des bonnes pratiques de responsive design et d'accessibilité pour offrir une expérience utilisateur optimale sur tous les appareils.",
     "url": "https://webagency.sandrinealcazar.ovh",
     "image": "/images/projects_thumbnails/webagency.png",
     "github": "https://github.com/Vanda89/Webagency"
