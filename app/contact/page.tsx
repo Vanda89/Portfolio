@@ -3,7 +3,7 @@ import React from "react";
 import { title } from "@/styles/primitives";
 import { ContactForm } from "@/components/contact/ContactForm";
 
-const ContactPage = () => {
+const Page = () => {
   return (
     <div className="h-full max-w-lg mx-auto flex flex-col justify-center py-10 px-4 gap-24">
       <h1
@@ -21,4 +21,4 @@ const ContactPage = () => {
   );
 };
 
-export default ContactPage;
+export default Page;

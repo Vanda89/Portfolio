@@ -7,7 +7,7 @@ import Button from "@/components/common/Button";
 import { title, textBase } from "@/styles/primitives";
 import cvData from "@/data/cv.json";
 
-export default function MentionsLegales() {
+export default function Page() {
   return (
     <div className="max-w-5xl mx-auto px-4 py-10 space-y-6">
       <Card className="p-6">

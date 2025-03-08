@@ -5,7 +5,7 @@ import { Skills } from "@/components/about/skills";
 import { Education } from "@/components/about/education";
 import { Activities } from "@/components/about/activities";
 
-export default function CVPage() {
+export default function Page() {
   return (
     <div className="max-w-5xl mx-auto px-4 py-10 space-y-6">
       <Infos cvData={cvData} />

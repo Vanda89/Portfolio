@@ -1,24 +1,24 @@
+import { Link } from "@heroui/link";
 import {
   Navbar as HeroUINavbar,
-  NavbarContent,
-  NavbarMenu,
-  NavbarMenuToggle,
   NavbarBrand,
+  NavbarContent,
   NavbarItem,
+  NavbarMenu,
   NavbarMenuItem,
+  NavbarMenuToggle,
 } from "@heroui/navbar";
-import { Link } from "@heroui/link";
 import NextLink from "next/link";
 import { tv } from "tailwind-variants";
 
-import cvData from "@/data/cv.json";
-import { siteConfig } from "@/config/site";
-import { ThemeSwitch } from "@/components/common/theme-switch";
 import { GithubIcon, LinkedInIcon } from "@/components/common/icons";
+import { ThemeSwitch } from "@/components/common/theme-switch";
+import { siteConfig } from "@/config/site";
+import cvData from "@/data/cv.json";
 
 export const navbarVariants = tv({
   slots: {
-    navbarBase: "static py-4 bg-background-100",
+    navbarBase: "static py-4 bg-background-100 z-10",
     navbarBrand:
       "gap-3 max-w-fit font-bold text-inherit text-lg lg:text-xl uppercase",
     linksContainer: "gap-6 justify-start ml-2 hidden md:flex text-lg",

@@ -92,9 +92,8 @@ export const textBase = tv({
 
 export const card = tv({
   slots: {
-    base: "flex flex-col items-center h-full rounded-xl gap-16 p-4 text-foreground bg-foreground-100 shadow-lg ",
-    image:
-      "border-2 border-gray-100 h-[250px] p-0 overflow-hidden rounded-lg bg-cover",
+    base: "background-none flex flex-col items-center h-full rounded-xl gap-16 p-4 text-foreground bg-foreground-100 shadow-lg ",
+    image: "border-1 border-gray-200  p-0 overflow-hidden rounded-lg bg-cover",
     body: "text-center",
   },
 });

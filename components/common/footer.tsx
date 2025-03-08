@@ -5,7 +5,7 @@ import Link from "next/link";
 const footerVariants = tv({
   slots: {
     footer:
-      "w-full flex flex-col md:flex-row items-center md:justify-center gap-3 md:h-24 bg-gray-900 text-white py-4 mt-10 text-center rounded-none",
+      "z-10 w-full flex flex-col md:flex-row items-center md:justify-center gap-3 md:h-24 bg-gray-900 text-white py-4 mt-10 text-center rounded-none ",
     copyright: "text-sm opacity-80",
     credits: "text-sm opacity-80 ",
     mentions: "underline underline-offset-4 text-xs pl-1 opacity-80",

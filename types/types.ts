@@ -79,5 +79,5 @@ export interface Button {
   radius?: "none" | "sm" | "md" | "lg" | "full";
   value?: string;
   className?: string;
-  onClick?: () => void;
+  onPress?: () => void;
 }

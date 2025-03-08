@@ -3,10 +3,11 @@ import { Metadata, Viewport } from "next";
 
 import { Providers } from "./providers";
 
-import { fontSans } from "@/config/fonts";
-import { Navbar } from "@/components/common/navbar";
+import Background from "@/components/common/background/Background";
 import Footer from "@/components/common/footer";
+import { Navbar } from "@/components/common/navbar";
 import ScrollArrow from "@/components/common/ScrollArrow";
+import { fontSans } from "@/config/fonts";
 
 export const metadata: Metadata = {
   title: "Portfolio de Sandrine ALCAZAR - Développeuse Front-end",
@@ -35,11 +36,13 @@ export default function RootLayout({
     <html suppressHydrationWarning lang="fr">
       <head />
       <body
-        className={`min-w-xs min-h-screen bg-background font-sans antialiased   mx-auto scroll-smooth ${fontSans.variable}`}
+        className={`min-w-xs min-h-screen font-sans antialiased   mx-auto scroll-smooth ${fontSans.variable} `}
+        cz-shortcut-listen="true"
       >
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
           <div className="relative flex flex-col h-screen w-full gap-10">
             <Navbar />
+            <Background />
 
             <main className=" self-center  w-full  flex-grow ">{children}</main>
             <Footer />

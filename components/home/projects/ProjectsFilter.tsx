@@ -1,5 +1,6 @@
 "use client";
-import Button from "@/components/common/Button";
+
+import { Button } from "@heroui/react";
 
 interface Props {
   activeTag: string;
@@ -17,12 +18,12 @@ const ProjectsFilter = ({ activeTag, handleTag, tagList }: Props) => {
             aria-label={tag.toLowerCase()}
             as="button"
             className={`px-2 md:px-8 py-1 md:py-2 cursor-pointer text-sm md:text-md 
-    ${activeTag === tag ? "bg-secondary text-white dark:text-violet-500 dark:bg-white" : "bg-default-50"}`}
+           ${activeTag === tag ? "bg-secondary text-white dark:text-violet-500 dark:bg-white" : "bg-default-50"}`}
             color="default"
             radius="full"
             value={tag}
             variant="shadow"
-            onClick={() => handleTag(tag)}
+            onPress={() => handleTag(tag)}
           >
             {tag}
           </Button>

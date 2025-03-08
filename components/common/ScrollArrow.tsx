@@ -1,7 +1,7 @@
 "use client";
 import { Button } from "@heroui/react";
-import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 
 import { ArrowDown, ArrowUp } from "./icons";
 
