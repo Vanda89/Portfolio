@@ -66,7 +66,9 @@ export const Infos = ({ cvData }: { cvData: CvData }) => {
         </div>
       </CardHeader>
       <CardBody className="w-full grid grid-col-1 md:grid-cols-2 lg:grid-cols-4 gap-4  place-items-center md:place-content-between">
-        {site.contactLinks.map((link) => contactButton(link))}
+        {site.contactLinks.map((link) => (
+          <div key={link.href}>{contactButton(link)}</div>
+        ))}{" "}
       </CardBody>
     </Card>
   );
