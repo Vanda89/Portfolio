@@ -1,11 +1,12 @@
 // ProjectCard
 
 "use client";
-import { Link, Image, CardBody, Card, CardHeader } from "@heroui/react";
+import { Card, CardBody, CardHeader, Link } from "@heroui/react";
+import Image from "next/image";
 
+import { GithubIcon } from "@/components/common/icons";
 import { card, textBase, title } from "@/styles/primitives";
 import { Project } from "@/types/types";
-import { GithubIcon } from "@/components/common/icons";
 
 type Props = {
   project: Project;
@@ -19,8 +20,16 @@ const ProjectCard = ({ project }: Props) => {
   return (
     <Link href={linkUrl} target="_blank">
       <Card className={card.slots.base}>
-        <CardHeader className={card.slots.image}>
-          <Image alt={project.title} src={project.image} />
+        <CardHeader
+          className={card.slots.image}
+          style={{ position: "relative", height: "250px" }}
+        >
+          <Image
+            alt={project.title}
+            src={project.image}
+            fill
+            style={{ objectFit: "cover" }}
+          />
         </CardHeader>
         <CardBody className={card.slots.body}>
           <div className="flex items-center gap-2">
