@@ -10,14 +10,74 @@ import ScrollArrow from "@/components/common/ScrollArrow";
 import { fontSans } from "@/config/fonts";
 
 export const metadata: Metadata = {
-  title: "Portfolio de Sandrine ALCAZAR - Développeuse Front-end",
+  title: "Sandrine Alcazar | Développeuse Front-End Portfolio",
   description:
-    "Découvrez le portfolio de Sandrine ALCAZAR, développeuse front-end passionnée par la création de sites web modernes et interactifs.",
-  keywords:
-    "développeur front-end, portfolio, création de sites web, développement React, développement Next.js",
-  robots: "index, follow",
-  authors: [{ name: "Sandrine ALCAZAR", url: "" }],
-  icons: { icon: "/favicon.ico" },
+    "ortfolio de Sandrine ALCAZAR, développeuse front-end passionnée. Découvrez mes projets React, Next.js et sites web interactifs modernes.",
+  keywords: [
+    "Sandrine Alcazar",
+    "développeuse front-end",
+    "portfolio développeur",
+    "React",
+    "Next.js",
+    "création site web",
+    "web design",
+    "développement web",
+    "UI/UX",
+    "Three.js",
+  ],
+  robots: {
+    index: true,
+    follow: true,
+    noimageindex: true,
+    noarchive: true,
+  },
+  authors: [
+    {
+      name: "Sandrine ALCAZAR",
+      url: "https://www.linkedin.com/in/alcazar-sandrine/",
+    },
+  ],
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+    shortcut: "/favicon.ico",
+  },
+
+  // Métadata Open Graph (to share on Facebook, LinkedIn, etc.)
+  openGraph: {
+    title: "Sandrine Alcazar | Développeuse Front-End",
+    description:
+      "Découvrez mes projets de développement front-end en React, Next.js et autres technologies sur mon portfolio.",
+    url: "https://sandrinealcazar.ovh",
+    siteName: "Portfolio Sandrine Alcazar",
+    images: [
+      {
+        url: "https://sandrinealcazar.ovh/images/portfolio.png",
+        width: 1200,
+        height: 630,
+        alt: "Sandrine Alcazar - Portfolio",
+      },
+    ],
+    locale: "fr_FR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Sandrine Alcazar | Développeuse Front-End",
+    description:
+      "Découvrez mes projets de développement front-end en React, Next.js et autres technologies sur mon portfolio.",
+    images: "https://sandrinealcazar.ovh/images/portfolio.png",
+  },
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+    maximumScale: 1,
+    userScalable: false,
+  },
+  alternates: {
+    canonical: "https://sandrinealcazar.ovh",
+  },
+  category: "Portfolio",
 };
 
 export const viewport: Viewport = {

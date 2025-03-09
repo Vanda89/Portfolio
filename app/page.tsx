@@ -1,3 +1,4 @@
+import CTA from "@/components/common/CTA";
 import Banner from "@/components/home/Banner";
 import Projects from "@/components/home/Projects";
 
@@ -6,6 +7,7 @@ export default function Home() {
     <div className=" w-full relative flex flex-col items-center justify-center gap-20  ">
       <Banner />
       <Projects />
+      <CTA isHome={true} />
     </div>
   );
 }
