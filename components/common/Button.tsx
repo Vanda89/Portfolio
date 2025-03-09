@@ -25,7 +25,7 @@ const Button = ({
       as={as}
       className={className}
       color={color}
-      href={as === "a" || as === "link" ? href : undefined}
+      href={href}
       isDisabled={isDisabled}
       isLoading={isLoading}
       radius={radius}

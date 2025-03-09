@@ -1,4 +1,5 @@
-import { SVGProps } from "react";
+import Link from "next/link";
+import { ReactNode, SVGProps } from "react";
 
 export type IconSvgProps = SVGProps<SVGSVGElement> & {
   size?: number;
@@ -58,15 +59,15 @@ export interface Form {
 }
 
 export interface Button {
-  as?: "a" | "button" | "link";
+  as?: "a" | "button" | typeof Link;
   href?: string;
   rel?: string;
   target?: string;
   isLoading?: boolean;
   isDisabled?: boolean;
   type?: "submit" | "reset" | "button";
-  children: React.ReactNode;
-  icon?: string | React.ReactNode;
+  children: ReactNode;
+  icon?: string | ReactNode;
   size?: "sm" | "md" | "lg";
   color?:
     | "default"
