@@ -25,10 +25,11 @@ const ProjectCard = ({ project }: Props) => {
           style={{ position: "relative", height: "250px" }}
         >
           <Image
-            alt={project.title}
+            alt={`Miniature du projet ${project.title} réalisé par Sandrine Alcazar`}
             src={project.image}
             fill
             style={{ objectFit: "cover" }}
+            loading="lazy"
           />
         </CardHeader>
         <CardBody className={card.slots.body}>

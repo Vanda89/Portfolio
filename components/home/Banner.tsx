@@ -16,7 +16,7 @@ const Banner = () => {
       style={{}}
     >
       <Image
-        src="/images/dev_web_img.png"
+        src="/images/dev_web_img.webp"
         alt="Image d'une femme entrain de coder sur son ordinateur portable"
         width={200}
         height={200}
