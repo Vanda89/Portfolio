@@ -37,7 +37,7 @@ export default function RootLayout({
       <head />
       <body
         className={`min-w-xs min-h-screen font-sans antialiased   mx-auto scroll-smooth ${fontSans.variable} `}
-        cz-shortcut-listen="true"
+        
       >
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
           <div className="relative flex flex-col h-screen w-full gap-10">
