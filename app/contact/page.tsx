@@ -1,8 +1,6 @@
-import React from "react";
-import Link from "next/link";
-import { title } from "@/styles/primitives";
-import { ContactForm } from "@/components/contact/ContactForm";
 import CTA from "@/components/common/CTA";
+import { ContactForm } from "@/components/contact/ContactForm";
+import { title } from "@/styles/primitives";
 
 const Page = () => {
   return (

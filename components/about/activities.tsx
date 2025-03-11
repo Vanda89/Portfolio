@@ -1,13 +1,16 @@
 "use client";
 import { Card, CardBody, CardHeader } from "@heroui/react";
-import { FiCalendar, FiBriefcase } from "react-icons/fi"; // Icônes
+import { FiBriefcase, FiCalendar } from "react-icons/fi"; // Icônes
 
+import { textBase, title } from "@/styles/primitives";
 import { CvData } from "@/types/types";
-import { title, textBase } from "@/styles/primitives";
 
 export const Activities = ({ cvData }: { cvData: CvData }) => {
   return (
-    <Card className="flex flex-col gap-6 p-6 bg-foreground-50" id="activities">
+    <Card
+      className="flex flex-col gap-6 p-6  mb-6 bg-foreground-50"
+      id="activities"
+    >
       <CardHeader className="pb-4 border-b border-foreground-300">
         <h2 className={title({ size: "md", weight: "bold" })}>Activités</h2>
       </CardHeader>

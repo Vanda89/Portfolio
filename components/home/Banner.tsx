@@ -1,13 +1,13 @@
 "use client";
-import React from "react";
+
+import Image from "next/image";
+import Link from "next/link";
 
 import Button from "../common/Button";
-import Image from "next/image";
-import cvData from "@/data/cv.json";
-import { title, subtitle } from "@/styles/primitives";
+
 import { GithubIcon } from "@/components/common/icons";
-import Background from "../common/background/Background";
-import Link from "next/link";
+import cvData from "@/data/cv.json";
+import { subtitle, title } from "@/styles/primitives";
 
 const Banner = () => {
   return (
@@ -17,11 +17,11 @@ const Banner = () => {
       style={{}}
     >
       <Image
-        src="/images/dev_web_img.webp"
         alt="Image d'une femme entrain de coder sur son ordinateur portable"
-        width={200}
-        height={200}
         className="rounded-full my-10"
+        height={200}
+        src="/images/dev_web_img.webp"
+        width={200}
       />
       <div className="flex flex-col gap-4">
         <h1 className={title({ size: "xl" })}>
@@ -42,15 +42,15 @@ const Banner = () => {
       <p className={subtitle({ size: "lg", class: "mt-8 text-gray-500" })}>
         Découvrez{" "}
         <Link
-          href="/about"
           className="text-foreground font-bold hover:underline"
+          href="/about"
         >
           qui je suis
         </Link>{" "}
         et mes{" "}
         <Link
-          href="#projects"
           className="text-foreground font-bold hover:underline"
+          href="#projects"
         >
           réalisations
         </Link>

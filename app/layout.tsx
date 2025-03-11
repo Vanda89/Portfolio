@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     siteName: "Portfolio Sandrine Alcazar",
     images: [
       {
-        url: "https://sandrinealcazar.ovh/images/portfolio.png",
+        url: "https://sandrinealcazar.ovh/images/portfolio_thumbnail.webp",
         width: 1200,
         height: 630,
         alt: "Sandrine Alcazar - Portfolio",
@@ -66,14 +66,9 @@ export const metadata: Metadata = {
     title: "Sandrine Alcazar | Développeuse Front-End",
     description:
       "Découvrez mes projets de développement front-end en React, Next.js et autres technologies sur mon portfolio.",
-    images: "https://sandrinealcazar.ovh/images/portfolio.png",
+    images: "https://sandrinealcazar.ovh/images/portfolio_thumbnail.webp",
   },
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    maximumScale: 1,
-    userScalable: false,
-  },
+
   alternates: {
     canonical: "https://sandrinealcazar.ovh",
   },
@@ -81,6 +76,10 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "white" },
     { media: "(prefers-color-scheme: dark)", color: "black" },
@@ -96,8 +95,7 @@ export default function RootLayout({
     <html suppressHydrationWarning lang="fr">
       <head />
       <body
-        className={`min-w-xs min-h-screen font-sans antialiased   mx-auto scroll-smooth ${fontSans.variable} `}
-        
+        className={`min-w-xs min-h-screen font-sans antialiased mx-auto scroll-smooth ${fontSans.variable} `}
       >
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
           <div className="relative flex flex-col h-screen w-full gap-10">

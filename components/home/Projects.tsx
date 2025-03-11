@@ -4,11 +4,11 @@
 
 import { useState } from "react";
 
-import ProjectsList from "../home/projects/ProjectsList";
 import ProjectsFilter from "../home/projects/ProjectsFilter";
+import ProjectsList from "../home/projects/ProjectsList";
 
-import { title } from "@/styles/primitives";
 import projects from "@/data/projects.json";
+import { title } from "@/styles/primitives";
 import { Project } from "@/types/types";
 
 const Projects = () => {

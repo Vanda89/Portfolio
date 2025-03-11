@@ -1,4 +1,3 @@
-import React from "react";
 import { Button as HerouiButton } from "@heroui/react";
 
 import { Button as ButtonProps } from "@/types/types";

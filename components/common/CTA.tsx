@@ -1,4 +1,3 @@
-import React from "react";
 import Link from "next/link";
 
 interface CTAProps {
@@ -13,15 +12,15 @@ const CTA = ({ isHome = false, isContact = false }: CTAProps) => {
         <>
           Intéressé(e) par mes{" "}
           <Link
-            href="/about"
             className="text-secondary font-semibold hover:underline"
+            href="/about"
           >
             compétences
           </Link>
           {" ? "}
           <Link
-            href="/contact"
             className="text-secondary font-semibold hover:underline"
+            href="/contact"
           >
             Contactez-moi
           </Link>{" "}
@@ -31,8 +30,8 @@ const CTA = ({ isHome = false, isContact = false }: CTAProps) => {
         <>
           Envie d&apos;en savoir{" "}
           <Link
-            href="/about"
             className="text-secondary font-semibold hover:underline"
+            href="/about"
           >
             plus
           </Link>
@@ -40,8 +39,8 @@ const CTA = ({ isHome = false, isContact = false }: CTAProps) => {
           <br />
           Explorez mes{" "}
           <Link
-            href="/"
             className="text-secondary font-semibold hover:underline"
+            href="/"
           >
             projets
           </Link>{" "}
@@ -51,8 +50,8 @@ const CTA = ({ isHome = false, isContact = false }: CTAProps) => {
         <>
           Intéressé(e) par une collaboration ?{" "}
           <Link
-            href="/contact"
             className="text-secondary font-semibold hover:underline"
+            href="/contact"
           >
             Contactez-moi
           </Link>{" "}
@@ -60,8 +59,8 @@ const CTA = ({ isHome = false, isContact = false }: CTAProps) => {
           <br />
           Retour sur la page d&apos;accueil{" "}
           <Link
-            href="/"
             className="text-secondary font-semibold hover:underline"
+            href="/"
           >
             ici
           </Link>

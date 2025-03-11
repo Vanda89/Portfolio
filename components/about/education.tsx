@@ -47,7 +47,7 @@ export const Education = ({
                         <div className="flex">
                           <span>🔹</span>
                           <a
-                            href={project.url || "#"}
+                            href={project.url || project.github}
                             rel="noopener noreferrer"
                             target="_blank"
                           >
