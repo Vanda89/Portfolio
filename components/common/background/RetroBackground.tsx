@@ -1,40 +1,55 @@
 // components/common/background/RetroBackground.tsx
 "use client";
 
-import * as THREE from "three";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+import {
+  Color,
+  Group,
+  Mesh,
+  MeshBasicMaterial,
+  PerspectiveCamera,
+  Scene,
+  SphereGeometry,
+  WebGLRenderer,
+} from "three";
+import { useTheme } from "next-themes";
+import Image from "next/image";
 
 export function RetroBackground() {
   const containerRef = useRef<HTMLDivElement>(null);
+  const { resolvedTheme } = useTheme();
+  const [isLoaded, setIsLoaded] = useState(false); // État pour suivre le chargement
 
   // TODO: change the colors
   const darkRetroColors = [
-    { from: new THREE.Color("#00DDEB"), to: new THREE.Color("#FF007A") }, // Bleu néon → Rose néon
-    { from: new THREE.Color("#6B00D7"), to: new THREE.Color("#00FF9F") }, // Violet sombre → Vert cyber
-    { from: new THREE.Color("#FF007A"), to: new THREE.Color("#00DDEB") }, // Rose néon → Bleu néon
-    { from: new THREE.Color("#00FF9F"), to: new THREE.Color("#6B00D7") }, // Vert cyber → Violet sombre
+    { from: new Color("#00DDEB"), to: new Color("#FF007A") }, // Bleu néon → Rose néon
+    { from: new Color("#6B00D7"), to: new Color("#00FF9F") }, // Violet sombre → Vert cyber
+    { from: new Color("#FF007A"), to: new Color("#00DDEB") }, // Rose néon → Bleu néon
+    { from: new Color("#00FF9F"), to: new Color("#6B00D7") }, // Vert cyber → Violet sombre
   ];
 
   useEffect(() => {
     if (!containerRef.current) return;
 
     // TODO: change the scene
-    const scene = new THREE.Scene();
+    const scene = new Scene();
 
     // TODO: change the camera
-    const camera = new THREE.PerspectiveCamera(
+    const camera = new PerspectiveCamera(
       75,
       window.innerWidth / window.innerHeight,
       0.1,
       1000
     );
+
     camera.position.z = 5;
 
     // TODO: change the renderer
-    const renderer = new THREE.WebGLRenderer({
+    const renderer = new WebGLRenderer({
       antialias: true,
       alpha: true, // TODO: change the background color
     });
+
     renderer.setSize(window.innerWidth, window.innerHeight);
     containerRef.current.appendChild(renderer.domElement);
 
@@ -42,20 +57,20 @@ export function RetroBackground() {
     const particlesCount = 30;
 
     // TODO: change the geometry
-    const particles = new THREE.Group();
+    const particles = new Group();
 
     for (let i = 0; i < particlesCount; i++) {
       // TODO: change the geometry
-      const geometry = new THREE.SphereGeometry(0.05, 8, 8);
+      const geometry = new SphereGeometry(0.05, 8, 8);
       // TODO: change the material
-      const material = new THREE.MeshBasicMaterial({
+      const material = new MeshBasicMaterial({
         color: darkRetroColors[0].from,
         transparent: true,
         opacity: 0.3,
       });
 
       // TODO: change the particle
-      const particle = new THREE.Mesh(geometry, material);
+      const particle = new Mesh(geometry, material);
 
       // TODO: change the position
       particle.position.x = Math.random() * 10 - 5;
@@ -69,13 +84,14 @@ export function RetroBackground() {
         z: (Math.random() - 0.5) * 0.01,
       };
 
-      // Associer un dégradé aléatoire de darkRetroColors
+      // TODO: Assign a random gradient from darkRetroColors
       const gradient =
         darkRetroColors[Math.floor(Math.random() * darkRetroColors.length)];
+
       particle.userData.colorStart = gradient.from;
       particle.userData.colorEnd = gradient.to;
-      particle.userData.colorProgress = Math.random(); // Progression initiale entre 0 et 1
-      particle.userData.colorSpeed = 0.001 + Math.random() * 0.002; // Vitesse de transition
+      particle.userData.colorProgress = Math.random(); // TODO: Progression initiale between 0 and 1
+      particle.userData.colorSpeed = 0.001 + Math.random() * 0.002; // TODO: Transition speed
 
       particles.add(particle);
     }
@@ -92,13 +108,18 @@ export function RetroBackground() {
 
     window.addEventListener("resize", handleResize);
 
+    // TODO: change the lastFrame
+    let lastFrame = 0;
     // TODO: change the animate
-    const animate = () => {
+    const animate = (time: number) => {
       requestAnimationFrame(animate);
+      if (time - lastFrame < 45) return; // Throttle at ~30 FPS
+      lastFrame = time;
 
       // TODO: change the particles
       particles.children.forEach((object) => {
-        const particle = object as THREE.Mesh;
+        const particle = object as Mesh;
+
         particle.position.x += particle.userData.velocity.x;
         particle.position.y += particle.userData.velocity.y;
         particle.position.z += particle.userData.velocity.z;
@@ -115,11 +136,13 @@ export function RetroBackground() {
           particle.userData.colorProgress = 0;
 
           const temp = particle.userData.colorStart;
+
           particle.userData.colorStart = particle.userData.colorEnd;
           particle.userData.colorEnd = temp;
         }
 
-        const material = particle.material as THREE.MeshBasicMaterial;
+        const material = particle.material as MeshBasicMaterial;
+
         material.color.lerpColors(
           particle.userData.colorStart,
           particle.userData.colorEnd,
@@ -133,7 +156,8 @@ export function RetroBackground() {
       renderer.render(scene, camera);
     };
 
-    animate();
+    setIsLoaded(true);
+    animate(0);
 
     return () => {
       window.removeEventListener("resize", handleResize);
@@ -143,6 +167,11 @@ export function RetroBackground() {
       renderer.dispose();
     };
   }, []);
+
+  const placeholderSrc =
+    resolvedTheme === "dark"
+      ? "/images/retro_placeholder_dark.webp"
+      : "/images/retro_placeholder_light.webp";
 
   return (
     <div
@@ -156,7 +185,25 @@ export function RetroBackground() {
         zIndex: -1,
         pointerEvents: "none",
       }}
-    />
+    >
+      {!isLoaded && (
+        <Image
+          src={placeholderSrc}
+          alt="Retro Background Placeholder"
+          width={1920}
+          height={1080}
+          priority
+          style={{
+            objectFit: "cover",
+            width: "100%",
+            height: "100%",
+            position: "absolute",
+            top: 0,
+            left: 0,
+          }}
+        />
+      )}
+    </div>
   );
 }
 

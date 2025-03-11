@@ -1,7 +1,13 @@
 "use client";
+import dynamic from "next/dynamic";
 
-import RetroBackground from "./RetroBackground";
+const RetroBackground = dynamic(
+  () => import("@/components/common/background/RetroBackground"),
+  {
+    ssr: false,
+  }
+);
 
-export default function ClientRetroBackground() {
+export default function Background() {
   return <RetroBackground />;
 }
