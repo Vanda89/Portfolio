@@ -20,16 +20,15 @@ const ProjectCard = ({ project }: Props) => {
   return (
     <Link href={linkUrl} target="_blank">
       <Card className={card.slots.base}>
-        <CardHeader
-          className={card.slots.image}
-          style={{ position: "relative", height: "250px" }}
-        >
+        <CardHeader className={card.slots.imageContainer}>
           <Image
-            fill
             alt={`Miniature du projet ${project.title} réalisé par Sandrine Alcazar`}
+            width={1920}
+            height={1080}
+            sizes="(max-width: 320px) 100vw, (max-width: 640px) 50vw, (max-width: 1280px) 75vw, 1280px"
             loading="lazy"
             src={project.image}
-            style={{ objectFit: "cover" }}
+            className="object-cover rounded-lg"
           />
         </CardHeader>
         <CardBody className={card.slots.body}>

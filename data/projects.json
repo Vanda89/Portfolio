@@ -58,7 +58,7 @@
     "resume": "Refonte d'une application interne de jquery à React pour améliorer performances et accessibilité.",
     "description": "WealthHealth est un projet de modernisation d'une application interne de gestion des dossiers employés (HRnet). L'objectif était de convertir l'application de jQuery à React, tout en améliorant ses performances, son accessibilité et son design. Ce projet met en évidence la transition d'une technologie obsolète à une pile moderne et performante, tout en résolvant des problèmes d'ergonomie et de stabilité pour les utilisateurs.",
     "url": "https://wealth-health.sandrinealcazar.ovh",
-    "image": "/images/projects_thumbnails/wealth-health.webp",
+    "image": "/images/projects_thumbnails/wealth_health.webp",
     "github": "https://github.com/Vanda89/WealthHealth"
   },
 
@@ -249,7 +249,7 @@
     "resume": "Site de jeux pour enfants en mobile first avec espace personnel personnalisable. ",
     "description": "L'univers Fabuleux est un site de jeux mobile-first pour enfants, offrant un espace personnel personnalisable. Il inclut des jeux interactifs, tels qu'un jeu de Memory et un jeu de Tape lettre au clavier, conçus pour aider les enfants à développer leur mémoire et leur rapidité. Le projet comprend également une interface admin permettant d'ajouter, modifier et supprimer des éléments du site de manière dynamique.",
     "_url": "https://univers-fabuleux.sandrinealcazar.ovh",
-    "image": "/images/projects_thumbnails/univers-fabuleux.webp",
+    "image": "/images/projects_thumbnails/univers_fabuleux.webp",
     "github": "https://github.com/Vanda89/Univers_Fabuleux"
   },
   {
@@ -264,7 +264,7 @@
     "resume": "Blog pour un écrivain avec intégration d'un système de CRUD pour la partie admin, et de commentaires pour la partie user. ",
     "description": "Le site de Jean Forteroche est un blog développé pour un écrivain, avec un système de CRUD pour l'admin afin de gérer les articles, et une fonctionnalité de commentaires pour les utilisateurs. Ce projet utilise une architecture MVC avec une base de données MySQL pour stocker les articles et commentaires. Il dispose d'une gestion efficace du contenu tout en offrant une expérience utilisateur simple et intuitive.",
     "_url": "https://blog-jean-forteroche.sandrinealcazar.ovh",
-    "image": "/images/projects_thumbnails/blog-jean-forteroche.webp",
+    "image": "/images/projects_thumbnails/blog_jean_forteroche.webp",
     "github": "https://github.com/Vanda89/Blog_jean_forteroche"
   },
   {
