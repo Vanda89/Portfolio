@@ -7,7 +7,7 @@ interface CTAProps {
 
 const CTA = ({ isHome = false, isContact = false }: CTAProps) => {
   return (
-    <p className="pt-6 text-gray-500 text-center leading-loose ">
+    <p className="pt-6 text-foreground-500 text-center leading-loose ">
       {isHome ? (
         <>
           Intéressé(e) par mes{" "}

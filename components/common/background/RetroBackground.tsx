@@ -39,7 +39,7 @@ export function RetroBackground() {
       75,
       window.innerWidth / window.innerHeight,
       0.1,
-      1000
+      1000,
     );
 
     camera.position.z = 5;
@@ -146,7 +146,7 @@ export function RetroBackground() {
         material.color.lerpColors(
           particle.userData.colorStart,
           particle.userData.colorEnd,
-          particle.userData.colorProgress
+          particle.userData.colorProgress,
         );
       });
 
@@ -188,11 +188,10 @@ export function RetroBackground() {
     >
       {!isLoaded && (
         <Image
-          src={placeholderSrc}
-          alt="Retro Background Placeholder"
-          width={1920}
-          height={1080}
           priority
+          alt="Retro Background Placeholder"
+          height={1080}
+          src={placeholderSrc}
           style={{
             objectFit: "cover",
             width: "100%",
@@ -201,6 +200,7 @@ export function RetroBackground() {
             top: 0,
             left: 0,
           }}
+          width={1920}
         />
       )}
     </div>

@@ -1,26 +1,33 @@
-"use client";
+"use client"; // À reconsidérer si pas d'interactions client nécessaires
+
 import { Divider, tv } from "@heroui/react";
 import Link from "next/link";
 
 const footerVariants = tv({
   slots: {
     footer:
-      "z-10 w-full flex flex-col md:flex-row items-center md:justify-center gap-3 md:h-24 bg-gray-900 text-white py-4 mt-10 text-center rounded-none ",
-    copyright: "text-sm opacity-80",
-    credits: "text-sm opacity-80 ",
-    mentions: "underline underline-offset-4 text-xs pl-1 opacity-80",
-    dividerVertical: "hidden h-6 md:block bg-gray-700",
-    dividerHorizontal: "block md:hidden w-48 bg-gray-700",
+      "z-10 w-full flex flex-col lg:flex-row items-center justify-center gap-6 lg:gap-8 bg-gray-900 text-white py-6 mt-10 text-center rounded-none",
+    copyright: "text-sm text-gray-200",
+    credits: "text-sm text-gray-300",
+    mentions:
+      "underline underline-offset-4 text-xs text-gray-300 hover:text-gray-200 transition-colors",
+    dividerVertical: "hidden lg:block h-6 bg-gray-500 w-px",
+    dividerHorizontal: "block lg:hidden w-48 bg-gray-500 h-px",
   },
 });
 
 const Footer = () => {
-  return (
-    <footer className={footerVariants.slots.footer} id="footer">
-      <p className={footerVariants.slots.copyright}>
-        © {new Date().getFullYear()} Sandrine Alcazar - Tous droits réservés.
-      </p>
+  const currentYear = new Date().getFullYear();
 
+  return (
+    <footer
+      className={footerVariants.slots.footer}
+      id="footer"
+      role="contentinfo"
+    >
+      <p className={footerVariants.slots.copyright}>
+        © {currentYear} Sandrine Alcazar - Tous droits réservés.
+      </p>
       <Divider
         className={footerVariants.slots.dividerVertical}
         orientation="vertical"
@@ -29,7 +36,6 @@ const Footer = () => {
         className={footerVariants.slots.dividerHorizontal}
         orientation="horizontal"
       />
-
       <p className={footerVariants.slots.credits}>
         Développé avec ❤️ par Sandrine Alcazar
       </p>
@@ -41,7 +47,11 @@ const Footer = () => {
         className={footerVariants.slots.dividerHorizontal}
         orientation="horizontal"
       />
-      <Link className={footerVariants.slots.mentions} href="/mentions">
+      <Link
+        aria-label="Accéder aux mentions légales"
+        className={footerVariants.slots.mentions}
+        href="/mentions"
+      >
         Mentions légales
       </Link>
     </footer>

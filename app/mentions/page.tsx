@@ -7,24 +7,35 @@ import Button from "@/components/common/Button";
 import { title, textBase } from "@/styles/primitives";
 import cvData from "@/data/cv.json";
 
+interface Contact {
+  email: string;
+  linkedin: string;
+  github: string;
+}
+
 export default function Page() {
+  const contacts: Contact = cvData.contacts;
+
   return (
     <div className="max-w-5xl mx-auto px-4 py-10 space-y-6">
-      <Card className="p-6">
-        <CardHeader className="pb-4 border-b border-foreground-300">
+      <Card className="p-6 shadow-md bg-white dark:bg-gray-800">
+        <CardHeader className="pb-4 border-b border-gray-300 dark:border-gray-700">
           <h1
             className={title({
               size: "lg",
               weight: "extrabold",
-              class: "text-center w-full",
+              class: "text-center w-full text-gray-900 dark:text-gray-100",
             })}
           >
             Mentions légales
           </h1>
         </CardHeader>
-        <CardBody className="space-y-12 mt-6 ">
-          <section className="flex flex-col space-y-1">
-            <h2 className={title({ size: "sm", weight: "bold" })}>
+        <CardBody className="space-y-12 mt-6 text-gray-800 dark:text-gray-200">
+          <section aria-labelledby="editor-section">
+            <h2
+              className={title({ size: "sm", weight: "bold" })}
+              id="editor-section"
+            >
               Éditeur du site
             </h2>
             <div className="flex flex-col sm:flex-row gap-2">
@@ -34,18 +45,20 @@ export default function Page() {
             <p>
               Contact :{" "}
               <Link
-                className="text-primary underline underline-offset-4"
-                href={cvData.contacts.email}
+                className="text-primary-500 dark:text-primary-600 underline underline-offset-4 hover:text-primary-600 dark:hover:text-primary-700 transition-colors"
+                href={`mailto:${contacts.email}`}
                 rel="noopener noreferrer"
-                target="_blank"
               >
-                {cvData.contacts.email}
-              </Link>{" "}
+                {contacts.email}
+              </Link>
             </p>
           </section>
 
-          <section className="flex flex-col space-y-1">
-            <h2 className={title({ size: "sm", weight: "bold" })}>
+          <section aria-labelledby="hosting-section">
+            <h2
+              className={title({ size: "sm", weight: "bold" })}
+              id="hosting-section"
+            >
               Hébergement
             </h2>
             <div className={textBase({ class: "space-y-1" })}>
@@ -55,19 +68,22 @@ export default function Page() {
               <p>
                 Site web :{" "}
                 <Link
-                  className="text-primary underline underline-offset-4"
+                  className="text-primary-500 dark:text-primary-600 underline underline-offset-4 hover:text-primary-600 dark:hover:text-primary-700 transition-colors"
                   href="https://ovh.com"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
-                  ovh.com{" "}
-                </Link>{" "}
+                  ovh.com
+                </Link>
               </p>
             </div>
           </section>
 
-          <section className="flex flex-col space-y-1">
-            <h2 className={title({ size: "sm", weight: "bold" })}>
+          <section aria-labelledby="intellectual-section">
+            <h2
+              className={title({ size: "sm", weight: "bold" })}
+              id="intellectual-section"
+            >
               Propriété intellectuelle
             </h2>
             <div className={textBase({ class: "space-y-2" })}>
@@ -84,8 +100,11 @@ export default function Page() {
             </div>
           </section>
 
-          <section className="flex flex-col space-y-1">
-            <h2 className={title({ size: "sm", weight: "bold" })}>
+          <section aria-labelledby="data-section">
+            <h2
+              className={title({ size: "sm", weight: "bold" })}
+              id="data-section"
+            >
               Données personnelles
             </h2>
             <div className={textBase({ class: "space-y-2" })}>
@@ -98,8 +117,13 @@ export default function Page() {
             </div>
           </section>
 
-          <section className="flex flex-col space-y-1">
-            <h2 className={title({ size: "sm", weight: "bold" })}>Cookies</h2>
+          <section aria-labelledby="cookies-section">
+            <h2
+              className={title({ size: "sm", weight: "bold" })}
+              id="cookies-section"
+            >
+              Cookies
+            </h2>
             <div className={textBase({ class: "space-y-2" })}>
               <p>
                 Ce site n&apos;utilise{" "}
@@ -108,8 +132,11 @@ export default function Page() {
             </div>
           </section>
 
-          <section className="flex flex-col space-y-1">
-            <h2 className={title({ size: "sm", weight: "bold" })}>
+          <section aria-labelledby="liability-section">
+            <h2
+              className={title({ size: "sm", weight: "bold" })}
+              id="liability-section"
+            >
               Responsabilité
             </h2>
             <div className={textBase({ class: "space-y-2" })}>
@@ -124,7 +151,7 @@ export default function Page() {
           <div className="flex justify-center py-6">
             <Button
               as="a"
-              className="font-medium"
+              className="font-medium transition-colors hover:bg-gray-100 dark:hover:bg-gray-700"
               color="secondary"
               href="/"
               variant="ghost"

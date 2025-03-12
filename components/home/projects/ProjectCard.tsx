@@ -23,12 +23,12 @@ const ProjectCard = ({ project }: Props) => {
         <CardHeader className={card.slots.imageContainer}>
           <Image
             alt={`Miniature du projet ${project.title} réalisé par Sandrine Alcazar`}
-            width={1920}
-            height={1080}
-            sizes="(max-width: 320px) 100vw, (max-width: 640px) 50vw, (max-width: 1280px) 75vw, 1280px"
-            loading="lazy"
-            src={project.image}
             className="object-cover rounded-lg"
+            height={1080}
+            loading="lazy"
+            sizes="(max-width: 320px) 100vw, (max-width: 640px) 50vw, (max-width: 1280px) 75vw, 1280px"
+            src={project.image}
+            width={1920}
           />
         </CardHeader>
         <CardBody className={card.slots.body}>
@@ -38,7 +38,7 @@ const ProjectCard = ({ project }: Props) => {
               <GithubIcon className="text-default-500 w-5 h-5" />
             )}
           </div>
-          <p className={textBase({ align: "justify", className: "mt-8" })}>
+          <p className={textBase({ align: "left", className: "mt-8" })}>
             {project.description}
           </p>
         </CardBody>

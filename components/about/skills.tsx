@@ -21,7 +21,11 @@ export const Skills = ({ cvData }: { cvData: CvData }) => {
       <CardBody>
         <div className="flex flex-wrap  gap-x-2 gap-y-4">
           {cvData.skills.map((skill) => (
-            <Chip key={skill} color="secondary" variant="solid">
+            <Chip
+              key={skill}
+              className="text-white bg-secondary dark:bg-primary"
+              variant="solid"
+            >
               {skill}
             </Chip>
           ))}

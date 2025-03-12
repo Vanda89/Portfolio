@@ -1,6 +1,7 @@
 "use client";
-import React from "react";
 import { Form, Input, Textarea, tv } from "@heroui/react";
+import React from "react";
+import log from "loglevel";
 
 import Button from "../common/Button";
 
@@ -8,51 +9,63 @@ import cvData from "@/data/cv.json";
 
 export const formVariants = tv({
   slots: {
-    form: "flex flex-col items-center justify-center gap-4",
-    input: " h-[64px] mt-20 font-semibold  ",
-    inputWrapper: "shadow-lg dark:shadow-cardShadowDark",
-    label: "!text-secondary text-sm md:text-medium",
+    form: "flex flex-col items-center justify-center gap-8",
+    input: "w-full h-16 font-semibold",
+    inputWrapper: "shadow-lg dark:shadow-cardShadowDark mb-1",
+    label: "!text-secondary  text-sm md:text-medium",
     textarea: "font-semibold",
-    button: "mt-8 shadow-lg",
-    message: "",
-  },
-  variants: {
-    size: {
-      sm: "text-sm",
-      lg: "text-lg",
-      xl: "text-xl",
-    },
+    button: "mt-8 shadow-lg text-white bg-violet-600",
+    errorMessage: "text-red-700 dark:text-red-500",
   },
 });
 
 export const ContactForm = () => {
   const [isLoading, setIsLoading] = React.useState(false);
+  const [globalError, setGlobalError] = React.useState<string | null>(null);
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setIsLoading(true);
+    setGlobalError(null);
+    const form = event.currentTarget;
 
-    const formData = Object.fromEntries(new FormData(event.currentTarget));
+    if (!form.checkValidity()) {
+      setIsLoading(false);
 
-    const mailtoLink = `${cvData.contacts.mail}?subject=${encodeURIComponent(
-      formData.subject as string,
+      return;
+    }
+
+    const formData = Object.fromEntries(new FormData(form));
+
+    const username = formData.username as string;
+    const email = formData.email as string;
+    const subject = formData.subject as string;
+    const message = formData.message as string;
+
+    const mailtoLink = `mailto:${cvData.contacts.email}?subject=${encodeURIComponent(
+      subject,
     )}&body=${encodeURIComponent(
       `Bonjour,
-    
-    Je vous contacte concernant ${formData.subject}. 
-    
-    Voici mes coordonnées :
-    **Nom / Société** : ${formData.username}
-    **Email** : ${formData.email}
-    
-    **Message :**
-    ${formData.message}
-    
-    ${formData.username}`,
+
+Je vous contacte concernant ${subject}.
+
+Voici mes coordonnées :
+**Nom / Société** : ${username}
+**Email** : ${email}
+
+**Message :**
+${message}
+
+${username}`,
     )}`;
 
-    window.location.href = mailtoLink;
-    setIsLoading(false);
+    try {
+      window.location.href = mailtoLink;
+    } catch (err) {
+      log.error("Error sending email", err);
+      setGlobalError("Une erreur s'est produite. Vérifiez votre client email.");
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -64,13 +77,13 @@ export const ContactForm = () => {
     >
       <Input
         isRequired
-        aria-invalid="false"
         aria-label="Votre nom ou le nom de votre entreprise"
         aria-required="true"
         className={formVariants.slots.input}
         classNames={{
           inputWrapper: formVariants.slots.inputWrapper,
           label: formVariants.slots.label,
+          errorMessage: formVariants.slots.errorMessage,
         }}
         isDisabled={isLoading}
         label="Nom/Société"
@@ -78,9 +91,8 @@ export const ContactForm = () => {
         name="username"
         placeholder="Entrez votre nom ou le nom de votre entreprise"
         validate={(value) => {
-          if (!value)
-            return "Veuillez entrer votre nom ou le nom de votre entreprise.";
-          if (value.length < 3) return "Veuillez entrer au moins 3 caractères.";
+          if (!value) return "Veuillez entrer votre nom.";
+          if (value.length < 3) return "Au moins 3 caractères requis.";
 
           return value === "admin" ? "Nice try!" : null;
         }}
@@ -95,6 +107,7 @@ export const ContactForm = () => {
         classNames={{
           inputWrapper: formVariants.slots.inputWrapper,
           label: formVariants.slots.label,
+          errorMessage: formVariants.slots.errorMessage,
         }}
         isDisabled={isLoading}
         label="Email"
@@ -103,7 +116,9 @@ export const ContactForm = () => {
         placeholder="Entrez votre email"
         type="email"
         validate={(value) =>
-          value.includes("@") ? null : "Adresse e-mail invalide."
+          !value || !value.includes("@")
+            ? "Votre adresse mail est invalide."
+            : null
         }
         variant="faded"
       />
@@ -116,6 +131,7 @@ export const ContactForm = () => {
         classNames={{
           inputWrapper: formVariants.slots.inputWrapper,
           label: formVariants.slots.label,
+          errorMessage: formVariants.slots.errorMessage,
         }}
         isDisabled={isLoading}
         label="Sujet"
@@ -123,21 +139,20 @@ export const ContactForm = () => {
         name="subject"
         placeholder="Sujet de votre message"
         validate={(value) =>
-          value.length < 3
-            ? "Le sujet doit contenir au moins 3 caractères."
-            : null
+          !value ? "Veuillez entrer le sujet de votre message." : null
         }
         variant="faded"
       />
 
       <Textarea
         isRequired
-        aria-label="Entre votre message ici"
+        aria-label="Entrez votre message ici"
         aria-required="true"
         className={formVariants.slots.textarea}
         classNames={{
           inputWrapper: formVariants.slots.inputWrapper,
           label: formVariants.slots.label,
+          errorMessage: formVariants.slots.errorMessage,
         }}
         isDisabled={isLoading}
         label="Message"
@@ -145,17 +160,20 @@ export const ContactForm = () => {
         name="message"
         placeholder="Votre message ici..."
         validate={(value) =>
-          value.length < 10
-            ? "Le message doit contenir au moins 10 caractères."
+          !value || value.length < 10
+            ? "Votre message doit contenir au moins 10 caractères."
             : null
         }
         variant="faded"
       />
 
+      {globalError && (
+        <p className={formVariants.slots.errorMessage}>{globalError}</p>
+      )}
+
       <Button
         aria-label="Envoyer le message"
         className={formVariants.slots.button}
-        color="secondary"
         isDisabled={isLoading}
         isLoading={isLoading}
         type="submit"

@@ -4,7 +4,7 @@ import { title } from "@/styles/primitives";
 
 const Page = () => {
   return (
-    <div className="h-full max-w-lg mx-auto flex flex-col mt-10  px-4 gap-12">
+    <div className="h-full max-w-lg mx-auto flex flex-col mt-10  px-4 gap-16">
       <h1
         className={title({
           size: "sm",

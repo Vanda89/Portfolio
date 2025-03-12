@@ -27,19 +27,19 @@ const Banner = () => {
         <h1 className={title({ size: "xl" })}>
           <span>Bienvenue sur </span>
           <span className={title({ color: "violet" })}>mon portfolio</span>
-        </h1>
-        <p className={title({ size: "xl" })}>
+          <br />
           <span>Je suis Sandrine Alcazar,</span>
-        </p>
-        <p className={title({ size: "xl" })}>
+          <br />
           <span>
             Développeuse d&#39;applications
             <span className={title({ color: "violet" })}> Front-End </span>
           </span>
-        </p>
+        </h1>
       </div>
 
-      <p className={subtitle({ size: "lg", class: "mt-8 text-gray-500" })}>
+      <p
+        className={subtitle({ size: "lg", class: "mt-8 text-foreground-500" })}
+      >
         Découvrez{" "}
         <Link
           className="text-foreground font-bold hover:underline"
@@ -60,7 +60,7 @@ const Banner = () => {
       <div className="flex gap-3 mt-28 justify-center">
         <Button
           as={Link}
-          color="secondary"
+          className="bg-violet-600 text-white"
           href="/contact"
           radius="full"
           size="lg"

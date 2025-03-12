@@ -38,44 +38,61 @@ export const ThemeSwitch: FC<ThemeSwitchProps> = ({
     onChange,
   });
 
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLDivElement>) => {
+    event.preventDefault();
+    if (event.key === "Enter" || event.key === " ") {
+      onChange();
+    }
+  };
+
   return (
-    <Component
-      {...getBaseProps({
-        className: clsx(
-          "px-px transition-opacity hover:opacity-80 cursor-pointer ",
-          className,
-          classNames?.base,
-        ),
-      })}
-    >
-      <VisuallyHidden>
-        <input {...getInputProps()} />
-      </VisuallyHidden>
-      <div
-        {...getWrapperProps()}
-        className={slots.wrapper({
-          class: clsx(
-            [
-              "w-auto h-auto",
-              "bg-transparent",
-              "rounded-lg",
-              "flex items-center justify-center",
-              "group-data-[selected=true]:bg-transparent",
-              "!text-default-500",
-              "pt-px",
-              "px-0",
-              "mx-0",
-            ],
-            classNames?.wrapper,
+    <div>
+      <span className="sr-only" id="theme-switch-label">
+        Changer de thème
+      </span>{" "}
+      <Component
+        {...getBaseProps({
+          className: clsx(
+            "px-px transition-opacity hover:opacity-80 cursor-pointer",
+            className,
+            classNames?.base,
           ),
+          role: "switch",
+          "aria-checked": isSelected,
+          "aria-labelledby": "theme-switch-label",
+          onKeyDown: handleKeyDown,
+          tabIndex: 0,
         })}
       >
-        {!isSelected || isSSR ? (
-          <SunFilledIcon className="header-links" size={22} />
-        ) : (
-          <MoonFilledIcon className="header-links" size={22} />
-        )}
-      </div>
-    </Component>
+        <VisuallyHidden>
+          <input {...getInputProps()} aria-labelledby="theme-switch-label" />
+        </VisuallyHidden>
+        <div
+          {...getWrapperProps()}
+          className={slots.wrapper({
+            class: clsx(
+              [
+                "w-auto h-auto",
+                "bg-transparent",
+                "rounded-lg",
+                "flex items-center justify-center",
+                "group-data-[selected=true]:bg-transparent",
+                "!text-default-500",
+                "pt-px",
+                "px-0",
+                "mx-0",
+              ],
+              classNames?.wrapper,
+            ),
+          })}
+        >
+          {!isSelected || isSSR ? (
+            <SunFilledIcon className="header-links" size={22} />
+          ) : (
+            <MoonFilledIcon className="header-links" size={22} />
+          )}
+        </div>
+      </Component>
+    </div>
   );
 };

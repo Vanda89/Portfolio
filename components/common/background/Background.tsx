@@ -5,7 +5,7 @@ const RetroBackground = dynamic(
   () => import("@/components/common/background/RetroBackground"),
   {
     ssr: false,
-  }
+  },
 );
 
 export default function Background() {

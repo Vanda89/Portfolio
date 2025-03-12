@@ -54,7 +54,7 @@ export const Activities = ({ cvData }: { cvData: CvData }) => {
                   <p
                     className={textBase({
                       size: "sm",
-                      class: "text-gray-500 py-1 rounded-full",
+                      class: "text-foreground-500 py-1 rounded-full",
                     })}
                   >
                     {activity.company}

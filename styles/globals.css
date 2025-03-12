@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 header {
-  @apply flex flex-col sm:flex-row !important;
+  @apply flex flex-col sm:flex-row min-h-20 !important;
 }
 
 .header-links,
