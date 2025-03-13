@@ -1,53 +1,101 @@
-# Next.js & HeroUI Template
+# Portfolio de Sandrine Alcazar - Développeuse Front-End
 
-This is a template for creating applications using Next.js 14 (app directory) and HeroUI (v2).
+![Portfolio Screenshot](/public/images/portfolio_thumbnail.webp)
 
-[Try it on CodeSandbox](https://githubbox.com/heroui-inc/heroui/next-app-template)
+## 🚀 Présentation
 
-## Technologies Used
+Portfolio professionnel de Sandrine Alcazar, développeuse Front-End spécialisée en JavaScript/TypeScript. Ce site présente mes compétences, projets et expériences dans le développement web moderne.
 
-- [Next.js 14](https://nextjs.org/docs/getting-started)
-- [HeroUI v2](https://heroui.com/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Tailwind Variants](https://tailwind-variants.org)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Framer Motion](https://www.framer.com/motion/)
-- [next-themes](https://github.com/pacocoursey/next-themes)
+🔗 **Site en ligne :** [sandrinealcazar.ovh](https://sandrinealcazar.ovh)
 
-## How to Use
+## ✨ Fonctionnalités
 
-### Use the template with create-next-app
+- **Design Responsive** - Interface adaptée à tous les appareils
+- **Thème Clair/Sombre** - Changement de thème automatique ou manuel
+- **Arrière-plan Dynamique** - Animation 3D réalisée avec Three.js
+- **Filtrage des Projets** - Filtrage par technologies (React, Next.js, etc.)
+- **CV Interactif** - Présentation de mes compétences et expériences
+- **Formulaire de Contact** - Possibilité de me contacter directement
 
-To create a new project based on this template using `create-next-app`, run the following command:
+## 🛠️ Technologies Utilisées
 
-```bash
-npx create-next-app -e https://github.com/heroui-inc/next-app-template
+- **Framework** : [Next.js 15](https://nextjs.org/) avec App Router
+- **Langage** : [TypeScript](https://www.typescriptlang.org/)
+- **UI/UX** :
+  - [React 18.3](https://react.dev/)
+  - [Hero UI 2.4](https://heroui.com/)
+  - [Tailwind CSS 3.4](https://tailwindcss.com/)
+- **Animation 3D** : [Three.js](https://threejs.org/)
+- **Déploiement** : [OVH](https://ovh.com)
+
+## 📂 Structure du Projet
+
+```
+/
+├── app/                # Pages Next.js (App Router)
+│   ├── about/          # Page CV
+│   ├── contact/        # Page de contact
+│   ├── mentions/       # Mentions légales
+│   └── page.tsx        # Page d'accueil
+├── components/         # Composants React
+│   ├── about/          # Composants pour la page CV
+│   ├── common/         # Composants partagés
+│   ├── contact/        # Composants pour la page contact
+│   └── home/           # Composants pour la page d'accueil
+├── config/             # Configuration du site
+├── data/               # Données JSON (CV, projets)
+├── public/             # Fichiers statiques
+├── styles/             # Styles globaux et primitives
+└── types/              # Types TypeScript
 ```
 
-### Install dependencies
+## 🚀 Installation et Démarrage
 
-You can use one of them `npm`, `yarn`, `pnpm`, `bun`, Example using `npm`:
+### Prérequis
+
+- Node.js 18.17 ou supérieur
+- npm ou yarn
+
+### Installation
 
 ```bash
+# Cloner le dépôt
+git clone https://github.com/Vanda89/Portfolio.git
+cd Portfolio
+
+# Installer les dépendances
 npm install
-```
+# ou
+yarn install
 
-### Run the development server
-
-```bash
+# Lancer le serveur de développement
 npm run dev
+# ou
+yarn dev
 ```
 
-### Setup pnpm (optional)
+Le site sera accessible à l'adresse [http://localhost:3000](http://localhost:3000).
 
-If you are using `pnpm`, you need to add the following code to your `.npmrc` file:
+### Production
 
 ```bash
-public-hoist-pattern[]=*@heroui/*
+# Construire l'application
+npm run build
+# ou
+yarn build
+
+# Démarrer le serveur de production
+npm run start
+# ou
+yarn start
 ```
 
-After modifying the `.npmrc` file, you need to run `pnpm install` again to ensure that the dependencies are installed correctly.
+## 📝 Licence
 
-## License
+Tous droits réservés © Sandrine Alcazar 2025
 
-Licensed under the [MIT license](https://github.com/heroui-inc/next-app-template/blob/main/LICENSE).
+## 📬 Contact
+
+- **Email** : [sandrinealcazar@gmail.com](mailto:sandrinealcazar@gmail.com)
+- **LinkedIn** : [linkedin.com/in/alcazar-sandrine](https://www.linkedin.com/in/alcazar-sandrine/)
+- **GitHub** : [github.com/Vanda89](https://github.com/Vanda89)
