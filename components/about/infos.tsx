@@ -1,13 +1,13 @@
 "use client";
 
 import { Card, CardBody, CardHeader } from "@heroui/react";
+import { useTheme } from "next-themes";
 
 import Button from "../common/Button";
 
 import { title, subtitle } from "@/styles/primitives";
 import { CvData } from "@/types/types";
 import { siteConfig as site } from "@/config/site";
-import { useTheme } from "next-themes";
 
 type ContactLink = {
   href: string;

@@ -44,7 +44,7 @@ export const ContactForm = () => {
     const message = formData.message as string;
 
     const mailtoLink = `mailto:${cvData.contacts.email}?subject=${encodeURIComponent(
-      subject
+      subject,
     )}&body=${encodeURIComponent(
       `Bonjour,
 
@@ -57,7 +57,7 @@ Voici mes coordonnées :
 **Message :**
 ${message}
 
-${username}`
+${username}`,
     )}`;
 
     try {

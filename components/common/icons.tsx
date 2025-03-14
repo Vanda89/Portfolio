@@ -223,7 +223,7 @@ export const ArrowRightIcon = ({ size = 24, className = "" }: IconSvgProps) => (
     width={size}
     xmlns="http://www.w3.org/2000/svg"
   >
-    <line x1="0" y1="12" x2="19" y2="12" />
+    <line x1="0" x2="19" y1="12" y2="12" />
     <polyline points="12 5 19 12 12 19" />
   </svg>
 );
@@ -269,15 +269,15 @@ export const CheckCircleIcon = ({
 }: IconSvgProps) => (
   <svg
     className={className}
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
     fill="none"
+    height={size}
     stroke="currentColor"
-    strokeWidth="2"
     strokeLinecap="round"
     strokeLinejoin="round"
+    strokeWidth="2"
+    viewBox="0 0 24 24"
+    width={size}
+    xmlns="http://www.w3.org/2000/svg"
   >
     <circle cx="12" cy="12" r="10" />
     <path d="M9 12l2 2 4-4" />
@@ -287,15 +287,15 @@ export const CheckCircleIcon = ({
 export const BriefcaseIcon = ({ size = 16, className = "" }: IconSvgProps) => (
   <svg
     className={className}
-    xmlns="http://www.w3.org/2000/svg"
-    width="16"
-    height="16"
-    viewBox="0 0 24 24"
     fill="none"
+    height={size}
     stroke="currentColor"
-    strokeWidth="2"
     strokeLinecap="round"
     strokeLinejoin="round"
+    strokeWidth="2"
+    viewBox="0 0 24 24"
+    width={size}
+    xmlns="http://www.w3.org/2000/svg"
   >
     <path d="M2 7h20v14H2z" />
     <path d="M2 7V4a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v3" />
@@ -306,15 +306,15 @@ export const BriefcaseIcon = ({ size = 16, className = "" }: IconSvgProps) => (
 export const CalendarIcon = ({ size = 16, className = "" }: IconSvgProps) => (
   <svg
     className={className}
-    xmlns="http://www.w3.org/2000/svg"
-    width="16"
-    height="16"
-    viewBox="0 0 24 24"
     fill="none"
+    height={size}
     stroke="currentColor"
-    strokeWidth="2"
     strokeLinecap="round"
     strokeLinejoin="round"
+    strokeWidth="2"
+    viewBox="0 0 24 24"
+    width={size}
+    xmlns="http://www.w3.org/2000/svg"
   >
     <path d="M3 4h18v18H3z" />
     <path d="M16 2v4M8 2v4" />
@@ -325,15 +325,15 @@ export const CalendarIcon = ({ size = 16, className = "" }: IconSvgProps) => (
 export const WorldIcon = ({ size = 16, className = "" }: IconSvgProps) => (
   <svg
     className={className}
-    xmlns="http://www.w3.org/2000/svg"
-    width={size}
-    height={size}
-    viewBox="0 0 24 24"
     fill="none"
+    height={size}
     stroke="currentColor"
-    strokeWidth="2"
     strokeLinecap="round"
     strokeLinejoin="round"
+    strokeWidth="2"
+    viewBox="0 0 24 24"
+    width={size}
+    xmlns="http://www.w3.org/2000/svg"
   >
     <circle cx="12" cy="12" r="10" />
     <path d="M2 12h20" />

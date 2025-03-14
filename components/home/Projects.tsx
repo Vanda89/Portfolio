@@ -35,9 +35,9 @@ const Projects = () => {
       return array.filter((project) =>
         Object.keys(project.filters).some((key) =>
           project.filters[key].some((item) =>
-            item.toLowerCase().includes(activeTag.toLowerCase())
-          )
-        )
+            item.toLowerCase().includes(activeTag.toLowerCase()),
+          ),
+        ),
       );
     }
   };

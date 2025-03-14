@@ -2,9 +2,10 @@
 
 import { Card, CardBody, CardHeader, Divider } from "@heroui/react";
 
+import { GithubIcon, WorldIcon } from "../common/icons";
+
 import { subtitle, textBase, title } from "@/styles/primitives";
 import { CvData, Project } from "@/types/types";
-import { GithubIcon, WorldIcon } from "../common/icons";
 
 const formationCategoryMap: { [key: string]: string } = {
   "Développeur Front-end JavaScript/React": "dev js",
@@ -28,7 +29,7 @@ export const Education = ({
           {cvData.formation.map((formation) => {
             const category = formationCategoryMap[formation.title];
             const formationProjects = projects.filter(
-              (project) => project.category === category
+              (project) => project.category === category,
             );
 
             return (
@@ -50,19 +51,20 @@ export const Education = ({
                       >
                         <div className="flex items-center gap-2">
                           <a
+                            className="flex items-center gap-2 hover:text-primary hover:underline"
                             href={project.url || project.github}
                             rel="noopener noreferrer"
                             target="_blank"
-                            className="flex items-center gap-2 hover:text-primary hover:underline"
                           >
                             <WorldIcon className="w-5 h-5 text-primary" />
                             <h4 className="font-semibold  ">{project.title}</h4>
                           </a>
                           <Divider className="w-0.5 h-4 mx-2" />
                           <a
-                            href={project.github}
-                            target="_blank"
                             className="flex items-center gap-2 hover:text-secondary duration-300 hover:underline"
+                            href={project.github}
+                            rel="noreferrer"
+                            target="_blank"
                           >
                             <GithubIcon className=" w-5 h-5 text-secondary " />
                             <h4 className="font-semibold    ">Github</h4>

@@ -2,13 +2,13 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useTheme } from "next-themes";
 
 import Button from "../common/Button";
 
 import { GithubIcon } from "@/components/common/icons";
 import cvData from "@/data/cv.json";
 import { subtitle, title } from "@/styles/primitives";
-import { useTheme } from "next-themes";
 
 const Banner = () => {
   const { theme } = useTheme();

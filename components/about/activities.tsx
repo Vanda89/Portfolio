@@ -1,9 +1,10 @@
 "use client";
 import { Card, CardBody, CardHeader } from "@heroui/react";
 
+import { BriefcaseIcon, CalendarIcon } from "../common/icons";
+
 import { textBase, title } from "@/styles/primitives";
 import { CvData } from "@/types/types";
-import { BriefcaseIcon, CalendarIcon } from "../common/icons";
 
 export const Activities = ({ cvData }: { cvData: CvData }) => {
   return (

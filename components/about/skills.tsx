@@ -1,9 +1,11 @@
 "use client";
 
 import { Card, CardBody, CardHeader, Chip } from "@heroui/react";
+
+import { CheckCircleIcon } from "../common/icons";
+
 import { textBase, title } from "@/styles/primitives";
 import { CvData } from "@/types/types";
-import { CheckCircleIcon } from "../common/icons";
 
 export const Skills = ({ cvData }: { cvData: CvData }) => {
   return (
@@ -56,13 +58,13 @@ export const Skills = ({ cvData }: { cvData: CvData }) => {
           <div className="grid gap-4 md:grid-cols-2">
             {cvData.softSkills.map((skill) => (
               <div
-                key={skill.name}
                 className="flex items-start gap-3 p-4 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 "
+                key={skill.name}
               >
                 <CheckCircleIcon
+                  aria-hidden="true"
                   className="fill-secondary stroke-white  dark:fill-primary dark:stroke-gray-800 mt-1 flex-shrink-0"
                   size={16}
-                  aria-hidden="true"
                 />
                 <div className="flex flex-col gap-1">
                   <p className={textBase({ size: "md", weight: "semibold" })}>

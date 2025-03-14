@@ -11,6 +11,7 @@ const CTA = ({ isHome = false, isContact = false }: CTAProps) => {
       <Link
         className="text-secondary dark:text-primary-500 font-semibold hover:underline"
         href={link.href}
+        key={link.href}
       >
         {link.label}
       </Link>
@@ -39,7 +40,10 @@ const CTA = ({ isHome = false, isContact = false }: CTAProps) => {
       ) : (
         <>
           Intéressé(e) par une collaboration ?{" "}
-          {renderLinks([{ href: "/contact", label: "Contactez-moi" }])} !
+          {renderLinks([
+            { href: "/contact", label: "Contactez-moi sans attendre" },
+          ])}{" "}
+          !
           <br />
           Retour sur la page d&apos;accueil{" "}
           {renderLinks([{ href: "/", label: "ici" }])}.
