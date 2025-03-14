@@ -23,36 +23,37 @@
   ],
   "softSkills": [
     {
-      "name": "Organisation",
-      "description": "Maman de trois enfants (16, 10 et 4 ans), j’ai appris à gérer des priorités multiples avec efficacité, un atout clé dans ma reconversion."
-    },
-    {
-      "name": "Résilience",
-      "description": "À 35 ans, j’ai surmonté des défis personnels tout en me formant en autodidacte pour réussir ma reconversion en développement."
+      "name": "Adaptabilité",
+      "description": "En reconversion, je suis prête à relever de nouveaux challenges techniques et m'adapter aux technologies de ma future entreprise."
     },
     {
       "name": "Apprentissage Autonome",
-      "description": "Passionnée depuis des années, j’ai acquis Next.js et TypeScript par moi-même, avec une soif d’apprendre qui s’étend à tous les langages."
+      "description": "Développer mes compétences en autodidacte m'a permis d'apprendre de nouvelles technologies et langages, renforçant ma rapidité et mon efficacité."
     },
     {
-      "name": "Adaptabilité",
-      "description": "En tant que développeuse en reconversion, je me suis adaptée à de nouveaux défis techniques tout en jonglant avec ma vie de famille à Montpellier."
+      "name": "Communication",
+      "description": "Capacité à partager des idées et à poser des questions de manière claire, facilitant ainsi la collaboration et l'apprentissage dans un environnement d'équipe."
     },
     {
-      "name": "Empathie",
-      "description": "Mère de trois enfants d’âges variés, j’ai développé une capacité à comprendre et répondre aux besoins divers, une force pour le travail en équipe."
-    },
-    {
-      "name": "Gestion du Stress",
-      "description": "Élever des enfants de 16, 10 et 4 ans tout en apprenant le développement m’a appris à rester calme et efficace sous pression."
+      "name": "Résilience",
+      "description": "À 35 ans, j'ai surmonté des défis personnels tout en me formant pour obtenir mes diplômes et réussir ma reconversion en développement."
     },
     {
       "name": "Curiosité Intellectuelle",
-      "description": "Passionnée par le code depuis des années, j’explore sans cesse de nouveaux langages et technologies pour enrichir mes compétences."
+      "description": "Passionnée par le code depuis plusieurs années, j'explore sans cesse de nouveaux langages et technologies pour enrichir mes compétences et suis prête à en apprendre de nouvelles pour les besoins de mon futur poste."
     },
     {
-      "name": "Rigueur",
-      "description": "Depuis des années, je consacre mes journées à coder, apprendre ou faire de la veille, une discipline qui m’a permis de ne jamais abandonner mon rêve de devenir développeuse."
+      "name": "Concentration",
+      "description": "Mon parcours d'apprentissage, tout en élevant des enfants, m'a permis de cultiver une grande capacité de concentration, me permettant de me focaliser rapidement sur mes objectifs et de les atteindre efficacement."
+    },
+    {
+      "name": "Empathie",
+      "description": "Grâce à mon écoute attentive, je comprends les besoins des autres, ce qui est une force pour le travail en équipe."
+    },
+
+    {
+      "name": "Organisation",
+      "description": "Grâce à mon expérience en tant que maman de trois enfants, j'ai développé une forte capacité à gérer efficacement plusieurs priorités, ce qui est essentiel dans un environnement de travail dynamique."
     }
   ],
   "formation": [
