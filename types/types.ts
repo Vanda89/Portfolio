@@ -45,7 +45,8 @@ export interface CvData {
   name: string;
   role: string;
   contacts: Contacts;
-  skills: string[];
+  hardSkills: string[];
+  softSkills: { name: string; description: string }[];
   formation: Formation[];
   activities: Activities[];
 }
