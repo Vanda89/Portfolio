@@ -1,14 +1,14 @@
 "use client";
 import { Card, CardBody, CardHeader } from "@heroui/react";
-import { FiBriefcase, FiCalendar } from "react-icons/fi"; // Icônes
 
 import { textBase, title } from "@/styles/primitives";
 import { CvData } from "@/types/types";
+import { BriefcaseIcon, CalendarIcon } from "../common/icons";
 
 export const Activities = ({ cvData }: { cvData: CvData }) => {
   return (
     <Card
-      className="flex flex-col gap-6 p-6  mb-6 bg-foreground-50"
+      className="flex flex-col gap-6 p-6  mb-6 bg-background-200 "
       id="activities"
     >
       <CardHeader className="pb-4 border-b border-foreground-300">
@@ -18,12 +18,12 @@ export const Activities = ({ cvData }: { cvData: CvData }) => {
         <ul className="space-y-4">
           {cvData.activities.map((activity) => (
             <li
-              className="flex flex-col gap-4 lg:gap-0 p-4 bg-foreground-50 border-2 border-secondary-300 rounded-lg shadow-sm hover:shadow-lg transition-shadow"
+              className="flex flex-col gap-4 lg:gap-0 p-4  rounded-lg  bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 "
               key={`${activity.title}-${activity.duration}`}
             >
               <div className="flex justify-between items-center lg:mb-4">
                 <div className="flex items-center justify-between gap-3">
-                  <FiBriefcase className="text-violet-600 min-w-6 " />
+                  <BriefcaseIcon className="text-violet-600 min-w-6 " />
                   <h3
                     className={title({
                       size: "sm",
@@ -36,7 +36,7 @@ export const Activities = ({ cvData }: { cvData: CvData }) => {
               </div>
 
               <div className="flex items-center gap-3 ">
-                <FiCalendar className="text-blue-500 min-w-6" />
+                <CalendarIcon className="text-blue-500 min-w-6" />
                 <p className={textBase({ size: "sm" })}>{activity.duration}</p>
               </div>
 
@@ -44,7 +44,7 @@ export const Activities = ({ cvData }: { cvData: CvData }) => {
                 <p
                   className={textBase({
                     size: "sm",
-                    class: "text-foreground-800 lg:mt-3",
+                    class: "text-foreground-500 lg:mt-3",
                   })}
                 >
                   {activity.description}

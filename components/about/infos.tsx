@@ -7,6 +7,8 @@ import Button from "../common/Button";
 import { title, subtitle } from "@/styles/primitives";
 import { CvData } from "@/types/types";
 import { siteConfig as site } from "@/config/site";
+import { useTheme } from "next-themes";
+
 type ContactLink = {
   href: string;
   icon: React.ComponentType<{ className?: string }>;
@@ -21,12 +23,10 @@ const contactButton = (link: ContactLink) => {
   return (
     <Button
       as="a"
-      className="text-xs md:text-md w-56 "
-      color="default"
+      className="text-xs md:text-md w-56 flex gap-4 bg-background-300 shadow-md "
       href={link.href}
       rel={link.rel}
       target={link.target}
-      variant="shadow"
     >
       <Icon className="w-4 text-secondary" /> {link.label}
     </Button>
@@ -34,8 +34,14 @@ const contactButton = (link: ContactLink) => {
 };
 
 export const Infos = ({ cvData }: { cvData: CvData }) => {
+  const { theme } = useTheme();
+  const titleColor = theme === "dark" ? "blue" : "violet";
+
   return (
-    <Card className="p-6 flex flex-col items-center" id="infos">
+    <Card
+      className="p-6 flex flex-col items-center bg-background-200 "
+      id="infos"
+    >
       <CardHeader className="md:w-[90%] lg:w-[80%]  flex flex-col md:flex-row items-center md:justify-center gap-8 md:gap-16 ">
         {/*  <Image
   src={cvData.image && cvData.image.trim() !== "" ? cvData.image : "/images/avatar-placeholder.png"}
@@ -49,7 +55,7 @@ export const Infos = ({ cvData }: { cvData: CvData }) => {
           <h1
             className={title({
               size: "xl",
-              color: "blue",
+              color: titleColor,
               class: "text-center",
               weight: "extrabold",
             })}

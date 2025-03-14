@@ -8,5 +8,5 @@ header {
 
 .header-links,
 .header-links a {
-  @apply hover:text-secondary hover:opacity-100;
+  @apply hover:text-secondary dark:hover:text-primary-400 hover:opacity-100;
 }

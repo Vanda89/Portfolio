@@ -35,9 +35,9 @@ const Projects = () => {
       return array.filter((project) =>
         Object.keys(project.filters).some((key) =>
           project.filters[key].some((item) =>
-            item.toLowerCase().includes(activeTag.toLowerCase()),
-          ),
-        ),
+            item.toLowerCase().includes(activeTag.toLowerCase())
+          )
+        )
       );
     }
   };
@@ -47,7 +47,7 @@ const Projects = () => {
   return (
     <section
       className="container
-        min-h-screen w-full pt-20 px-2 mx-auto flex flex-col items-center gap-8 "
+        min-h-screen w-full pt-20 px-2 mx-auto flex flex-col items-center gap-12 "
       id="projects"
     >
       <h2 className={title({ size: "lg" })}>Mes Projets</h2>

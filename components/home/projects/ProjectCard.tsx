@@ -5,7 +5,7 @@ import { Card, CardBody, CardHeader, Link } from "@heroui/react";
 import Image from "next/image";
 
 import { GithubIcon } from "@/components/common/icons";
-import { card, textBase, title } from "@/styles/primitives";
+import { projectCard as card, textBase, title } from "@/styles/primitives";
 import { Project } from "@/types/types";
 
 type Props = {

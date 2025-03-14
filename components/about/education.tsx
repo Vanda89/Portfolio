@@ -1,9 +1,10 @@
 "use client";
 
-import { Card, CardBody, CardHeader } from "@heroui/react";
+import { Card, CardBody, CardHeader, Divider } from "@heroui/react";
 
-import { title, subtitle, textBase } from "@/styles/primitives";
+import { subtitle, textBase, title } from "@/styles/primitives";
 import { CvData, Project } from "@/types/types";
+import { GithubIcon, WorldIcon } from "../common/icons";
 
 const formationCategoryMap: { [key: string]: string } = {
   "Développeur Front-end JavaScript/React": "dev js",
@@ -18,7 +19,7 @@ export const Education = ({
   projects: Project[];
 }) => {
   return (
-    <Card className="flex flex-col gap-4 p-6" id="education">
+    <Card className="flex flex-col gap-4 p-6 bg-background-200 " id="education">
       <CardHeader className="pb-4 border-b border-gray-300">
         <h2 className={title({ size: "md", weight: "bold" })}>Formations</h2>
       </CardHeader>
@@ -27,12 +28,12 @@ export const Education = ({
           {cvData.formation.map((formation) => {
             const category = formationCategoryMap[formation.title];
             const formationProjects = projects.filter(
-              (project) => project.category === category,
+              (project) => project.category === category
             );
 
             return (
               <li
-                className="flex flex-col gap-1 md:pl-4"
+                className="flex flex-col gap-1 md:pl-3"
                 key={`${formation.title}-${formation.duration}`}
               >
                 <h3 className={title({ size: "sm" })}>{formation.title}</h3>
@@ -41,22 +42,38 @@ export const Education = ({
                 </p>
 
                 {formationProjects.length > 0 && (
-                  <ul className="flex flex-col  gap-4  mt-2 lg:pl-4 space-y-2">
+                  <ul className="flex flex-col  gap-4  mt-2  space-y-2">
                     {formationProjects.map((project) => (
-                      <li className="flex flex-col gap-2" key={project.id}>
-                        <div className="flex">
-                          <span>🔹</span>
+                      <li
+                        className="flex flex-col gap-2 p-3 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 cursor-pointer"
+                        key={project.id}
+                      >
+                        <div className="flex items-center gap-2">
                           <a
                             href={project.url || project.github}
                             rel="noopener noreferrer"
                             target="_blank"
+                            className="flex items-center gap-2 hover:text-primary hover:underline"
                           >
-                            <h4 className="text-secondary font-semibold underline underline-offset-2 transition-colors duration-300 hover:text-primary">
-                              {project.title}
-                            </h4>
+                            <WorldIcon className="w-5 h-5 text-primary" />
+                            <h4 className="font-semibold  ">{project.title}</h4>
+                          </a>
+                          <Divider className="w-0.5 h-4 mx-2" />
+                          <a
+                            href={project.github}
+                            target="_blank"
+                            className="flex items-center gap-2 hover:text-secondary duration-300 hover:underline"
+                          >
+                            <GithubIcon className=" w-5 h-5 text-secondary " />
+                            <h4 className="font-semibold    ">Github</h4>
                           </a>
                         </div>
-                        <p className={textBase({ size: "xs" })}>
+                        <p
+                          className={textBase({
+                            size: "sm",
+                            class: "text-foreground-500",
+                          })}
+                        >
                           {project.resume}
                         </p>
                       </li>

@@ -10,11 +10,12 @@ import cvData from "@/data/cv.json";
 export const formVariants = tv({
   slots: {
     form: "flex flex-col items-center justify-center gap-8",
-    input: "w-full h-16 font-semibold",
-    inputWrapper: "shadow-lg dark:shadow-cardShadowDark mb-1",
-    label: "!text-secondary  text-sm md:text-medium",
+    input: "  placeholder:text-gray-500 dark:placeholder:text-gray-300",
+    inputWrapper:
+      "shadow-lg bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg mb-1",
+    label: "!text-secondary dark:!text-primary-600 text-sm md:text-medium",
     textarea: "font-semibold",
-    button: "mt-8 shadow-lg text-white bg-violet-600",
+    button: "mt-8 shadow-lg text-white bg-violet-600 dark:bg-primary-400",
     errorMessage: "text-red-700 dark:text-red-500",
   },
 });
@@ -43,7 +44,7 @@ export const ContactForm = () => {
     const message = formData.message as string;
 
     const mailtoLink = `mailto:${cvData.contacts.email}?subject=${encodeURIComponent(
-      subject,
+      subject
     )}&body=${encodeURIComponent(
       `Bonjour,
 
@@ -56,7 +57,7 @@ Voici mes coordonnées :
 **Message :**
 ${message}
 
-${username}`,
+${username}`
     )}`;
 
     try {
@@ -79,8 +80,8 @@ ${username}`,
         isRequired
         aria-label="Votre nom ou le nom de votre entreprise"
         aria-required="true"
-        className={formVariants.slots.input}
         classNames={{
+          input: formVariants.slots.input,
           inputWrapper: formVariants.slots.inputWrapper,
           label: formVariants.slots.label,
           errorMessage: formVariants.slots.errorMessage,
@@ -103,8 +104,8 @@ ${username}`,
         isRequired
         aria-label="Adresse e-mail"
         aria-required="true"
-        className={formVariants.slots.input}
         classNames={{
+          input: formVariants.slots.input,
           inputWrapper: formVariants.slots.inputWrapper,
           label: formVariants.slots.label,
           errorMessage: formVariants.slots.errorMessage,
@@ -127,8 +128,8 @@ ${username}`,
         isRequired
         aria-label="Sujet de votre message"
         aria-required="true"
-        className={formVariants.slots.input}
         classNames={{
+          input: formVariants.slots.input,
           inputWrapper: formVariants.slots.inputWrapper,
           label: formVariants.slots.label,
           errorMessage: formVariants.slots.errorMessage,
@@ -148,8 +149,8 @@ ${username}`,
         isRequired
         aria-label="Entrez votre message ici"
         aria-required="true"
-        className={formVariants.slots.textarea}
         classNames={{
+          input: formVariants.slots.input,
           inputWrapper: formVariants.slots.inputWrapper,
           label: formVariants.slots.label,
           errorMessage: formVariants.slots.errorMessage,

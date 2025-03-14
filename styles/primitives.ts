@@ -90,9 +90,9 @@ export const textBase = tv({
   },
 });
 
-export const card = tv({
+export const projectCard = tv({
   slots: {
-    base: "background-none flex flex-col items-center h-full rounded-xl gap-16 p-4 text-foreground bg-foreground-200 shadow-lg ",
+    base: "background-none flex flex-col items-center h-full rounded-xl gap-16 p-6 text-foreground bg-background-200 shadow-lg ",
     imageContainer:
       "relative flex justify-center border-1 border-gray-200  p-0 overflow-hidden rounded-lg bg-cover",
     body: "text-center",
