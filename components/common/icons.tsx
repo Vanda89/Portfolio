@@ -61,7 +61,6 @@ export const GithubIcon: React.FC<IconSvgProps> = ({
         clipRule="evenodd"
         d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z"
         fill="currentColor"
-        fillRule="evenodd"
       />
     </svg>
   );
@@ -211,7 +210,25 @@ export const ArrowDown = ({
   </svg>
 );
 
-export const MailIcon = ({ size = 24, className = "" }) => (
+export const ArrowRightIcon = ({ size = 24, className = "" }: IconSvgProps) => (
+  <svg
+    className={className}
+    fill="none"
+    height={size}
+    stroke="currentColor"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    strokeWidth="2"
+    viewBox="0 0 24 24"
+    width={size}
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <line x1="0" y1="12" x2="19" y2="12" />
+    <polyline points="12 5 19 12 12 19" />
+  </svg>
+);
+
+export const MailIcon = ({ size = 24, className = "" }: IconSvgProps) => (
   <svg
     className={className}
     fill="none"
@@ -229,7 +246,7 @@ export const MailIcon = ({ size = 24, className = "" }) => (
   </svg>
 );
 
-export const PhoneIcon = ({ size = 24, className = "" }) => (
+export const PhoneIcon = ({ size = 24, className = "" }: IconSvgProps) => (
   <svg
     className={className}
     fill="none"
@@ -243,5 +260,84 @@ export const PhoneIcon = ({ size = 24, className = "" }) => (
     xmlns="http://www.w3.org/2000/svg"
   >
     <path d="M22 16.92V19a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2 6.18 2 2 0 0 1 4 4h2.08a2 2 0 0 1 2 .91l2.36 3.94a2 2 0 0 1-.45 2.55l-1.27 1a16 16 0 0 0 6 6l1-1.27a2 2 0 0 1 2.55-.45l3.94 2.36a2 2 0 0 1 .91 2Z" />
+  </svg>
+);
+
+export const CheckCircleIcon = ({
+  size = 24,
+  className = "",
+}: IconSvgProps) => (
+  <svg
+    className={className}
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <circle cx="12" cy="12" r="10" />
+    <path d="M9 12l2 2 4-4" />
+  </svg>
+);
+
+export const BriefcaseIcon = ({ size = 16, className = "" }: IconSvgProps) => (
+  <svg
+    className={className}
+    xmlns="http://www.w3.org/2000/svg"
+    width="16"
+    height="16"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <path d="M2 7h20v14H2z" />
+    <path d="M2 7V4a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v3" />
+    <path d="M16 7V4H8v3" />
+  </svg>
+);
+
+export const CalendarIcon = ({ size = 16, className = "" }: IconSvgProps) => (
+  <svg
+    className={className}
+    xmlns="http://www.w3.org/2000/svg"
+    width="16"
+    height="16"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <path d="M3 4h18v18H3z" />
+    <path d="M16 2v4M8 2v4" />
+    <path d="M3 10h18" />
+  </svg>
+);
+
+export const WorldIcon = ({ size = 16, className = "" }: IconSvgProps) => (
+  <svg
+    className={className}
+    xmlns="http://www.w3.org/2000/svg"
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <circle cx="12" cy="12" r="10" />
+    <path d="M2 12h20" />
+    <path d="M12 2a15 15 0 0 0 0 20" />
+    <path d="M12 2a15 15 0 0 1 0 20" />
   </svg>
 );
