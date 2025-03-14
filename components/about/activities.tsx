@@ -18,8 +18,8 @@ export const Activities = ({ cvData }: { cvData: CvData }) => {
         <ul className="space-y-4">
           {cvData.activities.map((activity) => (
             <li
-              key={`${activity.title}-${activity.duration}`}
               className="flex flex-col gap-4 lg:gap-0 p-4 bg-foreground-50 border-2 border-secondary-300 rounded-lg shadow-sm hover:shadow-lg transition-shadow"
+              key={`${activity.title}-${activity.duration}`}
             >
               <div className="flex justify-between items-center lg:mb-4">
                 <div className="flex items-center justify-between gap-3">

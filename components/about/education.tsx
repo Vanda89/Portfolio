@@ -32,8 +32,8 @@ export const Education = ({
 
             return (
               <li
-                key={`${formation.title}-${formation.duration}`}
                 className="flex flex-col gap-1 md:pl-4"
+                key={`${formation.title}-${formation.duration}`}
               >
                 <h3 className={title({ size: "sm" })}>{formation.title}</h3>
                 <p className={subtitle({ size: "sm" })}>
@@ -43,7 +43,7 @@ export const Education = ({
                 {formationProjects.length > 0 && (
                   <ul className="flex flex-col  gap-4  mt-2 lg:pl-4 space-y-2">
                     {formationProjects.map((project) => (
-                      <li key={project.id} className="flex flex-col gap-2">
+                      <li className="flex flex-col gap-2" key={project.id}>
                         <div className="flex">
                           <span>🔹</span>
                           <a

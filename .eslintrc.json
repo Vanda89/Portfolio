@@ -78,12 +78,11 @@
     ],
     "react/self-closing-comp": "warn",
     "react/jsx-sort-props": [
-      "warn",
+      "error",
       {
+        "ignoreCase": true,
         "callbacksLast": true,
-        "shorthandFirst": true,
-        "noSortAlphabetically": false,
-        "reservedFirst": true
+        "shorthandFirst": true
       }
     ],
     "padding-line-between-statements": [
