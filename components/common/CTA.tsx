@@ -6,64 +6,43 @@ interface CTAProps {
 }
 
 const CTA = ({ isHome = false, isContact = false }: CTAProps) => {
+  const renderLinks = (links: { href: string; label: string }[]) => {
+    return links.map((link) => (
+      <Link
+        className="text-secondary dark:text-primary-500 font-semibold hover:underline"
+        href={link.href}
+      >
+        {link.label}
+      </Link>
+    ));
+  };
+
   return (
-    <p className="pt-6 text-foreground-500 text-center leading-loose ">
+    <p className="pt-6 text-foreground-500 text-center leading-loose">
       {isHome ? (
         <>
           Intéressé(e) par mes{" "}
-          <Link
-            className="text-secondary font-semibold hover:underline"
-            href="/about"
-          >
-            compétences
-          </Link>
-          {" ? "}
-          <Link
-            className="text-secondary font-semibold hover:underline"
-            href="/contact"
-          >
-            Contactez-moi
-          </Link>{" "}
+          {renderLinks([
+            { href: "/about", label: "compétences. " },
+            { href: "/contact", label: "Contactez-moi" },
+          ])}{" "}
           pour collaborer.
         </>
       ) : isContact ? (
         <>
           Envie d&apos;en savoir{" "}
-          <Link
-            className="text-secondary font-semibold hover:underline"
-            href="/about"
-          >
-            plus
-          </Link>
-          {" ?"}
+          {renderLinks([{ href: "/about", label: "plus" }])} ?
           <br />
-          Explorez mes{" "}
-          <Link
-            className="text-secondary font-semibold hover:underline"
-            href="/"
-          >
-            projets
-          </Link>{" "}
-          ou utilisez le formulaire ci-dessus !
+          Explorez mes {renderLinks([{ href: "/", label: "projets" }])} ou
+          utilisez le formulaire ci-dessus !
         </>
       ) : (
         <>
           Intéressé(e) par une collaboration ?{" "}
-          <Link
-            className="text-secondary font-semibold hover:underline"
-            href="/contact"
-          >
-            Contactez-moi
-          </Link>{" "}
-          !
+          {renderLinks([{ href: "/contact", label: "Contactez-moi" }])} !
           <br />
           Retour sur la page d&apos;accueil{" "}
-          <Link
-            className="text-secondary font-semibold hover:underline"
-            href="/"
-          >
-            ici
-          </Link>
+          {renderLinks([{ href: "/", label: "ici" }])}.
         </>
       )}
     </p>
