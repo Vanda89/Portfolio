@@ -4,10 +4,6 @@ export const title = tv({
   base: "tracking-tight inline font-semibold",
   variants: {
     color: {
-      violet: "from-[#FF1CF7] to-[#b249f8]",
-
-      blue: "from-[#5EA2EF] to-[#0072F5]",
-
       foreground: "dark:from-[#FFFFFF] dark:to-[#4B4B4B]",
     },
     size: {
@@ -33,7 +29,7 @@ export const title = tv({
 
   compoundVariants: [
     {
-      color: ["violet", "foreground", "blue"],
+      color: ["foreground"],
       class: "bg-clip-text text-transparent bg-gradient-to-b",
     },
   ],

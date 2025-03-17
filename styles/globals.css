@@ -10,3 +10,7 @@ header {
 .header-links a {
   @apply hover:text-secondary dark:hover:text-primary-400 hover:opacity-100;
 }
+
+.title-color {
+  @apply bg-gradient-to-b dark:from-[#5EA2EF] from-[#FF1CF7] dark:to-[#0072F5] to-[#b249f8] text-transparent bg-clip-text;
+}

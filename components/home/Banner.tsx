@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useTheme } from "next-themes";
 
 import Button from "../common/Button";
 
@@ -11,9 +10,6 @@ import cvData from "@/data/cv.json";
 import { subtitle, title } from "@/styles/primitives";
 
 const Banner = () => {
-  const { theme } = useTheme();
-  const titleColor = theme === "dark" ? "blue" : "violet";
-
   return (
     <section
       className=" px-2 w-full text-center  flex flex-col items-center  gap-8  min-h-[calc(100vh-12rem)] bg-center bg-cover "
@@ -30,13 +26,13 @@ const Banner = () => {
       <div className="flex flex-col gap-4">
         <h1 className={title({ size: "xl" })}>
           <span>Bienvenue sur </span>
-          <span className={title({ color: titleColor })}>mon portfolio</span>
+          <span className={title({ class: "title-color" })}>mon portfolio</span>
           <br />
           <span>Je suis Sandrine Alcazar,</span>
           <br />
           <span>
             Développeuse d&#39;applications
-            <span className={title({ color: titleColor })}> Front-End </span>
+            <span className={title({ class: "title-color" })}> Front-End </span>
           </span>
         </h1>
       </div>
