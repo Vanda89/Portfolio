@@ -1,13 +1,13 @@
 "use client";
 
 import { Card, CardBody, CardHeader } from "@heroui/react";
-import { useTheme } from "next-themes";
 
 import Button from "../common/Button";
 
-import { title, subtitle } from "@/styles/primitives";
-import { CvData } from "@/types/types";
 import { siteConfig as site } from "@/config/site";
+import { subtitle, title } from "@/styles/primitives";
+import { CvData } from "@/types/types";
+import { DownloadIcon } from "../common/icons";
 
 type ContactLink = {
   href: string;
@@ -24,25 +24,23 @@ const contactButton = (link: ContactLink) => {
     <Button
       as="a"
       className="text-xs md:text-md w-56 flex gap-4 bg-background-300 shadow-md "
+      startContent={<Icon className="w-4 text-secondary" />}
       href={link.href}
       rel={link.rel}
       target={link.target}
     >
-      <Icon className="w-4 text-secondary" /> {link.label}
+      {link.label}
     </Button>
   );
 };
 
 export const Infos = ({ cvData }: { cvData: CvData }) => {
-  const { theme } = useTheme();
-  const titleColor = theme === "dark" ? "blue" : "violet";
-
   return (
     <Card
       className="p-6 flex flex-col items-center bg-background-200 "
       id="infos"
     >
-      <CardHeader className="md:w-[90%] lg:w-[80%]  flex flex-col md:flex-row items-center md:justify-center gap-8 md:gap-16 ">
+      <CardHeader className="flex flex-col md:flex-row items-center md:justify-around px-16 gap-8 md:gap-0 ">
         {/*  <Image
   src={cvData.image && cvData.image.trim() !== "" ? cvData.image : "/images/avatar-placeholder.png"}
   width={150}
@@ -50,13 +48,21 @@ export const Infos = ({ cvData }: { cvData: CvData }) => {
   className="rounded-full"
   alt={`photo de ${cvData.name}`}
 /> */}
+        <Button
+          as="a"
+          href={cvData.cv}
+          startContent={<DownloadIcon className="w-4 mr-2" />}
+          target="_blank"
+          className="bg-secondary-400 text-md p-6 dark:bg-primary-500 text-white"
+        >
+          C.V.
+        </Button>
 
-        <div className="flex flex-col items-center md:items-end lg:items-center w-full">
+        <div className="flex flex-col items-center md:items-end w-min-content">
           <h1
             className={title({
               size: "xl",
-              color: titleColor,
-              class: "text-center",
+              class: "title-color text-center ",
               weight: "extrabold",
             })}
           >
@@ -64,7 +70,7 @@ export const Infos = ({ cvData }: { cvData: CvData }) => {
           </h1>
           <p
             className={subtitle({
-              class: "text-center md:text-end lg:text-center",
+              class: "text-center ",
             })}
           >
             {cvData.role}

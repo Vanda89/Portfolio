@@ -45,6 +45,7 @@ export interface CvData {
   image: string;
   name: string;
   role: string;
+  cv: string;
   contacts: Contacts;
   hardSkills: string[];
   softSkills: { name: string; description: string }[];
@@ -62,6 +63,7 @@ export interface Form {
 
 export interface Button {
   as?: "a" | "button" | typeof Link;
+  startContent?: ReactNode;
   href?: string;
   rel?: string;
   target?: string;
