@@ -11,7 +11,7 @@ export const title = tv({
       sm: "text-[1.1rem] sm:text-[1.5rem] lg:text-2xl leading-8",
       md: "text-[1.5rem] sm:text-[1.8rem] lg:text-3xl leading-9",
       lg: "text-[1.75rem] sm:text-[2.1rem] lg:text-4xl leading-10",
-      xl: "text-[2rem] sm:text-[2.3rem] lg:text-5xl !leading-[3.5rem]",
+      xl: "text-[1.5rem] sm:text-[2.3rem] lg:text-5xl !leading-[3.5rem]",
     },
 
     weight: {

@@ -6,8 +6,7 @@ header {
   @apply flex flex-col sm:flex-row min-h-20 !important;
 }
 
-.header-links,
-.header-links a {
+.header-links {
   @apply hover:text-secondary dark:hover:text-primary-400 hover:opacity-100;
 }
 

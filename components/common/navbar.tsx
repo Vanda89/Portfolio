@@ -1,3 +1,4 @@
+"use client";
 import { Link } from "@heroui/link";
 import {
   Navbar as HeroUINavbar,
@@ -8,7 +9,6 @@ import {
   NavbarMenuItem,
   NavbarMenuToggle,
 } from "@heroui/navbar";
-import NextLink from "next/link";
 import { tv } from "tailwind-variants";
 
 import { GithubIcon, LinkedInIcon } from "@/components/common/icons";
@@ -16,6 +16,8 @@ import { ThemeSwitch } from "@/components/common/theme-switch";
 import { siteConfig } from "@/config/site";
 import cvData from "@/data/cv.json";
 import { title } from "@/styles/primitives";
+import { useState } from "react";
+import { usePathname } from "next/navigation";
 
 export const navbarVariants = tv({
   slots: {
@@ -24,17 +26,18 @@ export const navbarVariants = tv({
       "gap-3 max-w-fit font-bold text-inherit text-lg lg:text-xl uppercase",
     linksContainer: "gap-6 justify-start ml-2 hidden md:flex text-lg",
     navbarLinks:
-      "text-md lg:text-lg header-links data-[active=true]:text-primary-600 data-[active=true]:font-medium",
+      "text-lg text-foreground active:opacity-100 py-2 px-4 lg:py-0 lg:px-0 rounded-md",
     desktopIcon: "flex gap-7 md:ml-auto",
     icons: "text-default-500 header-links",
     navbarMobileMenu: "flex items-center sm:hidden",
     mobileLinksContainer: "mx-4 mt-2 flex flex-col gap-2",
-    navbarMobileItem:
-      "text-lg text-foreground hover:text-primary py-2 px-4 rounded-md",
   },
 });
 
 export const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
+
   return (
     <HeroUINavbar
       className={navbarVariants.slots.navbarBase}
@@ -48,24 +51,22 @@ export const Navbar = () => {
         </NavbarBrand>
 
         <div
-          
           className={navbarVariants.slots.linksContainer}
           data-hidden-mobile="true"
         >
           {siteConfig.navItems.map((item) => (
             <NavbarItem key={item.href}>
-              <NextLink
-                aria-current={
-                  typeof window !== "undefined" &&
-                  item.href === window.location.pathname
-                    ? "page"
-                    : undefined
-                }
-                className={navbarVariants.slots.navbarLinks}
+              <Link
+                className={`${navbarVariants.slots.navbarLinks} ${
+                  pathname === item.href
+                    ? "! dark:text-primary text-secondary underline underline-offset-4 font-medium"
+                    : "text-foreground"
+                }`}
+                aria-current={pathname === item.href ? "page" : undefined}
                 href={item.href}
               >
                 {item.label}
-              </NextLink>
+              </Link>
             </NavbarItem>
           ))}
         </div>
@@ -98,25 +99,26 @@ export const Navbar = () => {
         <NavbarMenuToggle
           aria-controls="navbar-menu"
           aria-expanded="false"
-          aria-label="Toggle navigation menu"
-          className={navbarVariants.slots.navbarMobileMenu} // Aligné avec les icônes sur mobile
+          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+          className={navbarVariants.slots.navbarMobileMenu}
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
         />
       </NavbarContent>
 
       {/* Menu Hamburger (Mobile) */}
       <NavbarMenu className="mt-16" id="navbar-menu">
         <div className={navbarVariants.slots.mobileLinksContainer}>
-          {siteConfig.navMenuItems.map((item, index) => (
-            <NavbarMenuItem key={`${item}-${index}`}>
+          {siteConfig.navItems.map((item) => (
+            <NavbarMenuItem key={`${item}`}>
               <Link
-                aria-current={
-                  typeof window !== "undefined" &&
-                  item.href === window.location.pathname
-                    ? "page"
-                    : undefined
-                }
-                className={navbarVariants.slots.navbarMobileItem}
+                aria-current={pathname === item.href ? "page" : undefined}
+                className={`${navbarVariants.slots.navbarLinks} ${
+                  pathname === item.href
+                    ? "dark:text-primary text-secondary underline underline-offset-4 font-medium"
+                    : "text-foreground"
+                }`}
                 href={item.href}
+                onPress={() => setIsMenuOpen(false)}
               >
                 {item.label}
               </Link>

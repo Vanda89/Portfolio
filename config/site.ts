@@ -14,21 +14,6 @@ export const siteConfig = {
       label: "Accueil",
       href: "/",
     },
-
-    {
-      label: "C.V.",
-      href: "/about",
-    },
-    {
-      label: "Contact",
-      href: "/contact",
-    },
-  ],
-  navMenuItems: [
-    {
-      label: "Accueil",
-      href: "/",
-    },
     {
       label: "C.V.",
       href: "/about",
