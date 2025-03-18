@@ -48,7 +48,7 @@ export const Navbar = () => {
         </NavbarBrand>
 
         <div
-          aria-hidden="true"
+          
           className={navbarVariants.slots.linksContainer}
           data-hidden-mobile="true"
         >
