@@ -21,8 +21,8 @@ const Button = ({
 }: ButtonProps) => {
   return (
     <HerouiButton
-      as={as}
       startContent
+      as={as}
       className={className}
       color={color}
       href={href}

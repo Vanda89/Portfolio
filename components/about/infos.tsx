@@ -3,11 +3,11 @@
 import { Card, CardBody, CardHeader } from "@heroui/react";
 
 import Button from "../common/Button";
+import { DownloadIcon } from "../common/icons";
 
 import { siteConfig as site } from "@/config/site";
 import { subtitle, title } from "@/styles/primitives";
 import { CvData } from "@/types/types";
-import { DownloadIcon } from "../common/icons";
 
 type ContactLink = {
   href: string;
@@ -24,9 +24,9 @@ const contactButton = (link: ContactLink) => {
     <Button
       as="a"
       className="text-xs md:text-md w-56 flex gap-4 bg-background-300 shadow-md "
-      startContent={<Icon className="w-4 text-secondary" />}
       href={link.href}
       rel={link.rel}
+      startContent={<Icon className="w-4 text-secondary" />}
       target={link.target}
     >
       {link.label}
@@ -50,10 +50,10 @@ export const Infos = ({ cvData }: { cvData: CvData }) => {
 /> */}
         <Button
           as="a"
+          className="bg-secondary-400 text-md p-6 dark:bg-primary-500 text-white"
           href={cvData.cv}
           startContent={<DownloadIcon className="w-4 mr-2" />}
           target="_blank"
-          className="bg-secondary-400 text-md p-6 dark:bg-primary-500 text-white"
         >
           C.V.
         </Button>
