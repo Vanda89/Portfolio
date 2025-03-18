@@ -12,7 +12,7 @@ import { fontSans } from "@/config/fonts";
 export const metadata: Metadata = {
   title: "Sandrine Alcazar | Développeuse Front-End Portfolio",
   description:
-    "ortfolio de Sandrine ALCAZAR, développeuse front-end passionnée. Découvrez mes projets React, Next.js et sites web interactifs modernes.",
+    "Portfolio de Sandrine ALCAZAR, développeuse front-end passionnée. Découvrez mes projets React, Next.js et sites web interactifs modernes.",
   keywords: [
     "Sandrine Alcazar",
     "développeuse front-end",
