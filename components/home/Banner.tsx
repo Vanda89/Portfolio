@@ -12,17 +12,19 @@ import { subtitle, title } from "@/styles/primitives";
 const Banner = () => {
   return (
     <section
-      className=" px-2 w-full text-center  flex flex-col items-center  gap-8  min-h-[calc(100vh-12rem)] bg-center bg-cover "
+      className="px-2 w-full text-center flex flex-col items-center gap-8 min-h-[calc(100vh-12rem)] bg-center bg-cover"
       id="banner"
-      style={{}}
     >
-      <Image
-        alt="Image d'une femme entrain de coder sur son ordinateur portable"
-        className="rounded-full my-10"
-        height={200}
-        src="/images/dev_web_img.webp"
-        width={200}
-      />
+      <div className="relative h-[200px] w-[200px] my-10">
+        <Image
+          fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          priority
+          alt="Image d'une femme entrain de coder sur son ordinateur portable"
+          className="rounded-full"
+          src="/images/dev_web_img.webp"
+        />
+      </div>
       <div className="flex flex-col gap-4">
         <h1 className={title({ size: "xl" })}>
           <span>Bienvenue sur </span>
