@@ -59,7 +59,7 @@ export const Navbar = () => {
               <Link
                 className={`${navbarVariants.slots.navbarLinks} ${
                   pathname === item.href
-                    ? "! dark:text-primary text-secondary underline underline-offset-4 font-medium"
+                    ? "! dark:text-primary-500 text-secondary underline underline-offset-4 font-medium"
                     : "text-foreground"
                 }`}
                 aria-current={pathname === item.href ? "page" : undefined}
@@ -114,7 +114,7 @@ export const Navbar = () => {
                 aria-current={pathname === item.href ? "page" : undefined}
                 className={`${navbarVariants.slots.navbarLinks} ${
                   pathname === item.href
-                    ? "dark:text-primary text-secondary underline underline-offset-4 font-medium"
+                    ? "dark:text-primary-500 text-secondary underline underline-offset-4 font-medium"
                     : "text-foreground"
                 }`}
                 href={item.href}
