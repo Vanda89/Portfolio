@@ -18,10 +18,10 @@ const Banner = () => {
       <div className="relative h-[200px] w-[200px] my-10">
         <Image
           fill
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           priority
           alt="Image d'une femme entrain de coder sur son ordinateur portable"
           className="rounded-full"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           src="/images/dev_web_img.webp"
         />
       </div>

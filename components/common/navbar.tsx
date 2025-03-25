@@ -1,5 +1,4 @@
 "use client";
-import { Link } from "@heroui/link";
 import {
   Navbar as HeroUINavbar,
   NavbarBrand,
@@ -8,16 +7,17 @@ import {
   NavbarMenu,
   NavbarMenuItem,
   NavbarMenuToggle,
-} from "@heroui/navbar";
+  Link,
+} from "@heroui/react";
 import { tv } from "tailwind-variants";
+import { useState } from "react";
+import { usePathname } from "next/navigation";
 
 import { GithubIcon, LinkedInIcon } from "@/components/common/icons";
 import { ThemeSwitch } from "@/components/common/theme-switch";
 import { siteConfig } from "@/config/site";
 import cvData from "@/data/cv.json";
 import { title } from "@/styles/primitives";
-import { useState } from "react";
-import { usePathname } from "next/navigation";
 
 export const navbarVariants = tv({
   slots: {
@@ -57,12 +57,12 @@ export const Navbar = () => {
           {siteConfig.navItems.map((item) => (
             <NavbarItem key={item.href}>
               <Link
+                aria-current={pathname === item.href ? "page" : undefined}
                 className={`${navbarVariants.slots.navbarLinks} ${
                   pathname === item.href
                     ? "! dark:text-primary-500 text-secondary underline underline-offset-4 font-medium"
                     : "text-foreground"
                 }`}
-                aria-current={pathname === item.href ? "page" : undefined}
                 href={item.href}
               >
                 {item.label}
