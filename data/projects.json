@@ -1,6 +1,6 @@
 [
   {
-    "id": 18,
+    "id": 19,
     "category": "perso",
     "title": "Portfolio",
     "date": "01/2025",
@@ -16,7 +16,7 @@
   },
 
   {
-    "id": 17,
+    "id": 18,
     "category": "perso",
     "title": "KidsBook Adventures",
     "date": "10/2024",
@@ -47,7 +47,7 @@
   },
 
   {
-    "id": 16,
+    "id": 17,
     "category": "dev js",
     "title": "Wealth Health",
     "date": "10/2024",
@@ -63,7 +63,7 @@
   },
 
   {
-    "id": 15,
+    "id": 16,
     "category": "dev js",
     "title": "Argent Bank",
     "date": "08/2024",
@@ -79,14 +79,14 @@
       "technologies": ["TailwindCSS", "React", "Redux", "NodeJS"]
     },
     "resume": "Intégration d'une API pour un compte utilisateur bancaire et définition des endpoints avec Swagger",
-    "description": "ArgentBank est une application bancaire en ligne conçue pour assurer une gestion sécurisée des comptes utilisateurs. Le projet a consisté à intégrer une API permettant l’authentification des utilisateurs ainsi que la gestion des profils et des comptes bancaires, à travers une interface moderne et responsive développée avec React et TailwindCSS. Les endpoints de l’API ont été définis à l’aide de Swagger pour garantir une documentation claire et structurée, ainsi que les futures features.",
+    "description": "ArgentBank est une application bancaire en ligne conçue pour assurer une gestion sécurisée des comptes utilisateurs. Le projet a consisté à intégrer une API permettant l'authentification des utilisateurs ainsi que la gestion des profils et des comptes bancaires, à travers une interface moderne et responsive développée avec React et TailwindCSS. Les endpoints de l'API ont été définis à l'aide de Swagger pour garantir une documentation claire et structurée, ainsi que les futures features.",
     "url": "https://argentbank.sandrinealcazar.ovh/",
     "image": "/images/projects_thumbnails/argentbank.webp",
     "github": "https://github.com/Vanda89/ArgentBank"
   },
 
   {
-    "id": 14,
+    "id": 15,
     "category": "dev js",
     "title": "Sport See",
     "date": "07/2024",
@@ -101,7 +101,7 @@
     "github": "https://github.com/Vanda89/SportSee"
   },
   {
-    "id": 13,
+    "id": 14,
     "category": "dev js",
     "title": "Kasa",
     "date": "06/2024",
@@ -116,7 +116,7 @@
     "github": "https://github.com/Vanda89/Kasa"
   },
   {
-    "id": 12,
+    "id": 13,
     "category": "dev js",
     "title": "Learn@home",
     "date": "04/2024",
@@ -131,7 +131,7 @@
     "github": "https://github.com/Vanda89/Learn-home"
   },
   {
-    "id": 11,
+    "id": 12,
     "category": "dev js",
     "title": "Billed",
     "date": "03/2024",
@@ -147,7 +147,7 @@
   },
 
   {
-    "id": 10,
+    "id": 11,
     "category": "dev js",
     "title": "Les petits plats",
     "date": "02/2024",
@@ -163,7 +163,7 @@
   },
 
   {
-    "id": 9,
+    "id": 10,
     "category": "dev js",
     "title": "FishEye",
     "date": "01/2024",
@@ -178,7 +178,7 @@
     "github": "https://github.com/Vanda89/Fisheye"
   },
   {
-    "id": 8,
+    "id": 9,
     "category": "dev js",
     "title": "GameOn",
     "date": "11/2023",
@@ -193,7 +193,7 @@
     "github": "https://github.com/Vanda89/GameOn"
   },
   {
-    "id": 7,
+    "id": 8,
     "category": "dev js",
     "title": "OhmyFood",
     "date": "10/2023",
@@ -209,7 +209,7 @@
   },
 
   {
-    "id": 6,
+    "id": 7,
     "category": "dev js",
     "title": "Booki",
     "date": "09/2023",
@@ -223,6 +223,22 @@
     "image": "/images/projects_thumbnails/booki.webp",
     "github": "https://github.com/Vanda89/Booki"
   },
+  {
+    "id": 6,
+    "category": "freelance",
+    "title": "Thebes Peinture",
+    "date": "10/2018",
+    "technologies": ["Wordpress"],
+    "filters": {
+      "technologies": ["Wordpress"]
+    },
+    "resume": "Site vitrine WordPress développé en freelance pour une entreprise de peinture, mettant en avant ses services et réalisations. ",
+    "description": "Thebes Peinture est un site développé sous WordPress pour une entreprise de peinture, mettant en avant ses services et réalisations. Il dispose d'un thème personnalisé et d'un système de gestion de contenu.  ",
+    "url": "https://thebes-peinture.sandrinealcazar.ovh/",
+    "image": "/images/projects_thumbnails/thebes_peinture.webp",
+    "github": "https://github.com/Vanda89/thebes_peinture"
+  },
+
   {
     "id": 5,
     "category": "dev web",
@@ -248,7 +264,7 @@
     },
     "resume": "Site de jeux pour enfants en mobile first avec espace personnel personnalisable. ",
     "description": "L'univers Fabuleux est un site de jeux mobile-first pour enfants, offrant un espace personnel personnalisable. Il inclut des jeux interactifs, tels qu'un jeu de Memory et un jeu de Tape lettre au clavier, conçus pour aider les enfants à développer leur mémoire et leur rapidité. Le projet comprend également une interface admin permettant d'ajouter, modifier et supprimer des éléments du site de manière dynamique.",
-    "_url": "https://univers-fabuleux.sandrinealcazar.ovh",
+    "url": "https://univers-fabuleux.sandrinealcazar.ovh",
     "image": "/images/projects_thumbnails/univers_fabuleux.webp",
     "github": "https://github.com/Vanda89/Univers_Fabuleux"
   },
@@ -263,7 +279,7 @@
     },
     "resume": "Blog pour un écrivain avec intégration d'un système de CRUD pour la partie admin, et de commentaires pour la partie user. ",
     "description": "Le site de Jean Forteroche est un blog développé pour un écrivain, avec un système de CRUD pour l'admin afin de gérer les articles, et une fonctionnalité de commentaires pour les utilisateurs. Ce projet utilise une architecture MVC avec une base de données MySQL pour stocker les articles et commentaires. Il dispose d'une gestion efficace du contenu tout en offrant une expérience utilisateur simple et intuitive.",
-    "_url": "https://blog-jean-forteroche.sandrinealcazar.ovh",
+    "url": "https://blog-jean-forteroche.sandrinealcazar.ovh",
     "image": "/images/projects_thumbnails/blog_jean_forteroche.webp",
     "github": "https://github.com/Vanda89/Blog_jean_forteroche"
   },
@@ -293,7 +309,7 @@
     },
     "resume": "Version Wordpress fonctionnelle simulant le site internet de l'Office de Tourisme de Strasbourg. ",
     "description": "Strasbourg est une application WordPress fonctionnelle créée pour simuler un site de l'Office de Tourisme de Strasbourg. Le projet visait à concevoir un site mettant en avant les attraits touristiques de la ville, tout en respectant un cahier des charges précis. L'objectif était de créer une interface claire et intuitive, avec un design attractif, tout en personnalisant le thème WordPress choisi. ",
-    "_url": "https://strasbourg.sandrinealcazar.ovh",
+    "url": "https://strasbourg.sandrinealcazar.ovh",
     "image": "/images/projects_thumbnails/strasbourg.webp",
     "github": "https://github.com/Vanda89/Strasbourg"
   },
