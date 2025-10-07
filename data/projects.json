@@ -1,5 +1,20 @@
 [
   {
+    "id": 20,
+    "category": "dev fullstack",
+    "title": "AirSphereConnect",
+    "date": "12/2025-03/2026",
+    "technologies": ["Java 21", "Spring Boot", "Spring Security", "JPA", "Hibernate", "Angular", "TypeScript", "MariaDB", "Docker", "MariaDB", "Maven", "Git", "GitHub", "Bootstrap", "HTML5", "CSS3", "API REST"],
+    "filters": {
+      "technologies": ["Java", "Spring Boot", "Angular", "TypeScript", "Docker", "SQL", "TailwindCSS"]
+    },
+    "resume": "Plateforme environnementale interactive avec forum écologique et visualisation de données (qualité de l'air, météo, population) en région Occitanie.",
+    "description": "Application fullstack développée en équipe avec méthodologie Scrum dans le cadre de la formation CDA. Intègre des APIs ouvertes (ATMO Occitanie, Géo Gouv, WTTR) pour afficher des données environnementales en temps réel. Comprend un système de forum communautaire, gestion des favoris, authentification JWT et notifications. Architecture MVC avec Spring Boot pour le backend, Angular pour le frontend et déploiement Docker. Projet collaboratif utilisant Git/GitHub Project pour le versionnage et la gestion des sprints.",
+    "_url": null,
+    "image": "",
+    "github": "https://github.com/AirSphereConnect"
+  },
+  {
     "id": 19,
     "category": "perso",
     "title": "Portfolio",
@@ -250,7 +265,7 @@
       "PHP",
       "Bootstrap",
       "jquery",
-      "MySQL"
+      "SQL"
     ],
     "filters": {
       "technologies": [
@@ -259,7 +274,7 @@
         "PHP",
         "Bootstrap",
         "jquery",
-        "MySQL"
+        "SQL"
       ]
     },
     "resume": "Site de jeux pour enfants en mobile first avec espace personnel personnalisable. ",
@@ -273,12 +288,12 @@
     "category": "dev web",
     "title": "Jean Forteroche",
     "date": "06/2018",
-    "technologies": ["HTML/CSS", "PHP", "MySQL"],
+    "technologies": ["HTML/CSS", "PHP", "SQL"],
     "filters": {
-      "technologies": ["HTML/CSS", "PHP", "MySQL"]
+      "technologies": ["HTML/CSS", "PHP", "SQL"]
     },
     "resume": "Blog pour un écrivain avec intégration d'un système de CRUD pour la partie admin, et de commentaires pour la partie user. ",
-    "description": "Le site de Jean Forteroche est un blog développé pour un écrivain, avec un système de CRUD pour l'admin afin de gérer les articles, et une fonctionnalité de commentaires pour les utilisateurs. Ce projet utilise une architecture MVC avec une base de données MySQL pour stocker les articles et commentaires. Il dispose d'une gestion efficace du contenu tout en offrant une expérience utilisateur simple et intuitive.",
+    "description": "Le site de Jean Forteroche est un blog développé pour un écrivain, avec un système de CRUD pour l'admin afin de gérer les articles, et une fonctionnalité de commentaires pour les utilisateurs. Ce projet utilise une architecture MVC avec une base de données SQL (MySQL) pour stocker les articles et commentaires. Il dispose d'une gestion efficace du contenu tout en offrant une expérience utilisateur simple et intuitive.",
     "url": "https://blog-jean-forteroche.sandrinealcazar.ovh",
     "image": "/images/projects_thumbnails/blog_jean_forteroche.webp",
     "github": "https://github.com/Vanda89/Blog_jean_forteroche"

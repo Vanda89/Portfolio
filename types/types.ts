@@ -28,13 +28,17 @@ export interface Contacts {
 }
 
 export interface Formation {
+  location?: string;
   title: string;
   company: string;
   duration: string;
+  level?: string;
   projects?: string[];
 }
 
 export interface Activities {
+  technologies?: string[];
+  location?: string;
   title: string;
   company?: string;
   duration: string;

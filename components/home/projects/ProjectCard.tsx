@@ -22,9 +22,9 @@ const ProjectCard = ({ project }: Props) => {
       <Card className={card.slots.base}>
         <CardHeader className={card.slots.imageContainer}>
           <Image
+            fill
             alt={`Miniature du projet ${project.title} réalisé par Sandrine Alcazar`}
             className="object-cover rounded-lg"
-            fill
             loading="lazy"
             sizes="(max-width: 320px) 100vw, (max-width: 640px) 50vw, (max-width: 1280px) 75vw, 1280px"
             src={project.image}

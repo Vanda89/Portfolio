@@ -1,6 +1,6 @@
 "use client";
 
-import { Card, CardBody, CardHeader, Divider } from "@heroui/react";
+import { Card, CardBody, CardHeader, Chip, Divider } from "@heroui/react";
 
 import { GithubIcon, WorldIcon } from "../common/icons";
 
@@ -8,7 +8,8 @@ import { subtitle, textBase, title } from "@/styles/primitives";
 import { CvData, Project } from "@/types/types";
 
 const formationCategoryMap: { [key: string]: string } = {
-  "Développeur Front-end JavaScript/React": "dev js",
+  "Conceptrice Développeuse d'Applications Full Stack": "dev fullstack",
+  "Développeuse Front-end JavaScript/React": "dev js",
   "Développeur/Intégrateur Web": "dev web",
 };
 
@@ -37,9 +38,13 @@ export const Education = ({
                 className="flex flex-col gap-1 md:pl-3"
                 key={`${formation.title}-${formation.duration}`}
               >
-                <h3 className={title({ size: "sm" })}>{formation.title}</h3>
+                <>
+                  <h3 className={title({ size: "sm" })}>{formation.title}</h3>
+                  <h4 className={title({ size: "sm" })}>{formation.level}</h4>
+                </>
                 <p className={subtitle({ size: "sm" })}>
-                  {formation.company} - {formation.duration}
+                  {formation.company} - {formation.duration} -{" "}
+                  {formation.location}
                 </p>
 
                 {formationProjects.length > 0 && (
@@ -73,11 +78,23 @@ export const Education = ({
                         <p
                           className={textBase({
                             size: "sm",
-                            class: "text-foreground-500",
+                            class: "text-foreground-500 py-1",
                           })}
                         >
                           {project.resume}
                         </p>
+                        <div className="flex flex-wrap gap-x-2 gap-y-4">
+                          {project.technologies.map((techno) => (
+                            <Chip
+                              aria-label={`Technologie utilisée : ${techno}`}
+                              className="text-white bg-secondary dark:bg-primary"
+                              key={techno}
+                              variant="solid"
+                            >
+                              {techno}
+                            </Chip>
+                          ))}
+                        </div>
                       </li>
                     ))}
                   </ul>

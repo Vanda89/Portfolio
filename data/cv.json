@@ -1,7 +1,8 @@
+
 {
   "image": "/images/profile.jpg",
   "name": "Sandrine Alcazar",
-  "role": "Développeuse Front-end JavaScript ",
+  "role": "Développeuse Fullstack Java/Angular",
   "cv": "/images/cv.pdf",
   "contacts": {
     "phone": "06 26 08 41 91",
@@ -11,63 +12,86 @@
     "mail": "mailto:sandrinealcazar@gmail.com"
   },
   "hardSkills": [
+    "Java",
+    "Spring Boot",
+    "Spring Security",
+    "JPA/Hibernate",
+    "API REST",
+    "Maven",
+    "JUnit",
     "HTML",
     "CSS",
+    "TypeScript",
     "JavaScript",
+    "Angular",
     "React",
     "Redux",
     "Next.js",
     "TailwindCSS",
     "Node.js",
     "MongoDB",
-    "TypeScript"
+    "MariaDB",
+    "Docker",
+    "Git",
+    "UML"
   ],
   "softSkills": [
     {
-      "name": "Adaptabilité",
-      "description": "En reconversion, je suis prête à relever de nouveaux challenges techniques et m'adapter aux technologies de ma future entreprise."
+      "name": "Polyvalence Technique",
+      "description": "Maîtrise du développement fullstack, du backend Java/Spring au frontend Angular/React, avec une capacité d'adaptation rapide aux nouvelles technologies."
     },
     {
-      "name": "Apprentissage Autonome",
-      "description": "Développer mes compétences en autodidacte m'a permis d'apprendre de nouvelles technologies et langages, renforçant ma rapidité et mon efficacité."
+      "name": "Apprentissage Continu",
+      "description": "Reconversion réussie du front-end vers le fullstack Java/Angular, démontrant ma capacité à acquérir rapidement de nouvelles compétences techniques complexes."
     },
     {
-      "name": "Communication",
-      "description": "Capacité à partager des idées et à poser des questions de manière claire, facilitant ainsi la collaboration et l'apprentissage dans un environnement d'équipe."
+      "name": "Travail d'Équipe Agile",
+      "description": "Expérience concrète en méthodologie Scrum, collaboration Git, code review et gestion de projet avec GitHub Projects."
     },
     {
-      "name": "Résilience",
-      "description": "À 35 ans, j'ai surmonté des défis personnels tout en me formant pour obtenir mes diplômes et réussir ma reconversion en développement."
+      "name": "Résolution de Problèmes",
+      "description": "Capacité à analyser, concevoir et développer des solutions techniques complètes, de l'architecture backend aux interfaces utilisateur."
     },
     {
-      "name": "Curiosité Intellectuelle",
-      "description": "Passionnée par le code depuis plusieurs années, j'explore sans cesse de nouveaux langages et technologies pour enrichir mes compétences et suis prête à en apprendre de nouvelles pour les besoins de mon futur poste."
+      "name": "Curiosité Technique",
+      "description": "Passionnée par l'évolution des technologies, je reste en veille constante sur les frameworks modernes et les bonnes pratiques de développement."
     },
     {
-      "name": "Concentration",
-      "description": "Mon parcours d'apprentissage, tout en élevant des enfants, m'a permis de cultiver une grande capacité de concentration, me permettant de me focaliser rapidement sur mes objectifs et de les atteindre efficacement."
+      "name": "Autonomie & Initiative",
+      "description": "Capable de mener des projets personnels complexes (KidsBook Adventures avec IA) tout en contribuant efficacement aux projets d'équipe."
     },
     {
-      "name": "Empathie",
-      "description": "Grâce à mon écoute attentive, je comprends les besoins des autres, ce qui est une force pour le travail en équipe."
+      "name": "Communication Technique",
+      "description": "Aptitude à documenter le code, présenter des solutions techniques et collaborer avec des équipes pluridisciplinaires."
     },
-
     {
-      "name": "Organisation",
-      "description": "Grâce à mon expérience en tant que maman de trois enfants, j'ai développé une forte capacité à gérer efficacement plusieurs priorités, ce qui est essentiel dans un environnement de travail dynamique."
+      "name": "Rigueur & Qualité",
+      "description": "Attachée aux bonnes pratiques de développement : tests unitaires, architecture propre, sécurité et performance des applications."
     }
   ],
   "formation": [
     {
-      "title": "Développeur Front-end JavaScript/React",
+      "title": "Conceptrice Développeuse d'Applications Full Stack",
+      "company": "DIGINAMIC Formation Hybride",
+      "duration": "06/2025 - 03/2026",
+      "level": "Diplôme RNCP Niveau 6 (Bac+3)",
+      "location": "Montpellier",
+      "projects": []
+    },
+    {
+      "title": "Développeuse Front-end JavaScript/React",
       "company": "OpenClassrooms",
       "duration": "08/2023 - 10/2024",
+      "level": "Diplôme RNCP Niveau 6 (Bac+3)",
+      "location": "À distance",
       "projects": []
     },
     {
       "title": "Développeur/Intégrateur Web",
       "company": "OpenClassrooms",
       "duration": "02/2018 - 09/2018",
+      "level": "Diplôme RNCP Niveau 5 (Bac+2)",
+      "location": "À distance",
       "projects": []
     },
     {
@@ -78,28 +102,55 @@
   ],
   "activities": [
     {
-      "title": "Développement de mon portfolio en Next.js",
+      "title": "AirSphereConnect - Plateforme environnementale interactive",
+      "duration": "08/2025 - 12/2025",
+      "company": "DIGINAMIC (Stagiaire)",
+      "location": "Pérols",
+      "description": "Développement fullstack Java/Spring Boot & Angular en équipe avec méthodologie Scrum, GitHub Projects, code review",
+      "technologies": ["Java 21", "Spring Boot", "Spring Security", "JPA/Hibernate", "API REST", "Angular", "TypeScript", "TailwindCSS", "Docker", "Git"]
+    },
+    {
+      "title": "Portfolio développeur",
       "duration": "01/2025",
-      "description": "Développement d'une interface moderne et responsive mettant en avant mes projets et compétences en développement web."
+      "description": "Développement d'une interface moderne et responsive mettant en avant mes projets et compétences en développement web. Auto-hébergement sur serveur OVH de tous mes projets.",
+      "technologies": ["Next.js", "React", "TypeScript", "SEO"]
     },
     {
       "title": "KidsBook Adventures",
-      "duration": "11/2024",
-      "description": "Développement d'une plateforme dédiée à la création de livres pour enfants en Next.js avec intégration IA"
+      "duration": "11/2024 - En cours",
+      "description": "Développement d'une plateforme dédiée à la création de livres pour enfants en Next.js avec intégration IA",
+      "technologies": ["Next.js", "React", "TypeScript", "IA", "MongoDB"]
     },
     {
       "title": "Congé parental d'éducation",
-      "duration": "2021 - 2024"
+      "duration": "2021 - 2024",
+      "description": "Formation continue développement web en autonomie, veille technologique"
+    },
+    {
+      "title": "Auto-formation développement front-end",
+      "duration": "2020 - 2021",
+      "description": "Apprentissage React.js, hooks, gestion d'état via OpenClassrooms, Codecademy, Udemy. Projets personnels avec bonnes pratiques."
+    },
+    {
+      "title": "Site Thèbes Peinture",
+      "duration": "2019",
+      "location": "Alès",
+      "company": "Freelance",
+      "description": "Création site vitrine artisan peintre en freelance",
+      "technologies": ["Wordpress", "PHP"]
     },
     {
       "title": "Congé parental d'éducation",
-      "duration": "2015 - 2018"
+      "duration": "2015 - 2018",
+      "description": "Gestion familiale avec initiation au développement web"
     },
     {
-      "title": "AVS (AESH)",
-      "company": "Ecoles diverses",
+      "title": "Accompagnante Élèves en Situation de Handicap (AESH)",
+      "company": "Écoles diverses",
       "duration": "2013 - 2015",
-      "description": "Accompagnement d'enfants TDA et polyhandicapés "
+      "location": "Bagnols-sur-Cèze",
+      "description": "Accompagnement enfants TDA et polyhandicapés, adaptation pédagogique"
     }
   ]
 }
+

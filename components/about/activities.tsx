@@ -1,5 +1,5 @@
 "use client";
-import { Card, CardBody, CardHeader } from "@heroui/react";
+import { Card, CardBody, CardHeader, Chip } from "@heroui/react";
 
 import { BriefcaseIcon, CalendarIcon } from "../common/icons";
 
@@ -51,16 +51,28 @@ export const Activities = ({ cvData }: { cvData: CvData }) => {
                   {activity.description}
                 </p>
 
-                {activity.company && (
+                {activity.company && activity.location && (
                   <p
                     className={textBase({
                       size: "sm",
                       class: "text-foreground-500 py-1 rounded-full",
                     })}
                   >
-                    {activity.company}
+                    {`${activity.company}, ${activity.location}`}
                   </p>
                 )}
+              </div>
+              <div className="flex flex-wrap gap-x-2 gap-y-4 pt-3">
+                {activity.technologies?.map((techno) => (
+                  <Chip
+                    aria-label={`Technologie utilisée : ${techno}`}
+                    className="text-white bg-secondary dark:bg-primary"
+                    key={techno}
+                    variant="solid"
+                  >
+                    {techno}
+                  </Chip>
+                ))}
               </div>
             </li>
           ))}
