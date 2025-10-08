@@ -11,7 +11,7 @@
     "resume": "Plateforme environnementale interactive avec forum écologique et visualisation de données (qualité de l'air, météo, population) en région Occitanie.",
     "description": "Application fullstack développée en équipe avec méthodologie Scrum dans le cadre de la formation CDA. Intègre des APIs ouvertes (ATMO Occitanie, Géo Gouv, WTTR) pour afficher des données environnementales en temps réel. Comprend un système de forum communautaire, gestion des favoris, authentification JWT et notifications. Architecture MVC avec Spring Boot pour le backend, Angular pour le frontend et déploiement Docker. Projet collaboratif utilisant Git/GitHub Project pour le versionnage et la gestion des sprints.",
     "_url": null,
-    "image": "",
+    "image": "/images/projects_thumbnails/airsphereconnect.webp",
     "github": "https://github.com/AirSphereConnect"
   },
   {
