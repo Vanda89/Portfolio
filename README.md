@@ -1,10 +1,10 @@
-# Portfolio de Sandrine Alcazar - Développeuse Front-End
+# Portfolio de Sandrine Alcazar - Développeuse Full-Stack
 
 ![Portfolio Screenshot](/public/images/portfolio_thumbnail.webp)
 
 ## 🚀 Présentation
 
-Portfolio professionnel de Sandrine Alcazar, développeuse Front-End spécialisée en JavaScript/TypeScript. Ce site présente mes compétences, projets et expériences dans le développement web moderne.
+Portfolio professionnel de Sandrine Alcazar, développeuse Full-Stack spécialisée en JavaScript/TypeScript. Ce site présente mes compétences, projets et expériences dans le développement web moderne.
 
 🔗 **Site en ligne :** [sandrinealcazar.ovh](https://sandrinealcazar.ovh)
 
@@ -19,12 +19,12 @@ Portfolio professionnel de Sandrine Alcazar, développeuse Front-End spécialis�
 
 ## 🛠️ Technologies Utilisées
 
-- **Framework** : [Next.js 15](https://nextjs.org/) avec App Router
+- **Framework** : [Next.js 16](https://nextjs.org/) avec App Router
 - **Langage** : [TypeScript](https://www.typescriptlang.org/)
 - **UI/UX** :
-  - [React 18.3](https://react.dev/)
-  - [Hero UI 2.4](https://heroui.com/)
-  - [Tailwind CSS 3.4](https://tailwindcss.com/)
+  - [React 19](https://react.dev/)
+  - [Hero UI 2.8](https://heroui.com/)
+  - [Tailwind CSS 4](https://tailwindcss.com/)
 - **Animation 3D** : [Three.js](https://threejs.org/)
 - **Déploiement** : [OVH](https://ovh.com)
 
@@ -53,7 +53,7 @@ Portfolio professionnel de Sandrine Alcazar, développeuse Front-End spécialis�
 
 ### Prérequis
 
-- Node.js 18.17 ou supérieur
+- Node.js 22 ou supérieur
 - npm ou yarn
 
 ### Installation
@@ -92,7 +92,7 @@ yarn start
 
 ## 📝 Licence
 
-Tous droits réservés © Sandrine Alcazar 2025
+Tous droits réservés © Sandrine Alcazar 2026
 
 ## 📬 Contact
 
