@@ -23,7 +23,7 @@
     },
     "resume": "Développement d'un SaaS interne pour l'entreprise Agoragom pour la gestion du personnel et de la partie commerciale.",
     "description": "Création d'une application SaaS interne pour Agoragom (Montpellier) dans le cadre du stage de la formation Conceptrice Développeuse d'Applications. Application développée avec Next.js, TailwindCSS et HeroUI pour le frontend, conteneurisée avec Docker, base de donnée PostgreSQL et ORM Prisma. Qualité de code assurée par SonarQube et Biome.",
-    "image": "/images/projects_thumbnails/agoragom.jpg",
+    "image": "/images/projects_thumbnails/agoragom.webp",
     "github": ""
   },
   {
@@ -79,7 +79,7 @@
     "resume": "Une interface moderne et responsive mettant en avant mes projets et compétences en développement web.",
     "description": "Site personnel développé en Next.js, Hero UI et TailwindCSS, rassembleant mes projets et mes informations personnelles. Il reflète mon évolution en développement web moderne, en mettant l'accent sur des designs responsives et une gestion flexible des thèmes. Ce projet m'a permis de consolider mes compétences tout en explorant de nouvelles approches créatives.",
     "_url": "https://sandrinealcazar.ovh",
-    "image": "/images/projects_thumbnails/portfolio.png",
+    "image": "/images/projects_thumbnails/portfolio.webp",
     "github": "https://github.com/Vanda89/Portfolio"
   },
 
