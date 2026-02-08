@@ -1,11 +1,9 @@
 "use client";
 
 import { Card, CardBody, CardHeader, Chip } from "@heroui/react";
-
-import { CheckCircleIcon } from "../common/icons";
-
 import { textBase, title } from "@/styles/primitives";
-import { CvData } from "@/types/types";
+import type { CvData } from "@/types/types";
+import { CheckCircleIcon } from "../common/icons";
 
 export const Skills = ({ cvData }: { cvData: CvData }) => {
   return (
@@ -67,9 +65,7 @@ export const Skills = ({ cvData }: { cvData: CvData }) => {
                   size={16}
                 />
                 <div className="flex flex-col gap-1">
-                  <p className={textBase({ size: "md", weight: "semibold" })}>
-                    {skill.name}
-                  </p>
+                  <p className={textBase({ size: "md", weight: "semibold" })}>{skill.name}</p>
                   <p
                     className={textBase({
                       class: "text-gray-600 dark:text-gray-400 text-sm",

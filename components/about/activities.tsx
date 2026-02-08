@@ -1,17 +1,13 @@
 "use client";
+
 import { Card, CardBody, CardHeader, Chip } from "@heroui/react";
-
-import { BriefcaseIcon, CalendarIcon } from "../common/icons";
-
 import { textBase, title } from "@/styles/primitives";
-import { CvData } from "@/types/types";
+import type { CvData } from "@/types/types";
+import { BriefcaseIcon, CalendarIcon } from "../common/icons";
 
 export const Activities = ({ cvData }: { cvData: CvData }) => {
   return (
-    <Card
-      className="flex flex-col gap-6 p-6  mb-6 bg-background-200 "
-      id="activities"
-    >
+    <Card className="flex flex-col gap-6 p-6  mb-6 bg-background-200 " id="activities">
       <CardHeader className="pb-4 border-b border-foreground-300">
         <h2 className={title({ size: "md", weight: "bold" })}>Activités</h2>
       </CardHeader>

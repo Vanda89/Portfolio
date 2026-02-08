@@ -1,13 +1,11 @@
 import "@/styles/globals.css";
-import { Metadata, Viewport } from "next";
-
-import { Providers } from "./providers";
-
+import type { Metadata, Viewport } from "next";
 import Background from "@/components/common/background/Background";
 import Footer from "@/components/common/footer";
 import { Navbar } from "@/components/common/navbar";
 import ScrollArrow from "@/components/common/ScrollArrow";
 import { fontSans } from "@/config/fonts";
+import { Providers } from "./providers";
 
 export const metadata: Metadata = {
   title: "Sandrine Alcazar | Développeuse Front-End Portfolio",
@@ -86,15 +84,11 @@ export const viewport: Viewport = {
   ],
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html suppressHydrationWarning lang="fr">
-      <head />
       <body
+        suppressHydrationWarning
         className={`min-w-xs min-h-screen font-sans antialiased mx-auto scroll-smooth ${fontSans.variable} `}
       >
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>

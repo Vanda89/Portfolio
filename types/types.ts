@@ -1,5 +1,5 @@
-import Link from "next/link";
-import { ReactNode, SVGProps } from "react";
+import type Link from "next/link";
+import type { ReactNode, SVGProps } from "react";
 
 export type IconSvgProps = SVGProps<SVGSVGElement> & {
   size?: number;
@@ -27,6 +27,14 @@ export interface Contacts {
   linkedin: string;
 }
 
+export interface Stage {
+  company: string;
+  location: string;
+  duration: string;
+  description: string;
+  technologies?: string[];
+}
+
 export interface Formation {
   location?: string;
   title: string;
@@ -34,6 +42,7 @@ export interface Formation {
   duration: string;
   level?: string;
   projects?: string[];
+  stage?: Stage;
 }
 
 export interface Activities {
@@ -77,13 +86,7 @@ export interface Button {
   children: ReactNode;
   icon?: string | ReactNode;
   size?: "sm" | "md" | "lg";
-  color?:
-    | "default"
-    | "primary"
-    | "secondary"
-    | "success"
-    | "warning"
-    | "danger";
+  color?: "default" | "primary" | "secondary" | "success" | "warning" | "danger";
   variant?: "solid" | "ghost" | "shadow";
   radius?: "none" | "sm" | "md" | "lg" | "full";
   value?: string;

@@ -19,13 +19,7 @@ const ScrollArrow = () => {
         mainSectionIds = ["banner", "projects", "footer"];
         break;
       case "/about":
-        mainSectionIds = [
-          "infos",
-          "skills",
-          "education",
-          "activities",
-          "footer",
-        ];
+        mainSectionIds = ["infos", "skills", "education", "activities", "footer"];
         break;
       case "/contact":
         mainSectionIds = ["contact", "footer"];
@@ -52,8 +46,7 @@ const ScrollArrow = () => {
     if (targetElement) {
       const headerOffset = 80;
       const elementPosition = targetElement.getBoundingClientRect().top;
-      const offsetPosition =
-        elementPosition + window.pageYOffset - headerOffset;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
       window.scrollTo({
         top: offsetPosition,
@@ -95,10 +88,7 @@ const ScrollArrow = () => {
         });
 
         // Détection du bas de page
-        if (
-          window.innerHeight + window.pageYOffset >=
-          document.documentElement.scrollHeight - 20
-        ) {
+        if (window.innerHeight + window.pageYOffset >= document.documentElement.scrollHeight - 20) {
           setCurrentSection(elementIds.length - 1);
         }
       }, 100);
@@ -121,9 +111,7 @@ const ScrollArrow = () => {
       <Button
         isIconOnly
         aria-label={
-          currentSection === elementIds.length - 1
-            ? "Retourner en haut"
-            : "Section suivante"
+          currentSection === elementIds.length - 1 ? "Retourner en haut" : "Section suivante"
         }
         className="p-1 rounded-full bg-gray-200 stroke-gray-800 hover:bg-black hover:stroke-white"
         onPress={handleClick}

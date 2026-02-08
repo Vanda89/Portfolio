@@ -1,6 +1,8 @@
 // components/common/background/RetroBackground.tsx
 "use client";
 
+import Image from "next/image";
+import { useTheme } from "next-themes";
 import { useEffect, useRef, useState } from "react";
 import {
   Color,
@@ -12,8 +14,6 @@ import {
   SphereGeometry,
   WebGLRenderer,
 } from "three";
-import { useTheme } from "next-themes";
-import Image from "next/image";
 
 export function RetroBackground() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -21,12 +21,12 @@ export function RetroBackground() {
   const [isLoaded, setIsLoaded] = useState(false); // État pour suivre le chargement
 
   // TODO: change the colors
-  const darkRetroColors = [
+  const darkRetroColors = useRef([
     { from: new Color("#00DDEB"), to: new Color("#FF007A") }, // Bleu néon → Rose néon
     { from: new Color("#6B00D7"), to: new Color("#00FF9F") }, // Violet sombre → Vert cyber
     { from: new Color("#FF007A"), to: new Color("#00DDEB") }, // Rose néon → Bleu néon
     { from: new Color("#00FF9F"), to: new Color("#6B00D7") }, // Vert cyber → Violet sombre
-  ];
+  ]).current;
 
   useEffect(() => {
     if (!containerRef.current) return;
@@ -35,12 +35,7 @@ export function RetroBackground() {
     const scene = new Scene();
 
     // TODO: change the camera
-    const camera = new PerspectiveCamera(
-      75,
-      window.innerWidth / window.innerHeight,
-      0.1,
-      1000,
-    );
+    const camera = new PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 
     camera.position.z = 5;
 
@@ -85,8 +80,7 @@ export function RetroBackground() {
       };
 
       // TODO: Assign a random gradient from darkRetroColors
-      const gradient =
-        darkRetroColors[Math.floor(Math.random() * darkRetroColors.length)];
+      const gradient = darkRetroColors[Math.floor(Math.random() * darkRetroColors.length)];
 
       particle.userData.colorStart = gradient.from;
       particle.userData.colorEnd = gradient.to;
@@ -124,12 +118,9 @@ export function RetroBackground() {
         particle.position.y += particle.userData.velocity.y;
         particle.position.z += particle.userData.velocity.z;
 
-        if (Math.abs(particle.position.x) > 5)
-          particle.userData.velocity.x *= -1;
-        if (Math.abs(particle.position.y) > 5)
-          particle.userData.velocity.y *= -1;
-        if (Math.abs(particle.position.z) > 2.5)
-          particle.userData.velocity.z *= -1;
+        if (Math.abs(particle.position.x) > 5) particle.userData.velocity.x *= -1;
+        if (Math.abs(particle.position.y) > 5) particle.userData.velocity.y *= -1;
+        if (Math.abs(particle.position.z) > 2.5) particle.userData.velocity.z *= -1;
 
         particle.userData.colorProgress += particle.userData.colorSpeed;
         if (particle.userData.colorProgress >= 1) {
@@ -166,7 +157,7 @@ export function RetroBackground() {
       }
       renderer.dispose();
     };
-  }, []);
+  }, [darkRetroColors]);
 
   const placeholderSrc =
     resolvedTheme === "dark"

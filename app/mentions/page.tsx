@@ -4,8 +4,8 @@ import { Card, CardBody, CardHeader } from "@heroui/react";
 import Link from "next/link";
 
 import Button from "@/components/common/Button";
-import { title, textBase } from "@/styles/primitives";
 import cvData from "@/data/cv.json";
+import { textBase, title } from "@/styles/primitives";
 
 interface Contact {
   email: string;
@@ -32,10 +32,7 @@ export default function Page() {
         </CardHeader>
         <CardBody className="space-y-12 mt-6 text-gray-800 dark:text-gray-200">
           <section aria-labelledby="editor-section">
-            <h2
-              className={title({ size: "sm", weight: "bold" })}
-              id="editor-section"
-            >
+            <h2 className={title({ size: "sm", weight: "bold" })} id="editor-section">
               Éditeur du site
             </h2>
             <div className="flex flex-col sm:flex-row gap-2">
@@ -55,10 +52,7 @@ export default function Page() {
           </section>
 
           <section aria-labelledby="hosting-section">
-            <h2
-              className={title({ size: "sm", weight: "bold" })}
-              id="hosting-section"
-            >
+            <h2 className={title({ size: "sm", weight: "bold" })} id="hosting-section">
               Hébergement
             </h2>
             <div className={textBase({ class: "space-y-1" })}>
@@ -80,70 +74,51 @@ export default function Page() {
           </section>
 
           <section aria-labelledby="intellectual-section">
-            <h2
-              className={title({ size: "sm", weight: "bold" })}
-              id="intellectual-section"
-            >
+            <h2 className={title({ size: "sm", weight: "bold" })} id="intellectual-section">
               Propriété intellectuelle
             </h2>
             <div className={textBase({ class: "space-y-2" })}>
               <p>
-                Les contenus de ce site (textes, images, graphismes, logo) sont
-                la propriété exclusive de{" "}
-                <span className="font-semibold">{cvData.name}</span>, sauf
-                mention contraire.
+                Les contenus de ce site (textes, images, graphismes, logo) sont la propriété
+                exclusive de <span className="font-semibold">{cvData.name}</span>, sauf mention
+                contraire.
               </p>
-              <p>
-                Toute reproduction, modification ou diffusion sans autorisation
-                est interdite.
-              </p>
+              <p>Toute reproduction, modification ou diffusion sans autorisation est interdite.</p>
             </div>
           </section>
 
           <section aria-labelledby="data-section">
-            <h2
-              className={title({ size: "sm", weight: "bold" })}
-              id="data-section"
-            >
+            <h2 className={title({ size: "sm", weight: "bold" })} id="data-section">
               Données personnelles
             </h2>
             <div className={textBase({ class: "space-y-2" })}>
               <p>
-                Ce site ne collecte aucune donnée personnelle. Le formulaire de
-                contact utilise un simple lien{" "}
-                <span className="font-semibold">mailto:</span> permettant
-                d&apos;envoyer un email directement depuis votre messagerie.
+                Ce site ne collecte aucune donnée personnelle. Le formulaire de contact utilise un
+                simple lien <span className="font-semibold">mailto:</span> permettant d&apos;envoyer
+                un email directement depuis votre messagerie.
               </p>
             </div>
           </section>
 
           <section aria-labelledby="cookies-section">
-            <h2
-              className={title({ size: "sm", weight: "bold" })}
-              id="cookies-section"
-            >
+            <h2 className={title({ size: "sm", weight: "bold" })} id="cookies-section">
               Cookies
             </h2>
             <div className={textBase({ class: "space-y-2" })}>
               <p>
-                Ce site n&apos;utilise{" "}
-                <span className="font-semibold">aucun cookie</span>.
+                Ce site n&apos;utilise <span className="font-semibold">aucun cookie</span>.
               </p>
             </div>
           </section>
 
           <section aria-labelledby="liability-section">
-            <h2
-              className={title({ size: "sm", weight: "bold" })}
-              id="liability-section"
-            >
+            <h2 className={title({ size: "sm", weight: "bold" })} id="liability-section">
               Responsabilité
             </h2>
             <div className={textBase({ class: "space-y-2" })}>
               <p>
-                L&apos;éditeur du site ne saurait être tenu responsable des
-                éventuels dommages liés à l&apos;utilisation du site ou des
-                informations qui y sont publiées.
+                L&apos;éditeur du site ne saurait être tenu responsable des éventuels dommages liés
+                à l&apos;utilisation du site ou des informations qui y sont publiées.
               </p>
             </div>
           </section>

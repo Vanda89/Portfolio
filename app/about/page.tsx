@@ -1,10 +1,10 @@
-import cvData from "@/data/cv.json";
-import projects from "@/data/projects.json";
+import { Activities } from "@/components/about/activities";
+import { Education } from "@/components/about/education";
 import { Infos } from "@/components/about/infos";
 import { Skills } from "@/components/about/skills";
-import { Education } from "@/components/about/education";
-import { Activities } from "@/components/about/activities";
 import CTA from "@/components/common/CTA";
+import cvData from "@/data/cv.json";
+import projects from "@/data/projects.json";
 
 export default function Page() {
   return (

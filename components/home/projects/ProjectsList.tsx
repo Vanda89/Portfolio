@@ -1,9 +1,7 @@
 // ProjectsList
 
-"use client";
+import type { Project } from "@/types/types";
 import ProjectCard from "./ProjectCard";
-
-import { Project } from "@/types/types";
 
 type Props = {
   projects: Project[];

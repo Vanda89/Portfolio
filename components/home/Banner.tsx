@@ -2,12 +2,10 @@
 
 import Image from "next/image";
 import Link from "next/link";
-
-import Button from "../common/Button";
-
 import { GithubIcon } from "@/components/common/icons";
 import cvData from "@/data/cv.json";
 import { subtitle, title } from "@/styles/primitives";
+import Button from "../common/Button";
 
 const Banner = () => {
   return (
@@ -34,26 +32,18 @@ const Banner = () => {
           <br />
           <span>
             Développeuse d&#39;applications
-            <span className={title({ class: "title-color" })}> Front-End </span>
+            <span className={title({ class: "title-color" })}> Full-Stack </span>
           </span>
         </h1>
       </div>
 
-      <p
-        className={subtitle({ size: "lg", class: "mt-8 text-foreground-500" })}
-      >
+      <p className={subtitle({ size: "lg", class: "mt-8 text-foreground-500" })}>
         Découvrez{" "}
-        <Link
-          className="text-foreground font-bold hover:underline"
-          href="/about"
-        >
+        <Link className="text-foreground font-bold hover:underline" href="/about">
           qui je suis
         </Link>{" "}
         et mes{" "}
-        <Link
-          className="text-foreground font-bold hover:underline"
-          href="#projects"
-        >
+        <Link className="text-foreground font-bold hover:underline" href="#projects">
           réalisations
         </Link>
         , peu importe votre domaine.

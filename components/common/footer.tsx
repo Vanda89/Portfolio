@@ -1,4 +1,4 @@
-"use client"; // À reconsidérer si pas d'interactions client nécessaires
+"use client";
 
 import { Divider, tv } from "@heroui/react";
 import Link from "next/link";
@@ -20,33 +20,15 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer
-      className={footerVariants.slots.footer}
-      id="footer"
-      role="contentinfo"
-    >
+    <footer className={footerVariants.slots.footer} id="footer">
       <p className={footerVariants.slots.copyright}>
         © {currentYear} Sandrine Alcazar - Tous droits réservés.
       </p>
-      <Divider
-        className={footerVariants.slots.dividerVertical}
-        orientation="vertical"
-      />
-      <Divider
-        className={footerVariants.slots.dividerHorizontal}
-        orientation="horizontal"
-      />
-      <p className={footerVariants.slots.credits}>
-        Développé avec ❤️ par Sandrine Alcazar
-      </p>
-      <Divider
-        className={footerVariants.slots.dividerVertical}
-        orientation="vertical"
-      />
-      <Divider
-        className={footerVariants.slots.dividerHorizontal}
-        orientation="horizontal"
-      />
+      <Divider className={footerVariants.slots.dividerVertical} orientation="vertical" />
+      <Divider className={footerVariants.slots.dividerHorizontal} orientation="horizontal" />
+      <p className={footerVariants.slots.credits}>Développé avec ❤️ par Sandrine Alcazar</p>
+      <Divider className={footerVariants.slots.dividerVertical} orientation="vertical" />
+      <Divider className={footerVariants.slots.dividerHorizontal} orientation="horizontal" />
       <Link
         aria-label="Accéder aux mentions légales"
         className={footerVariants.slots.mentions}

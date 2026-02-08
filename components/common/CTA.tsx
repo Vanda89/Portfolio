@@ -31,22 +31,17 @@ const CTA = ({ isHome = false, isContact = false }: CTAProps) => {
         </>
       ) : isContact ? (
         <>
-          Envie d&apos;en savoir{" "}
-          {renderLinks([{ href: "/about", label: "plus" }])} ?
+          Envie d&apos;en savoir {renderLinks([{ href: "/about", label: "plus" }])} ?
           <br />
-          Explorez mes {renderLinks([{ href: "/", label: "projets" }])} ou
-          utilisez le formulaire ci-dessus !
+          Explorez mes {renderLinks([{ href: "/", label: "projets" }])} ou utilisez le formulaire
+          ci-dessus !
         </>
       ) : (
         <>
           Intéressé(e) par une collaboration ?{" "}
-          {renderLinks([
-            { href: "/contact", label: "Contactez-moi sans attendre" },
-          ])}{" "}
-          !
+          {renderLinks([{ href: "/contact", label: "Contactez-moi sans attendre" }])} !
           <br />
-          Retour sur la page d&apos;accueil{" "}
-          {renderLinks([{ href: "/", label: "ici" }])}.
+          Retour sur la page d&apos;accueil {renderLinks([{ href: "/", label: "ici" }])}.
         </>
       )}
     </p>

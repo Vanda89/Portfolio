@@ -1,12 +1,65 @@
 [
   {
+    "id": 21,
+    "category": "dev fullstack",
+    "title": "Stage - Agoragom",
+    "date": "12/2025 - 03/2026",
+    "technologies": [
+      "Next.js",
+      "React",
+      "Node",
+      "TypeScript",
+      "Docker",
+      "HeroUI",
+      "TailwindCSS",
+      "PostgreSQL",
+      "Prisma",
+      "Biome",
+      "SonarQube",
+      "Git"
+    ],
+    "filters": {
+      "technologies": ["Next.js", "React", "TypeScript", "TailwindCSS", "Docker"]
+    },
+    "resume": "Développement d'un SaaS interne pour l'entreprise Agoragom pour la gestion du personnel et de la partie commerciale.",
+    "description": "Création d'une application SaaS interne pour Agoragom (Montpellier) dans le cadre du stage de la formation Conceptrice Développeuse d'Applications. Application développée avec Next.js, TailwindCSS et HeroUI pour le frontend, conteneurisée avec Docker, base de donnée PostgreSQL et ORM Prisma. Qualité de code assurée par SonarQube et Biome.",
+    "image": "/images/projects_thumbnails/agoragom.jpg",
+    "github": ""
+  },
+  {
     "id": 20,
     "category": "dev fullstack",
     "title": "AirSphereConnect",
-    "date": "12/2025-03/2026",
-    "technologies": ["Java 21", "Spring Boot", "Spring Security", "JPA", "Hibernate", "Angular", "TypeScript", "MariaDB", "Docker", "MariaDB", "Maven", "Git", "GitHub", "Bootstrap", "HTML5", "CSS3", "API REST"],
+    "date": "09/2025-12/2026",
+    "technologies": [
+      "Java 21",
+      "Spring Boot",
+      "Spring Security",
+      "JPA",
+      "Hibernate",
+      "Angular",
+      "TypeScript",
+      "MariaDB",
+      "Docker",
+      "MariaDB",
+      "Maven",
+      "Git",
+      "GitHub",
+      "Bootstrap",
+      "HTML5",
+      "CSS3",
+      "API REST"
+    ],
     "filters": {
-      "technologies": ["Java", "Spring Boot", "Angular", "TypeScript", "Docker", "SQL", "TailwindCSS"]
+      "technologies": [
+        "Java",
+        "Spring Boot",
+        "Angular",
+        "TypeScript",
+        "Docker",
+        "SQL",
+        "TailwindCSS"
+      ]
     },
     "resume": "Plateforme environnementale interactive avec forum écologique et visualisation de données (qualité de l'air, météo, population) en région Occitanie.",
     "description": "Application fullstack développée en équipe avec méthodologie Scrum dans le cadre de la formation CDA. Intègre des APIs ouvertes (ATMO Occitanie, Géo Gouv, WTTR) pour afficher des données environnementales en temps réel. Comprend un système de forum communautaire, gestion des favoris, authentification JWT et notifications. Architecture MVC avec Spring Boot pour le backend, Angular pour le frontend et déploiement Docker. Projet collaboratif utilisant Git/GitHub Project pour le versionnage et la gestion des sprints.",
@@ -45,14 +98,7 @@
       "MongoDB"
     ],
     "filters": {
-      "technologies": [
-        "Next.js",
-        "React",
-        "TailwindCSS",
-        "NextUI",
-        "OpenAI",
-        "TypeScript"
-      ]
+      "technologies": ["Next.js", "React", "TailwindCSS", "NextUI", "OpenAI", "TypeScript"]
     },
     "resume": "Application web permettant de générer des histoires personnalisées pour enfants grâce à l'IA.",
     "description": "Application web génèrant des histoires personnalisées pour enfants avec OpenAI. L'application utilise un design kawaii, un système de thèmes colorés et une expérience utilisateur ludique.",
@@ -82,14 +128,7 @@
     "category": "dev js",
     "title": "Argent Bank",
     "date": "08/2024",
-    "technologies": [
-      "TailwindCSS",
-      "React",
-      "Redux",
-      "Swagger",
-      "NodeJS",
-      "MongoDB"
-    ],
+    "technologies": ["TailwindCSS", "React", "Redux", "Swagger", "NodeJS", "MongoDB"],
     "filters": {
       "technologies": ["TailwindCSS", "React", "Redux", "NodeJS"]
     },
@@ -259,23 +298,9 @@
     "category": "dev web",
     "title": "L'univers Fabuleux",
     "date": "08/2018",
-    "technologies": [
-      "HTML/CSS",
-      "JavaScript",
-      "PHP",
-      "Bootstrap",
-      "jquery",
-      "SQL"
-    ],
+    "technologies": ["HTML/CSS", "JavaScript", "PHP", "Bootstrap", "jquery", "SQL"],
     "filters": {
-      "technologies": [
-        "HTML/CSS",
-        "JavaScript",
-        "PHP",
-        "Bootstrap",
-        "jquery",
-        "SQL"
-      ]
+      "technologies": ["HTML/CSS", "JavaScript", "PHP", "Bootstrap", "jquery", "SQL"]
     },
     "resume": "Site de jeux pour enfants en mobile first avec espace personnel personnalisable. ",
     "description": "L'univers Fabuleux est un site de jeux mobile-first pour enfants, offrant un espace personnel personnalisable. Il inclut des jeux interactifs, tels qu'un jeu de Memory et un jeu de Tape lettre au clavier, conçus pour aider les enfants à développer leur mémoire et leur rapidité. Le projet comprend également une interface admin permettant d'ajouter, modifier et supprimer des éléments du site de manière dynamique.",

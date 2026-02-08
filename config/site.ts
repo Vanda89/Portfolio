@@ -1,9 +1,4 @@
-import {
-  MailIcon,
-  LinkedInIcon,
-  GithubIcon,
-  PhoneIcon,
-} from "@/components/common/icons";
+import { GithubIcon, LinkedInIcon, MailIcon, PhoneIcon } from "@/components/common/icons";
 import cvData from "@/data/cv.json";
 
 export const siteConfig = {

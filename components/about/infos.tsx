@@ -1,13 +1,11 @@
 "use client";
 
 import { Card, CardBody, CardHeader } from "@heroui/react";
-
-import Button from "../common/Button";
-import { DownloadIcon } from "../common/icons";
-
 import { siteConfig as site } from "@/config/site";
 import { subtitle, title } from "@/styles/primitives";
-import { CvData } from "@/types/types";
+import type { CvData } from "@/types/types";
+import Button from "../common/Button";
+import { DownloadIcon } from "../common/icons";
 
 type ContactLink = {
   href: string;
@@ -36,10 +34,7 @@ const contactButton = (link: ContactLink) => {
 
 export const Infos = ({ cvData }: { cvData: CvData }) => {
   return (
-    <Card
-      className="p-6 flex flex-col items-center bg-background-200 "
-      id="infos"
-    >
+    <Card className="p-6 flex flex-col items-center bg-background-200 " id="infos">
       <CardHeader className="flex flex-col md:flex-row items-center md:justify-around px-16 gap-8 md:gap-0 ">
         {/*  <Image
   src={cvData.image && cvData.image.trim() !== "" ? cvData.image : "/images/avatar-placeholder.png"}

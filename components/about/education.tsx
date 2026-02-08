@@ -1,11 +1,9 @@
 "use client";
 
 import { Card, CardBody, CardHeader, Chip, Divider } from "@heroui/react";
-
-import { GithubIcon, WorldIcon } from "../common/icons";
-
 import { subtitle, textBase, title } from "@/styles/primitives";
-import { CvData, Project } from "@/types/types";
+import type { CvData, Project } from "@/types/types";
+import { GithubIcon, WorldIcon } from "../common/icons";
 
 const formationCategoryMap: { [key: string]: string } = {
   "Conceptrice Développeuse d'Applications Full Stack": "dev fullstack",
@@ -13,13 +11,7 @@ const formationCategoryMap: { [key: string]: string } = {
   "Développeur/Intégrateur Web": "dev web",
 };
 
-export const Education = ({
-  cvData,
-  projects,
-}: {
-  cvData: CvData;
-  projects: Project[];
-}) => {
+export const Education = ({ cvData, projects }: { cvData: CvData; projects: Project[] }) => {
   return (
     <Card className="flex flex-col gap-4 p-6 bg-background-200 " id="education">
       <CardHeader className="pb-4 border-b border-gray-300">
@@ -29,23 +21,45 @@ export const Education = ({
         <ul className="space-y-4 flex flex-col gap-8">
           {cvData.formation.map((formation) => {
             const category = formationCategoryMap[formation.title];
-            const formationProjects = projects.filter(
-              (project) => project.category === category,
-            );
+            const formationProjects = projects.filter((project) => project.category === category);
 
             return (
               <li
                 className="flex flex-col gap-1 md:pl-3"
                 key={`${formation.title}-${formation.duration}`}
               >
-                <>
-                  <h3 className={title({ size: "sm" })}>{formation.title}</h3>
-                  <h4 className={title({ size: "sm" })}>{formation.level}</h4>
-                </>
+                <h3 className={title({ size: "sm" })}>{formation.title}</h3>
+                <h4 className={title({ size: "sm" })}>{formation.level}</h4>
+
                 <p className={subtitle({ size: "sm" })}>
-                  {formation.company} - {formation.duration} -{" "}
-                  {formation.location}
+                  {formation.company} - {formation.duration} - {formation.location}
                 </p>
+
+                {formation.stage && (
+                  <div className="mt-3 p-3 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
+                    <h4 className={title({ size: "xs", weight: "semibold" })}>
+                      Stage - {formation.stage.company}
+                    </h4>
+                    <p className={subtitle({ size: "sm" })}>
+                      {formation.stage.location} - {formation.stage.duration}
+                    </p>
+                    <p className={textBase({ size: "sm" })}>{formation.stage.description}</p>
+                    {formation.stage.technologies && formation.stage.technologies.length > 0 && (
+                      <div className="flex flex-wrap gap-x-2 gap-y-4 mt-3">
+                        {formation.stage.technologies.map((techno) => (
+                          <Chip
+                            aria-label={`Technologie utilisée : ${techno}`}
+                            className="text-white bg-secondary dark:bg-primary"
+                            key={techno}
+                            variant="solid"
+                          >
+                            {techno}
+                          </Chip>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                )}
 
                 {formationProjects.length > 0 && (
                   <ul className="flex flex-col  gap-4  mt-2  space-y-2">
@@ -84,11 +98,11 @@ export const Education = ({
                           {project.resume}
                         </p>
                         <div className="flex flex-wrap gap-x-2 gap-y-4">
-                          {project.technologies.map((techno) => (
+                          {project.technologies.map((techno, index) => (
                             <Chip
                               aria-label={`Technologie utilisée : ${techno}`}
                               className="text-white bg-secondary dark:bg-primary"
-                              key={techno}
+                              key={`${project.id}-${index}`}
                               variant="solid"
                             >
                               {techno}

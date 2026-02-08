@@ -1,6 +1,6 @@
 import { Button as HerouiButton } from "@heroui/react";
 
-import { Button as ButtonProps } from "@/types/types";
+import type { Button as ButtonProps } from "@/types/types";
 
 const Button = ({
   as = "button",

@@ -3,13 +3,11 @@
 "use client";
 
 import { useState } from "react";
-
-import ProjectsFilter from "../home/projects/ProjectsFilter";
-import ProjectsList from "../home/projects/ProjectsList";
-
 import projects from "@/data/projects.json";
 import { title } from "@/styles/primitives";
-import { Project } from "@/types/types";
+import type { Project } from "@/types/types";
+import ProjectsFilter from "../home/projects/ProjectsFilter";
+import ProjectsList from "../home/projects/ProjectsList";
 
 const Projects = () => {
   const [activeTag, setActiveTag] = useState("Tous");
@@ -34,9 +32,7 @@ const Projects = () => {
     } else {
       return array.filter((project) =>
         Object.keys(project.filters).some((key) =>
-          project.filters[key].some((item) =>
-            item.toLowerCase().includes(activeTag.toLowerCase()),
-          ),
+          project.filters[key].some((item) => item.toLowerCase().includes(activeTag.toLowerCase())),
         ),
       );
     }
@@ -52,11 +48,7 @@ const Projects = () => {
     >
       <h2 className={title({ size: "lg" })}>Mes Projets</h2>
 
-      <ProjectsFilter
-        activeTag={activeTag}
-        handleTag={handleTag}
-        tagList={tagList}
-      />
+      <ProjectsFilter activeTag={activeTag} handleTag={handleTag} tagList={tagList} />
 
       <ProjectsList projects={filteredList} />
     </section>

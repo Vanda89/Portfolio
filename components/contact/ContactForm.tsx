@@ -1,11 +1,9 @@
 "use client";
 import { Form, Input, Textarea, tv } from "@heroui/react";
-import React from "react";
 import log from "loglevel";
-
-import Button from "../common/Button";
-
+import React from "react";
 import cvData from "@/data/cv.json";
+import Button from "../common/Button";
 
 export const formVariants = tv({
   slots: {
@@ -117,9 +115,7 @@ ${username}`,
         placeholder="Entrez votre email"
         type="email"
         validate={(value) =>
-          !value || !value.includes("@")
-            ? "Votre adresse mail est invalide."
-            : null
+          !value || !value.includes("@") ? "Votre adresse mail est invalide." : null
         }
         variant="faded"
       />
@@ -139,9 +135,7 @@ ${username}`,
         labelPlacement="outside"
         name="subject"
         placeholder="Sujet de votre message"
-        validate={(value) =>
-          !value ? "Veuillez entrer le sujet de votre message." : null
-        }
+        validate={(value) => (!value ? "Veuillez entrer le sujet de votre message." : null)}
         variant="faded"
       />
 
@@ -161,16 +155,12 @@ ${username}`,
         name="message"
         placeholder="Votre message ici..."
         validate={(value) =>
-          !value || value.length < 10
-            ? "Votre message doit contenir au moins 10 caractères."
-            : null
+          !value || value.length < 10 ? "Votre message doit contenir au moins 10 caractères." : null
         }
         variant="faded"
       />
 
-      {globalError && (
-        <p className={formVariants.slots.errorMessage}>{globalError}</p>
-      )}
+      {globalError && <p className={formVariants.slots.errorMessage}>{globalError}</p>}
 
       <Button
         aria-label="Envoyer le message"

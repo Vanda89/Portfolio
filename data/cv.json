@@ -1,4 +1,3 @@
-
 {
   "image": "/images/profile.jpg",
   "name": "Sandrine Alcazar",
@@ -107,7 +106,18 @@
       "company": "DIGINAMIC (Stagiaire)",
       "location": "Pérols",
       "description": "Développement fullstack Java/Spring Boot & Angular en équipe avec méthodologie Scrum, GitHub Projects, code review",
-      "technologies": ["Java 21", "Spring Boot", "Spring Security", "JPA/Hibernate", "API REST", "Angular", "TypeScript", "TailwindCSS", "Docker", "Git"]
+      "technologies": [
+        "Java 21",
+        "Spring Boot",
+        "Spring Security",
+        "JPA/Hibernate",
+        "API REST",
+        "Angular",
+        "TypeScript",
+        "TailwindCSS",
+        "Docker",
+        "Git"
+      ]
     },
     {
       "title": "Portfolio développeur",
@@ -153,4 +163,3 @@
     }
   ]
 }
-

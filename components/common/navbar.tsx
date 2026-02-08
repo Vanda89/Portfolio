@@ -1,17 +1,17 @@
 "use client";
 import {
   Navbar as HeroUINavbar,
+  Link,
   NavbarBrand,
   NavbarContent,
   NavbarItem,
   NavbarMenu,
   NavbarMenuItem,
   NavbarMenuToggle,
-  Link,
 } from "@heroui/react";
-import { tv } from "tailwind-variants";
-import { useState } from "react";
 import { usePathname } from "next/navigation";
+import { useState } from "react";
+import { tv } from "tailwind-variants";
 
 import { GithubIcon, LinkedInIcon } from "@/components/common/icons";
 import { ThemeSwitch } from "@/components/common/theme-switch";
@@ -22,11 +22,9 @@ import { title } from "@/styles/primitives";
 export const navbarVariants = tv({
   slots: {
     navbarBase: "static py-4 bg-background-100 z-10 ",
-    navbarBrand:
-      "gap-3 max-w-fit font-bold text-inherit text-lg lg:text-xl uppercase",
+    navbarBrand: "gap-3 max-w-fit font-bold text-inherit text-lg lg:text-xl uppercase",
     linksContainer: "gap-6 justify-start ml-2 hidden md:flex text-lg",
-    navbarLinks:
-      "text-lg text-foreground active:opacity-100 py-2 px-4 lg:py-0 lg:px-0 rounded-md",
+    navbarLinks: "text-lg text-foreground active:opacity-100 py-2 px-4 lg:py-0 lg:px-0 rounded-md",
     desktopIcon: "flex gap-7 md:ml-auto",
     icons: "text-default-500 header-links",
     navbarMobileMenu: "flex items-center sm:hidden",
@@ -39,21 +37,14 @@ export const Navbar = () => {
   const pathname = usePathname();
 
   return (
-    <HeroUINavbar
-      className={navbarVariants.slots.navbarBase}
-      id="navbar"
-      role="navigation"
-    >
+    <HeroUINavbar className={navbarVariants.slots.navbarBase} id="navbar" role="navigation">
       {/* Logo et liens (Desktop et Mobile) */}
       <NavbarContent className="basis-1/5 sm:basis-full gap-16" justify="start">
         <NavbarBrand className={navbarVariants.slots.navbarBrand}>
           <h2 className={title({ size: "sm" })}>sandrine alcazar</h2>
         </NavbarBrand>
 
-        <div
-          className={navbarVariants.slots.linksContainer}
-          data-hidden-mobile="true"
-        >
+        <div className={navbarVariants.slots.linksContainer} data-hidden-mobile="true">
           {siteConfig.navItems.map((item) => (
             <NavbarItem key={item.href}>
               <Link
@@ -73,10 +64,7 @@ export const Navbar = () => {
       </NavbarContent>
 
       {/* Social Links, Theme Switch, et Menu Hamburger (Desktop et Mobile) */}
-      <NavbarContent
-        className="basis-1/5 sm:basis-auto flex gap-7"
-        justify="end"
-      >
+      <NavbarContent className="basis-1/5 sm:basis-auto flex gap-7" justify="end">
         <NavbarItem className={navbarVariants.slots.desktopIcon}>
           <Link
             isExternal
