@@ -79,7 +79,7 @@
     "resume": "Une interface moderne et responsive mettant en avant mes projets et compétences en développement web.",
     "description": "Site personnel développé en Next.js, Hero UI et TailwindCSS, rassembleant mes projets et mes informations personnelles. Il reflète mon évolution en développement web moderne, en mettant l'accent sur des designs responsives et une gestion flexible des thèmes. Ce projet m'a permis de consolider mes compétences tout en explorant de nouvelles approches créatives.",
     "_url": "https://sandrinealcazar.ovh",
-    "image": "/images/projects_thumbnails/portfolio.webp",
+    "image": "/images/projects_thumbnails/portfolio.png",
     "github": "https://github.com/Vanda89/Portfolio"
   },
 
