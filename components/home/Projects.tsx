@@ -14,12 +14,14 @@ const Projects = () => {
 
   const tagList = [
     "Tous",
-    "HTML/CSS",
-    "JavaScript",
+    "Java",
+    "Angular",
     "React",
     "Next.js",
     "TypeScript",
-    "TailwindCSS",
+    "JavaScript",
+    "PHP",
+    "WordPress",
   ];
 
   const handleTag = (tag: string) => {
@@ -32,13 +34,14 @@ const Projects = () => {
     } else {
       return array.filter((project) =>
         Object.keys(project.filters).some((key) =>
-          project.filters[key].some((item) => item.toLowerCase().includes(activeTag.toLowerCase())),
+          project.filters[key].some((item) => item.toLowerCase() === activeTag.toLowerCase()),
         ),
       );
     }
   };
 
-  const filteredList = filterTags(projects);
+  const visibleProjects = projects.filter((p) => !p.hidden);
+  const filteredList = filterTags(visibleProjects);
 
   return (
     <section
