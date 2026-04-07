@@ -3,9 +3,11 @@
 "use client";
 
 import { useState } from "react";
-import projects from "@/data/projects.json";
+import projectsData from "@/data/projects.json";
 import { title } from "@/styles/primitives";
 import type { Project } from "@/types/types";
+
+const projects = projectsData as Project[];
 import ProjectsFilter from "../home/projects/ProjectsFilter";
 import ProjectsList from "../home/projects/ProjectsList";
 
