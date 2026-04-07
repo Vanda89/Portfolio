@@ -1,6 +1,14 @@
+import type { Metadata } from "next";
 import CTA from "@/components/common/CTA";
 import { ContactForm } from "@/components/contact/ContactForm";
 import { title } from "@/styles/primitives";
+
+export const metadata: Metadata = {
+  title: "Contact | Sandrine Alcazar — Conceptrice Développeuse Full-Stack",
+  description:
+    "Contactez Sandrine Alcazar, développeuse web full-stack, pour toute opportunité de collaboration ou question.",
+  alternates: { canonical: "https://sandrinealcazar.ovh/contact" },
+};
 
 const Page = () => {
   return (

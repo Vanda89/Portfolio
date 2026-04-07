@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { Activities } from "@/components/about/activities";
 import { Education } from "@/components/about/education";
 import { Infos } from "@/components/about/infos";
@@ -5,6 +6,13 @@ import { Skills } from "@/components/about/skills";
 import CTA from "@/components/common/CTA";
 import cvData from "@/data/cv.json";
 import projects from "@/data/projects.json";
+
+export const metadata: Metadata = {
+  title: "À propos | Sandrine Alcazar — Conceptrice Développeuse Full-Stack",
+  description:
+    "Découvrez le parcours, les compétences et la formation de Sandrine Alcazar, développeuse web full-stack basée à Montpellier.",
+  alternates: { canonical: "https://sandrinealcazar.ovh/about" },
+};
 
 export default function Page() {
   return (
