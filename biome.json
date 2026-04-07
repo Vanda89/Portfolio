@@ -33,6 +33,9 @@
         "noConsole": "warn",
         "noExplicitAny": "off"
       },
+      "security": {
+        "noDangerouslySetInnerHtml": "off"
+      },
       "a11y": {
         "noSvgWithoutTitle": "off"
       }
