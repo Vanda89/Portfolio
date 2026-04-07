@@ -1,97 +1,69 @@
 {
   "image": "/images/profile.jpg",
   "name": "Sandrine Alcazar",
-  "role": "Développeuse Fullstack Java/Angular",
-  "cv": "/images/cv.pdf",
+  "role": "Conceptrice Développeuse Fullstack",
+  "cv": "/images/sandrine_alcazar_cv.pdf",
   "contacts": {
     "phone": "06 26 08 41 91",
     "email": "sandrinealcazar@gmail.com",
     "github": "https://github.com/Vanda89",
-    "linkedin": "https://www.linkedin.com/in/alcazar-sandrine/",
-    "mail": "mailto:sandrinealcazar@gmail.com"
+    "linkedin": "https://www.linkedin.com/in/alcazar-sandrine/"
   },
-  "hardSkills": [
-    "Java",
-    "Spring Boot",
-    "Spring Security",
-    "JPA/Hibernate",
-    "API REST",
-    "Maven",
-    "JUnit",
-    "HTML",
-    "CSS",
-    "TypeScript",
-    "JavaScript",
-    "Angular",
-    "React",
-    "Redux",
-    "Next.js",
-    "TailwindCSS",
-    "Node.js",
-    "MongoDB",
-    "MariaDB",
-    "Docker",
-    "Git",
-    "UML"
+  "competencies": [
+    "Recueil et analyse des besoins",
+    "Rédaction des spécifications techniques",
+    "Conception d'API REST",
+    "Développement fullstack",
+    "Mise en place de tests",
+    "Conteneurisation avec Docker",
+    "Travail en méthodologie Agile (Scrum)",
+    "Intégration continue et déploiement (CI/CD)"
   ],
-  "softSkills": [
+  "technicalSkills": [
     {
-      "name": "Polyvalence Technique",
-      "description": "Maîtrise du développement fullstack, du backend Java/Spring au frontend Angular/React, avec une capacité d'adaptation rapide aux nouvelles technologies."
+      "category": "Backend",
+      "skills": ["Java", "Spring Boot", "Spring Security", "JPA/Hibernate", "API REST", "Maven", "JUnit"]
     },
     {
-      "name": "Apprentissage Continu",
-      "description": "Reconversion réussie du front-end vers le fullstack Java/Angular, démontrant ma capacité à acquérir rapidement de nouvelles compétences techniques complexes."
+      "category": "Frontend",
+      "skills": ["TypeScript", "JavaScript", "Angular", "React", "Redux", "Next.js", "HTML/CSS", "TailwindCSS"]
     },
     {
-      "name": "Travail d'Équipe Agile",
-      "description": "Expérience concrète en méthodologie Scrum, collaboration Git, code review et gestion de projet avec GitHub Projects."
+      "category": "Base de données",
+      "skills": ["MongoDB", "MariaDB", "Node.js"]
     },
     {
-      "name": "Résolution de Problèmes",
-      "description": "Capacité à analyser, concevoir et développer des solutions techniques complètes, de l'architecture backend aux interfaces utilisateur."
-    },
-    {
-      "name": "Curiosité Technique",
-      "description": "Passionnée par l'évolution des technologies, je reste en veille constante sur les frameworks modernes et les bonnes pratiques de développement."
-    },
-    {
-      "name": "Autonomie & Initiative",
-      "description": "Capable de mener des projets personnels complexes (KidsBook Adventures avec IA) tout en contribuant efficacement aux projets d'équipe."
-    },
-    {
-      "name": "Communication Technique",
-      "description": "Aptitude à documenter le code, présenter des solutions techniques et collaborer avec des équipes pluridisciplinaires."
-    },
-    {
-      "name": "Rigueur & Qualité",
-      "description": "Attachée aux bonnes pratiques de développement : tests unitaires, architecture propre, sécurité et performance des applications."
+      "category": "Outils & DevOps",
+      "skills": ["Docker", "Git", "UML"]
     }
   ],
   "formation": [
     {
-      "title": "Conceptrice Développeuse d'Applications Full Stack",
-      "company": "DIGINAMIC Formation Hybride",
-      "duration": "06/2025 - 03/2026",
-      "level": "Diplôme RNCP Niveau 6 (Bac+3)",
+      "title": "Expert Développeur Full Stack",
+      "company": "YNOV",
+      "duration": "10/2026 - 10/2028",
+      "level": "RNCP Niveau 7 (Bac+5)",
       "location": "Montpellier",
-      "projects": []
+      "contract": "Contrat d'apprentissage · 4 jours en entreprise / 1 jour en formation"
     },
     {
-      "title": "Développeuse Front-end JavaScript/React",
+      "title": "Conceptrice Développeuse d'Applications Full Stack",
+      "company": "Diginamic",
+      "duration": "06/2025 - 03/2026",
+      "level": "RNCP Niveau 6 (Bac+3)",
+      "location": "Montpellier"
+    },
+    {
+      "title": "Conceptrice Développeuse d'Applications JS React",
       "company": "OpenClassrooms",
       "duration": "08/2023 - 10/2024",
-      "level": "Diplôme RNCP Niveau 6 (Bac+3)",
-      "location": "À distance",
-      "projects": []
+      "level": "RNCP Niveau 6 (Bac+3)"
     },
     {
-      "title": "Développeur/Intégrateur Web",
+      "title": "Développeur Intégrateur Web",
       "company": "OpenClassrooms",
       "duration": "02/2018 - 09/2018",
-      "level": "Diplôme RNCP Niveau 5 (Bac+2)",
-      "location": "À distance",
-      "projects": []
+      "level": "RNCP Niveau 5 (Bac+2)"
     },
     {
       "title": "Baccalauréat Littéraire",
@@ -101,65 +73,51 @@
   ],
   "activities": [
     {
-      "title": "AirSphereConnect - Plateforme environnementale interactive",
-      "duration": "08/2025 - 12/2025",
-      "company": "DIGINAMIC (Stagiaire)",
-      "location": "Pérols",
-      "description": "Développement fullstack Java/Spring Boot & Angular en équipe avec méthodologie Scrum, GitHub Projects, code review",
-      "technologies": [
-        "Java 21",
-        "Spring Boot",
-        "Spring Security",
-        "JPA/Hibernate",
-        "API REST",
-        "Angular",
-        "TypeScript",
-        "TailwindCSS",
-        "Docker",
-        "Git"
-      ]
+      "title": "Développeuse Fullstack TypeScript",
+      "company": "Agoragom",
+      "location": "Montpellier",
+      "duration": "12/2025 - 03/2026",
+      "description": "Développement d'un CRM intégré à un ERP pour la gestion interne de l'entreprise. Animation de réunions de cadrage, recueil et analyse des besoins, rédaction du cahier des charges, développement d'interfaces web et intégration de fonctionnalités métier.",
+      "technologies": ["Next.js", "Docker", "PostgreSQL", "Prisma", "ShadcnUI", "GitHub Projects"]
     },
     {
-      "title": "Portfolio développeur",
+      "title": "Développeuse Fullstack Java Spring / Angular",
+      "company": "AirSphere Connect",
+      "location": "Montpellier",
+      "duration": "06/2025 - 12/2025",
+      "description": "Plateforme web dédiée au partage et à la consultation de données environnementales. Conception UX/technique (personas, user stories, maquettes, UML), développement fullstack Angular/Spring Boot, intégration d'API externes, visualisation de données, mise en place de tests et CI/CD.",
+      "technologies": ["Java Spring Boot", "Angular", "MariaDB", "Leaflet", "Unovis", "Docker", "Jenkins", "SonarQube", "GitHub Projects"]
+    },
+    {
+      "title": "Développeuse Fullstack TypeScript (Next.js/React)",
+      "company": "Portfolio personnel",
+      "location": "Montpellier",
       "duration": "01/2025",
-      "description": "Développement d'une interface moderne et responsive mettant en avant mes projets et compétences en développement web. Auto-hébergement sur serveur OVH de tous mes projets.",
-      "technologies": ["Next.js", "React", "TypeScript", "SEO"]
+      "description": "Conception d'une interface moderne avec HeroUI et optimisation SEO/performance. Déploiement et hébergement du portfolio et des projets sur un VPS.",
+      "technologies": ["Next.js", "React", "TypeScript", "TailwindCSS", "SEO"]
     },
     {
-      "title": "KidsBook Adventures",
-      "duration": "11/2024 - En cours",
-      "description": "Développement d'une plateforme dédiée à la création de livres pour enfants en Next.js avec intégration IA",
-      "technologies": ["Next.js", "React", "TypeScript", "IA", "MongoDB"]
+      "title": "Développeuse Front-End React",
+      "location": "Montpellier",
+      "duration": "2020 - 2024",
+      "description": "Développement d'interfaces web en React, conception de composants réutilisables, intégration d'API et gestion d'état. Réalisation de projets web personnels, expérimentations techniques et veille technologique continue.",
+      "technologies": ["React", "TypeScript", "JavaScript"]
     },
     {
-      "title": "Congé parental d'éducation",
-      "duration": "2021 - 2024",
-      "description": "Formation continue développement web en autonomie, veille technologique"
-    },
-    {
-      "title": "Auto-formation développement front-end",
-      "duration": "2020 - 2021",
-      "description": "Apprentissage React.js, hooks, gestion d'état via OpenClassrooms, Codecademy, Udemy. Projets personnels avec bonnes pratiques."
-    },
-    {
-      "title": "Site Thèbes Peinture",
-      "duration": "2019",
-      "location": "Alès",
+      "title": "Développeuse Web WordPress",
       "company": "Freelance",
-      "description": "Création site vitrine artisan peintre en freelance",
-      "technologies": ["Wordpress", "PHP"]
+      "location": "Alès, Gard",
+      "duration": "2019",
+      "description": "Conception et développement de sites vitrines WordPress pour un artisan. Recueil des besoins, rédaction du cahier des charges et déploiement sur VPS.",
+      "technologies": ["WordPress", "PHP"]
     },
     {
-      "title": "Congé parental d'éducation",
-      "duration": "2015 - 2018",
-      "description": "Gestion familiale avec initiation au développement web"
-    },
-    {
-      "title": "Accompagnante Élèves en Situation de Handicap (AESH)",
-      "company": "Écoles diverses",
-      "duration": "2013 - 2015",
-      "location": "Bagnols-sur-Cèze",
-      "description": "Accompagnement enfants TDA et polyhandicapés, adaptation pédagogique"
+      "title": "Développeuse Fullstack PHP/JavaScript",
+      "company": "Univers Fabuleux",
+      "location": "Alès",
+      "duration": "07/2018 - 09/2018",
+      "description": "Conception d'une application web ludique destinée aux enfants. Développement du backend en PHP (authentification, logique métier, MySQL) et du frontend en JavaScript (animations et jeux interactifs).",
+      "technologies": ["PHP", "JavaScript", "MySQL", "HTML/CSS"]
     }
   ]
 }

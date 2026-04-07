@@ -16,6 +16,7 @@ export interface Project {
   resume: string;
   description: string;
   url?: string;
+  hidden?: boolean;
   image: string;
   github: string;
 }
@@ -41,6 +42,7 @@ export interface Formation {
   company: string;
   duration: string;
   level?: string;
+  contract?: string;
   projects?: string[];
   stage?: Stage;
 }
@@ -60,8 +62,8 @@ export interface CvData {
   role: string;
   cv: string;
   contacts: Contacts;
-  hardSkills: string[];
-  softSkills: { name: string; description: string }[];
+  competencies: string[];
+  technicalSkills: { category: string; skills: string[] }[];
   formation: Formation[];
   activities: Activities[];
 }
