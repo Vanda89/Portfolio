@@ -36,3 +36,12 @@ next-env.d.ts
 
 /.cursor
 .cursorrules
+
+# IDE
+/.idea
+
+# Claude Code
+/.claude
+
+# Screenshots
+public/images/Capture*
