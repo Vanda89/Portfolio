@@ -1,6 +1,7 @@
 "use client";
 
-import { Card, CardBody, CardHeader } from "@heroui/react";
+import { Card, CardBody, CardHeader, Chip } from "@heroui/react";
+import Image from "next/image";
 import { siteConfig as site } from "@/config/site";
 import { subtitle, title } from "@/styles/primitives";
 import type { CvData } from "@/types/types";
@@ -35,17 +36,21 @@ const contactButton = (link: ContactLink) => {
 export const Infos = ({ cvData }: { cvData: CvData }) => {
   return (
     <Card className="p-6 flex flex-col items-center bg-background-200 " id="infos">
-      <CardHeader className="flex flex-col md:flex-row items-center md:justify-around px-16 gap-8 md:gap-0 ">
-        {/*  <Image
-  src={cvData.image && cvData.image.trim() !== "" ? cvData.image : "/images/avatar-placeholder.png"}
-  width={150}
-  height={150}
-  className="rounded-full"
-  alt={`photo de ${cvData.name}`}
-/> */}
+      <CardHeader className="flex flex-col md:flex-row items-center md:justify-around  gap-8 md:gap-0 ">
+        <Image
+          src={
+            cvData.image && cvData.image.trim() !== ""
+              ? cvData.image
+              : "/images/avatar-placeholder.png"
+          }
+          width={150}
+          height={150}
+          className="rounded-full"
+          alt={`photo de ${cvData.name}`}
+        />
         <Button
           as="a"
-          className="bg-secondary-400 text-md p-6 dark:bg-primary-500 text-white"
+          className="bg-secondary-400 text-md px-6 dark:bg-primary-500 text-white self-end"
           href={cvData.cv}
           startContent={<DownloadIcon className="w-4 mr-2" />}
           target="_blank"
@@ -53,11 +58,11 @@ export const Infos = ({ cvData }: { cvData: CvData }) => {
           C.V.
         </Button>
 
-        <div className="flex flex-col items-center md:items-end w-min-content">
+        <div className="flex flex-col items-center md:items-end gap-2">
           <h1
             className={title({
               size: "xl",
-              class: "title-color text-center ",
+              class: "title-color text-center md:text-right",
               weight: "extrabold",
             })}
           >
@@ -65,11 +70,18 @@ export const Infos = ({ cvData }: { cvData: CvData }) => {
           </h1>
           <p
             className={subtitle({
-              class: "text-center ",
+              class: "text-center md:text-right",
             })}
           >
             {cvData.role}
           </p>
+          <Chip
+            className="bg-success-100 text-success-700 dark:bg-success-900 dark:text-success-300 font-medium"
+            startContent={<span className="w-2 h-2 rounded-full bg-success-500 animate-pulse ml-1" />}
+            variant="flat"
+          >
+            Disponible · Contrat d&apos;apprentissage
+          </Chip>
         </div>
       </CardHeader>
       <CardBody className="w-full grid grid-col-1 md:grid-cols-2 lg:grid-cols-4 gap-4  place-items-center md:place-content-between">

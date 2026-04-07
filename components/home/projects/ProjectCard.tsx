@@ -11,9 +11,10 @@ import type { Project } from "@/types/types";
 
 type Props = {
   project: Project;
+  priority?: boolean;
 };
 
-const ProjectCard = ({ project }: Props) => {
+const ProjectCard = ({ project, priority = false }: Props) => {
   const linkUrl = project.url && !project.url.startsWith("_") ? project.url : project.github;
   const isGithubLink = linkUrl === project.github;
 
@@ -25,7 +26,7 @@ const ProjectCard = ({ project }: Props) => {
             fill
             alt={`Miniature du projet ${project.title} réalisé par Sandrine Alcazar`}
             className="object-cover rounded-lg"
-            loading="lazy"
+            loading={priority ? "eager" : "lazy"}
             sizes="(max-width: 320px) 100vw, (max-width: 640px) 50vw, (max-width: 1280px) 75vw, 1280px"
             src={project.image}
           />
@@ -35,7 +36,11 @@ const ProjectCard = ({ project }: Props) => {
             <h3 className={title({ size: "sm" })}>{project.title}</h3>
             {isGithubLink && <GithubIcon className="text-default-500 w-5 h-5" />}
           </div>
-          <p className={textBase({ align: "left", className: "mt-8" })}>{project.description}</p>
+          <p className={textBase({ align: "left", className: "mt-8" })}>
+            {project.description.split("\n").map((line, i) => (
+              <span key={i}>{line}{i < project.description.split("\n").length - 1 && <br />}</span>
+            ))}
+          </p>
         </CardBody>
       </Card>
     </Link>

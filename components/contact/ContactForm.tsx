@@ -10,10 +10,10 @@ export const formVariants = tv({
     form: "flex flex-col items-center justify-center gap-8",
     input: "  placeholder:text-gray-500 dark:placeholder:text-gray-300",
     inputWrapper:
-      "shadow-lg bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg mb-1",
+      "shadow-lg bg-gray-200 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg mb-1",
     label: "!text-secondary dark:!text-primary-600 text-sm md:text-medium",
     textarea: "font-semibold",
-    button: "mt-8 shadow-lg text-white bg-violet-600 dark:bg-primary-400",
+    button: "mt-8 shadow-lg text-white bg-secondary dark:bg-primary",
     errorMessage: "text-red-700 dark:text-red-500",
   },
 });

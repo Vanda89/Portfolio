@@ -7,8 +7,8 @@ import { GithubIcon, WorldIcon } from "../common/icons";
 
 const formationCategoryMap: { [key: string]: string } = {
   "Conceptrice Développeuse d'Applications Full Stack": "dev fullstack",
-  "Développeuse Front-end JavaScript/React": "dev js",
-  "Développeur/Intégrateur Web": "dev web",
+  "Conceptrice Développeuse d'Applications JS React": "dev js",
+  "Développeur Intégrateur Web": "dev web",
 };
 
 export const Education = ({ cvData, projects }: { cvData: CvData; projects: Project[] }) => {
@@ -28,12 +28,24 @@ export const Education = ({ cvData, projects }: { cvData: CvData; projects: Proj
                 className="flex flex-col gap-1 md:pl-3"
                 key={`${formation.title}-${formation.duration}`}
               >
-                <h3 className={title({ size: "sm" })}>{formation.title}</h3>
-                <h4 className={title({ size: "sm" })}>{formation.level}</h4>
+                <div className="flex items-center gap-3 flex-wrap">
+                  {formation.level && (
+                    <span className={title({ size: "sm", className: "text-secondary dark:text-primary" })}>
+                      {formation.level.match(/\(([^)]+)\)/)?.[1] ?? formation.level}
+                    </span>
+                  )}
+                  <h3 className={title({ size: "sm" })}>{formation.title}</h3>
+                </div>
 
                 <p className={subtitle({ size: "sm" })}>
-                  {formation.company} - {formation.duration} - {formation.location}
+                  {formation.company} - {formation.duration}
+                  {formation.location ? ` - ${formation.location}` : ""}
                 </p>
+                {formation.contract && (
+                  <p className={textBase({ size: "sm", className: "text-secondary dark:text-primary font-medium" })}>
+                    {formation.contract}
+                  </p>
+                )}
 
                 {formation.stage && (
                   <div className="mt-3 p-3 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
