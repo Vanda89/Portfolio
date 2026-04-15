@@ -10,7 +10,7 @@
       "Node",
       "TypeScript",
       "Docker",
-      "HeroUI",
+      "ShadcnUI",
       "TailwindCSS",
       "PostgreSQL",
       "Prisma",
@@ -22,7 +22,7 @@
       "technologies": ["Next.js", "React", "TypeScript", "TailwindCSS", "Docker"]
     },
     "resume": "Développement d'un SaaS interne pour l'entreprise Agoragom pour la gestion du personnel et de la partie commerciale.",
-    "description": "Création d'une application SaaS interne pour Agoragom (Montpellier) dans le cadre du stage de la formation Conceptrice Développeuse d'Applications. Application développée avec Next.js, TailwindCSS et HeroUI pour le frontend, conteneurisée avec Docker, base de donnée PostgreSQL et ORM Prisma. Qualité de code assurée par SonarQube et Biome.",
+    "description": "Création d'une application SaaS interne pour Agoragom (Montpellier) dans le cadre du stage de la formation Conceptrice Développeuse d'Applications. Application développée avec Next.js, TailwindCSS et ShadcnUI pour le frontend, conteneurisée avec Docker, base de donnée PostgreSQL et ORM Prisma. Qualité de code assurée par SonarQube et Biome.",
     "image": "/images/projects_thumbnails/agoragom.webp",
     "github": ""
   },
@@ -63,7 +63,7 @@
     },
     "resume": "Plateforme environnementale interactive avec forum écologique et visualisation de données (qualité de l'air, météo, population) en région Occitanie.",
     "description": "Application fullstack développée en équipe avec méthodologie Scrum dans le cadre de la formation CDA. Intègre des APIs ouvertes (ATMO Occitanie, Géo Gouv, WTTR) pour afficher des données environnementales en temps réel. Comprend un système de forum communautaire, gestion des favoris, authentification JWT et notifications. Architecture MVC avec Spring Boot pour le backend, Angular pour le frontend et déploiement Docker. Projet collaboratif utilisant Git/GitHub Project pour le versionnage et la gestion des sprints.",
-    "_url": null,
+    "url": "https://air-sphere-connect.sandrinealcazar.ovh/home",
     "image": "/images/projects_thumbnails/airsphereconnect.webp",
     "github": "https://github.com/AirSphereConnect"
   },
